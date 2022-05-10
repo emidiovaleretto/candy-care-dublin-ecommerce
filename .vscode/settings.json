@@ -1,6 +1,6 @@
 {
    "python.linting.pylintEnabled": true,
-   "python.linting.enabled": true,
+   "python.linting.enabled": false,
    "python.linting.pep8Enabled": false,
    "python.linting.flake8Enabled": true,
    "python.terminal.activateEnvironment": false,
@@ -23,5 +23,8 @@
    "files.autoSave": "off",
    "workbench.colorTheme": "Visual Studio Dark",
    "terminal.integrated.gpuAcceleration": "canvas",
-   "editor.defaultFormatter": "HookyQR.beautify"
+   "editor.defaultFormatter": "HookyQR.beautify",
+   "[python]": {
+      "editor.defaultFormatter": "ms-python.python"
+   }
 }
