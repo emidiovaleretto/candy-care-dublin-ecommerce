@@ -29,5 +29,8 @@
    },
    "[django-html]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
+   },
+   "[css]": {
+      "editor.defaultFormatter": "aeschli.vscode-css-formatter"
    }
 }

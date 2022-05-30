@@ -1,0 +1,116 @@
+// variables
+
+$cols: 12;
+$gap: 20px;
+$lg-device: 1200px;
+$md-device: 760px;
+$sm-device: 480px;
+
+// box-sizing
+
+*, *::after, *::before {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+// mixins media queries
+
+@mixin device($size) {
+	@if $size == large {
+		@media screen and (min-width: $lg-device) {
+			@content;
+		}
+	} @else if $size == medium {
+		@media screen and (min-width: $md-device) and (max-width: #{$lg-device - 1}) {
+			@content;
+		}
+	} @else if $size == small {
+		@media screen and (max-width: #{$md-device - 1}) {
+			@content;
+		}
+	}
+}
+
+@function grid($col, $offset: false) {
+	$width: $col / 12 * 100 + '%';
+	$result: calc(#{$width} - #{$gap});
+	@if $offset == offset {
+		$gap: $gap / 2;
+		$result: calc(#{$width} + #{$gap});
+	}
+	@return $result;
+}
+
+@for $i from 1 through $cols {
+	.grid-#{$i} {
+		width: grid($i);
+	}
+}
+
+@mixin grid-structure {
+	float: left;
+	min-height: 1px;
+	margin: 0 $gap / 2;
+	@include device(small) {
+		width: 100%;
+		float: none;
+		margin: 0px;
+	}
+}
+
+[class^="grid-"] {
+	@include grid-structure;
+}
+
+@for $i from 1 through $cols {
+	.offset-#{$i} {
+		margin-left: grid($i, offset);
+		@extend %offset;
+	}
+}
+
+@include device(small) {
+	%offset {
+		margin-left: 0px;
+	}
+}
+
+@mixin clearfix {
+	 &::after, &::before {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin container {
+	max-width: $lg-device;
+	margin: 0 auto;
+	position: relative;
+	@include device(medium) {
+		max-width: $md-device;
+	}
+	@include device(small) {
+		max-width: $sm-device;
+		padding: 0 10px;
+	}
+	@include clearfix;
+}
+
+.container {
+	@include container;
+}
+
+@mixin row {
+	position: relative;
+	margin: 0 -$gap / 2;
+	@include device(small) {
+		margin: 0px;
+	}
+	@include clearfix;
+}
+
+.row {
+	@include row;
+}
