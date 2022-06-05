@@ -3,7 +3,7 @@
 	background-size: cover;
 	color: $white;
 	padding: 200px 0;
-    height: 80vh;
+    height: 90vh;
 	text-align: center;
 }
 
@@ -11,6 +11,7 @@
 	text-transform: uppercase;
     font-family: $font-ms;
 	font-size: 3rem;
+	line-height: 1.2;
     margin-bottom: 20px;
 }
 
@@ -19,7 +20,7 @@
 	display: block;
 	width: 20px;
 	height: 4px;
-	background: #fff;
+	background: $white;
 	margin: 10px auto;
 }
 
@@ -50,7 +51,7 @@
 
 @media (max-width:  739px) {
 	.intro {
-		padding: 60px 0;
+		padding: 160px 0;
 	}
 
     .intro > a {
