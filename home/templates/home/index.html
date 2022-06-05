@@ -1,5 +1,27 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
+<header class="header">
+    <div class="container">
+        <a class="logo grid-2" href="#"><img src="{% static 'img/logo.png' %}" alt="Brafe" /></a>
+        <nav class="offset-2 grid-10">
+            <ul>
+                <li><a href="">Shop</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href=""><span class="material-symbols-outlined">shopping_bag</span>Cart <span>(0)</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="intro">
+    <div>
+        <h1>A sweet, a affection <br> a treat!</h1>
+        <p>Our Most Delicious and Popular Chocolate Treats</p>
+    </div>
+    <a href="#">Shop now</a>
+</main>
 
 {% endblock %}
