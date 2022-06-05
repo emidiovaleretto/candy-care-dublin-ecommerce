@@ -1,0 +1,61 @@
+.intro {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('/static/img/hero-image.jpg') no-repeat center center;
+	background-size: cover;
+	color: $white;
+	padding: 200px 0;
+    height: 80vh;
+	text-align: center;
+}
+
+.intro h1 {
+	text-transform: uppercase;
+    font-family: $font-ms;
+	font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.intro h1::after {
+	content: '';
+	display: block;
+	width: 20px;
+	height: 4px;
+	background: #fff;
+	margin: 10px auto;
+}
+
+.intro p {
+    font-family: $font-rto;
+	font-style: italic;
+	font-size: 1.125rem;
+}
+
+.intro > a {
+	display: block;
+	width: 220px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.125rem;
+	font-weight: bold;
+	color: $p7;
+	padding: 15px 0;
+	border: 2px solid;
+	margin: 40px auto 0 auto;
+}
+
+.intro > a:hover {
+	background: $p7;
+	border-color: $p7;
+    color: $white;
+}
+
+@media (max-width:  739px) {
+	.intro {
+		padding: 60px 0;
+	}
+
+    .intro > a {
+        background: $p7;
+        border: none;
+        color: $white;
+    }
+}
