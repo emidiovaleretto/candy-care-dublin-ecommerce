@@ -1,0 +1,41 @@
+.about{
+	padding: 90px 0 60px 0;
+}
+
+.about h2 {
+	font-family: $font-ms, sans-serif;
+	font-size: 2.25rem;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.about-item h3 {
+	font-size: 2.25rem;
+	line-height: 1rem;
+	font-style: italic;
+	font-weight: normal;
+	text-align: center;
+	background: $p10;
+	color: $p4;
+	width: 220px;
+	padding: 20px;
+	top: -25px;
+	position: relative;
+}
+
+.about > p {
+	max-width: 460px;
+	font-family: $font-rto, sans-serif;
+	font-size: 1.125rem;
+	line-height: 1.4rem;
+	font-style: italic;
+	text-align: center;
+	margin: 40px auto 0 auto;
+}
+
+@media (max-width:  739px) {
+	.about-item h3 {
+		font-size: 2rem;
+		width: 200px;
+	}
+}
