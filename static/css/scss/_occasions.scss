@@ -1,0 +1,61 @@
+.occasions {
+	padding: 60px 0;
+}
+
+.occasions > h2 {
+	font-family: $font-ms, sans-serif;
+	font-size: 2.25rem;
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+.occasion-content {
+	margin-bottom: 32px;
+}
+
+.occasion-content h2 {
+	font-size: 2.25em;
+	margin-bottom: 20px;
+}
+
+.occasion-content p {
+	font-size: 1.125em;
+	line-height: 1.4em;
+	color: $g8;
+	max-width: 360px;
+	margin-bottom: 20px;
+}
+
+
+.occasion-content a {
+	display: block;
+	width: 200px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.125rem;
+	font-weight: bold;
+	color: $p7;
+	padding: 15px 0;
+	border: 2px solid;
+}
+
+.occasion-content a:hover {
+	background: $p7;
+	border-color: $p7;
+    color: $white;
+}
+
+@media (max-width: 739px) {
+	.occasion-item {
+		margin-top: 20px;
+		margin-left: 0;
+	}
+
+	.occasion-content h2 {
+		margin-top: 20px;
+	}
+
+	.occasion-content p {
+		max-width: 100%;
+	}
+}
