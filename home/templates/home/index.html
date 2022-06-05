@@ -4,9 +4,10 @@
 {% block content %}
 <header class="header">
     <div class="container">
-        <a class="logo grid-2" href="#"><img src="{% static 'img/logo.png' %}" alt="Brafe" /></a>
-        <nav class="offset-2 grid-10">
-            <ul>
+        <a class="logo grid-2" href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="Candy Care Logo" /></a>
+        <nav id="nav" class="offset-2 grid-10" aria-label="primary-nav">
+            <button id="btn-mobile" aria-label="Open menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu<span id="hamburger"></span></button>
+            <ul id="menu" class="header-menu" role="menu">
                 <li><a href="">Shop</a></li>
                 <li><a href="">About</a></li>
                 <li><a href="">Contact</a></li>
