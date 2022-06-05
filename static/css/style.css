@@ -23,6 +23,11 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -50,6 +55,11 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 *, *::after, *::before {
@@ -214,4 +224,120 @@ table {
   content: '';
   display: table;
   clear: both;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #111111;
+}
+
+.header {
+  background: #320C0E;
+  padding: 20px 0;
+}
+
+.header img {
+  width: 60px;
+  float: left;
+}
+
+.header ul {
+  float: right;
+}
+
+.header li {
+  display: inline-block;
+}
+
+.header li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.125rem;
+  display: block;
+  padding: 10px;
+  margin-left: 10px;
+  position: relative;
+}
+
+.header a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: #FFFFFF;
+  margin-top: 4px;
+  transition: 0.3s;
+  position: absolute;
+}
+
+.header a:hover::after {
+  width: 80%;
+}
+
+.header span:not(:last-child) {
+  position: relative;
+  top: 5px;
+  margin-right: 5px;
+}
+
+.intro {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/static/img/hero-image.jpg") no-repeat center center;
+  background-size: cover;
+  color: #FFFFFF;
+  padding: 200px 0;
+  height: 80vh;
+  text-align: center;
+}
+
+.intro h1 {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.intro h1::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 4px;
+  background: #fff;
+  margin: 10px auto;
+}
+
+.intro p {
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-size: 1.125rem;
+}
+
+.intro > a {
+  display: block;
+  width: 220px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #BF0028;
+  padding: 15px 0;
+  border: 2px solid;
+  margin: 40px auto 0 auto;
+}
+
+.intro > a:hover {
+  background: #BF0028;
+  border-color: #BF0028;
+  color: #FFFFFF;
+}
+
+@media (max-width: 739px) {
+  .intro {
+    padding: 60px 0;
+  }
+  .intro > a {
+    background: #BF0028;
+    border: none;
+    color: #FFFFFF;
+  }
 }
