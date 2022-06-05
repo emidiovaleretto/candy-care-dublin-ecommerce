@@ -45,7 +45,7 @@
 
 <body>
     {% block content %}{% endblock %}
-    {% block postloadjs %}{% endblock %}
+    {% block postloadjs %}<script src="{% static 'js/script.js' %}"></script>{% endblock %}
 </body>
 
 </html>
