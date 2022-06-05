@@ -9,7 +9,7 @@
             <button id="btn-mobile" aria-label="Open menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu<span id="hamburger"></span></button>
             <ul id="menu" class="header-menu" role="menu">
                 <li><a href="">Shop</a></li>
-                <li><a href="">About</a></li>
+                <li><a href="#about">About Us</a></li>
                 <li><a href="">Contact</a></li>
                 <li><a href=""><span class="material-symbols-outlined">shopping_bag</span>Cart <span>(0)</span></a></li>
             </ul>
@@ -20,9 +20,30 @@
 <main class="intro">
     <div>
         <h1>A sweet, a affection <br> a treat!</h1>
-        <p>Our Most Delicious and Popular Chocolate Treats</p>
+        <p>From ours to your family</p>
     </div>
     <a href="#">Shop now</a>
 </main>
+
+<section id="about" class="about">
+    <h2>About us</h2>
+    <div class="container">
+        <div class="grid-6">
+            <div class="about-item">
+                <img src="{% static 'img/chocolate-1.jpg' %}" alt="Some assorted bonbons" />
+                <h3>love</h3>
+            </div>
+        </div>
+        <div class="grid-6">
+            <div class="about-item">
+                <img src="{% static 'img/chocolate-2.jpg' %}" alt="A chocolate cake" />
+                <h3>perfection</h3>
+            </div>
+        </div>
+    </div>
+    <p>
+        Candy Care provides a unique candy experience right to your door. We are experts in producing the best sweets, providing our friends and customers with an incredible experience. Based in Dublin, Ireland, we are dedicated to providing you with the best candy in the world.
+    </p>
+</section>
 
 {% endblock %}
