@@ -9,6 +9,14 @@
 	text-align: center;
 }
 
+.instagram a img {
+    transition: .2s ease-in;
+}
+
+.instagram a img:hover {
+    opacity: .9;
+}
+
 .instagram a {
     font-family: $font-rto, sans-serif;
     font-size: 1.5rem;
