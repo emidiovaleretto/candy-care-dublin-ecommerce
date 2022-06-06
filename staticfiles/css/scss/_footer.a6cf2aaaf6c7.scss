@@ -1,0 +1,80 @@
+.footer {
+    padding: 40px 0;
+    border-top: 3px solid $p10;
+    background: $p1;
+}
+
+.footer h2 {
+    font-family: $font-ms, sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: $g1;
+	margin-bottom: 20px;
+}
+
+.footer p,
+.footer-content li {
+    font-family: $font-rto, sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: $g4;
+    margin: 10px 0;
+    max-width: 460px;
+}
+
+.footer a:hover {
+    color: $g2;
+}
+
+.footer img {
+    display: inline-block;
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+}
+
+.footer h3 {
+    font-family: $font-ms, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: $g1;
+    margin-top: 10px;
+}
+
+.footer-content .grid-8,
+.footer-content .grid-4 {
+    margin-top: 60px;
+    margin-left: 0;
+}
+
+.credits {
+    text-align: right;
+}
+
+.credits a {
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.credits a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer img {
+        margin-top: 10px;
+    }
+
+    .footer h2 {
+        margin-top: 30px;
+    }
+    .footer h3 {
+        text-align: center;
+        padding-top: 30px;
+    }
+    .footer h3,
+    .credits {
+        text-align: center;
+    }
+}

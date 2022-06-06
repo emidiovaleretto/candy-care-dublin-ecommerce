@@ -1,0 +1,63 @@
+// Colors
+// Gray shades
+$white: #FFFFFF;
+$g1: #F7F7F7;
+$g2: #EDEDED;
+$g3: #DEDEDE;
+$g4: #CCCCCC;
+$g5: #B2B2B2;
+$g6: #9C9C9C;
+$g7: #717171;
+$g8: #404040;
+$g9: #2E2E2E;
+$g10: #111111;
+$black: #000000;
+
+// Primary colors
+$p1: #320C0E;
+$p2: #3D1416;
+$p3: #421F1D;
+$p4: #5E3622;
+$p5: #7B504D;
+$p6: #996D6A;
+
+// Detail color
+$p7: #BF0028;
+
+// Auxiliary colors
+$p8: #74523D;
+$p9: #D0AA7D;
+$p10: #E6BB7A;
+
+// Typography
+$font-ms: 'Montserrat', sans-serif;
+$font-rto: 'Roboto', sans-serif;
+
+@function rem($pixel, $context: 16) {
+	@return $pixel / $context + rem;
+}
+
+@mixin type-1($size) {
+	font-family: $font-ms;
+	@if $size == 18 {
+		font-size: rem(18);
+		line-height: rem(30, 18);
+	}
+}
+
+@mixin type-2($size) {
+	font-family: $font-rto;
+	@if $size == 18 {
+		font-size: rem(18);
+		line-height: rem(30, 18);
+	} @else if $size == 24 {
+		font-size: rem(24);
+		line-height: rem(30, 24);
+	}
+}
+
+@mixin box-shadow($shadow...) {
+	-webkit-box-shadow: $shadow;
+	-mox-box-shadow: $shadow;
+	box-shadow: $shadow;
+}

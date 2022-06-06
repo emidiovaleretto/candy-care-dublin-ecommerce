@@ -1,0 +1,35 @@
+.instagram {
+    padding: 60px 0;
+}
+
+.instagram h2 {
+	font-family: $font-ms, sans-serif;
+	font-size: 2.25rem;
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+.instagram a img {
+    transition: .2s ease-in;
+}
+
+.instagram a img:hover {
+    opacity: .9;
+}
+
+.instagram a {
+    font-family: $font-rto, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    display: block;
+    text-align: center;
+    color: $p7;
+    text-decoration: underline;
+    padding: 15px 0;
+    margin: 40px 0;
+}
+
+.instagram a:hover {
+    color: #a00028;
+}

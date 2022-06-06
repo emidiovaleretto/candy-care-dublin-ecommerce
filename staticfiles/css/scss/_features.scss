@@ -1,0 +1,67 @@
+.features {
+	background: rgba(230,187,122, .7);
+	border-top: 3px solid $p10;
+	border-bottom: 3px solid $p10;
+	padding: 90px 0;
+}
+
+.feature h2 {
+    font-family: $font-ms, sans-serif;
+	font-size: 2.25rem;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.feature h2::before {
+	content: '';
+	display: block;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 5px solid $g1;
+	margin: 0 auto 40px auto;
+}
+
+h2.feature-brigadeiro::before {
+	background: url("/static/img/feature-3.jpg") no-repeat center;
+    background-size: cover;
+	box-shadow: 0 0 0 5px $p3;
+}
+
+h2.feature-cakes::before {
+	background: url("/static/img/feature-2.jpg") no-repeat center;
+    background-size: cover;
+	box-shadow: 0 0 0 5px $p4;
+}
+
+h2.feature-sweets::before {
+	background: url("/static/img/feature-1.jpg") no-repeat center;
+    background-size: cover;
+	box-shadow: 0 0 0 5px $p5;
+}
+
+.feature p {
+    font-family: $font-rto, sans-serif;
+	font-size: 1rem;
+	line-height: 1.4rem;
+	margin-bottom: 40px;
+}
+
+.features > a {
+	display: block;
+	width: 220px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.125rem;
+	font-weight: bold;
+	color: $p7;
+	padding: 15px 0;
+	border: 2px solid;
+	margin: 40px auto 0 auto;
+}
+
+.features > a:hover {
+	background: $p7;
+	border-color: $p7;
+    color: $white;
+}

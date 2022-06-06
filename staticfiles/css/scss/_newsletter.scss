@@ -1,0 +1,57 @@
+.newsletter {
+	background: rgba(230,187,122, .8);
+	padding: 60px 0;
+    border-top: 3px solid $p10;
+    border-bottom: 3px solid $p10;
+    color: $p1;
+}
+
+.newsletter-content h2 {
+    font-family: $font-ms, sans-serif;
+	font-size: 2.25rem;
+    margin-bottom: 10px;
+}
+
+.newsletter-content p {
+    font-family: $font-rto, sans-serif;
+	font-size: 1.5rem;
+	font-style: italic;
+    font-weight: 300;
+}
+
+form input {
+	font-size: 1.25rem;
+	font-style: italic;
+	font-family: $font-ms, serif;
+	width: calc(100% - 140px);
+	border: 3px solid $p1;
+	background: transparent;
+	margin-top: 10px;
+	padding: 10px;
+	float: left;
+}
+
+form input::placeholder {
+    color: $p1;
+}
+
+form input:focus {
+    outline: none;
+}
+
+form button {
+	width: 140px;
+	padding: 13px 0;
+	margin-top: 10px;
+	font-family: Georgia, serif;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	color: $p10;
+	background: $p1;
+	border: none;
+	cursor: pointer;
+}
+
+form button:hover {
+    background: #230305;
+}

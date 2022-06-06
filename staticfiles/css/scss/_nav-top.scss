@@ -1,0 +1,33 @@
+.nav-top {
+    padding: 10px 0;
+    background: $p10;
+}
+
+.nav-top li {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+}
+
+.nav-top li:not(:last-child)::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 20px;
+    background: $p8;
+    position: absolute;
+    top: -3px;
+    right: -10px;
+}
+
+.nav-top a {
+    font-family: $font-ms, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 12px;
+    color: $p1;
+}
+
+.nav-top a:hover {
+    text-decoration: underline;
+}
