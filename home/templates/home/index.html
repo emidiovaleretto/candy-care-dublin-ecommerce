@@ -2,6 +2,16 @@
 {% load static %}
 
 {% block content %}
+<header class="nav-top">
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="">Sign in</a></li>
+                <li><a href="">Sign up</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 <header class="header">
     <div class="container">
         <a class="logo grid-2" href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="Candy Care Logo" /></a>
