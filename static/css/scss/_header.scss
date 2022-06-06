@@ -52,10 +52,6 @@
 }
 
 @media (max-width: 768px) {
-    .header > .container {
-        display: flex;
-        justify-content: space-between;
-    }
     .header-menu {
         display: flex;
         flex-direction: column;
@@ -97,6 +93,8 @@
         gap: 8px;
         align-items: center;
         z-index: 9999;
+        position: relative;
+        top: 15px;
         cursor: pointer;
     }
 
