@@ -1,9 +1,9 @@
 .intro {
-	background: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url('/static/img/hero-image.jpg') no-repeat center center;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('/static/img/hero-image.jpg') no-repeat center center;
 	background-size: cover;
 	color: $white;
 	padding: 200px 0;
-    height: 90vh;
+	height: 90vh;
 	text-align: center;
 }
 
@@ -37,15 +37,14 @@
 	text-align: center;
 	font-size: 1.125rem;
 	font-weight: bold;
-	color: $p7;
-	padding: 15px 0;
-	border: 2px solid;
-	margin: 40px auto 0 auto;
+	color: $white;
+	background: $p7;
+	padding: 20px 0;
+	margin: 60px auto 0 auto;
 }
 
 .intro > a:hover {
-	background: $p7;
-	border-color: $p7;
+	background: #a00028;
     color: $white;
 }
 
