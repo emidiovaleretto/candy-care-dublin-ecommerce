@@ -32,5 +32,8 @@
    },
    "[css]": {
       "editor.defaultFormatter": "aeschli.vscode-css-formatter"
+   },
+   "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
    }
 }
