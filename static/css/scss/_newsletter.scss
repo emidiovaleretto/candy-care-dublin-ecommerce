@@ -7,13 +7,13 @@
 }
 
 .newsletter-content h2 {
-    font-family: $font-ms, sans-serif;
+    font-family: $font-ms;
 	font-size: 2.25rem;
     margin-bottom: 10px;
 }
 
 .newsletter-content p {
-    font-family: $font-rto, sans-serif;
+    font-family: $font-rto;
 	font-size: 1.5rem;
 	font-style: italic;
     font-weight: 300;
@@ -22,7 +22,7 @@
 form input {
 	font-size: 1.25rem;
 	font-style: italic;
-	font-family: $font-ms, serif;
+	font-family: $font-ms;
 	width: calc(100% - 140px);
 	border: 3px solid $p1;
 	background: transparent;
@@ -43,7 +43,7 @@ form button {
 	width: 140px;
 	padding: 13px 0;
 	margin-top: 10px;
-	font-family: Georgia, serif;
+	font-family: $font-rto;
 	font-size: 1.5rem;
 	text-transform: uppercase;
 	color: $p10;

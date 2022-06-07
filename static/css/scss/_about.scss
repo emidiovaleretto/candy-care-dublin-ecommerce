@@ -3,7 +3,7 @@
 }
 
 .about h2 {
-	font-family: $font-ms, sans-serif;
+	font-family: $font-ms;
 	font-size: 2.25rem;
 	margin-bottom: 40px;
 	text-align: center;
@@ -25,7 +25,7 @@
 
 .about > p {
 	max-width: 460px;
-	font-family: $font-rto, sans-serif;
+	font-family: $font-rto;
 	font-size: 1.125rem;
 	line-height: 1.4rem;
 	font-style: italic;

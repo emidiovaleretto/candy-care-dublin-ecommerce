@@ -395,7 +395,7 @@ body {
 }
 
 .intro {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/static/img/hero-image.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/hero-image.jpg") no-repeat center center;
   background-size: cover;
   color: #FFFFFF;
   padding: 200px 0;
@@ -460,7 +460,7 @@ body {
 }
 
 .about h2 {
-  font-family: "Montserrat", sans-serif, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 2.25rem;
   margin-bottom: 40px;
   text-align: center;
@@ -482,7 +482,7 @@ body {
 
 .about > p {
   max-width: 460px;
-  font-family: "Roboto", sans-serif, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.125rem;
   line-height: 1.4rem;
   font-style: italic;
@@ -505,7 +505,7 @@ body {
 }
 
 .feature h2 {
-  font-family: "Montserrat", sans-serif, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 2.25rem;
   text-align: center;
   margin-bottom: 20px;
@@ -522,25 +522,25 @@ body {
 }
 
 h2.feature-brigadeiro::before {
-  background: url("/static/img/feature-3.jpg") no-repeat center;
+  background: url("../img/feature-3.jpg") no-repeat center;
   background-size: cover;
   box-shadow: 0 0 0 5px #421F1D;
 }
 
 h2.feature-cakes::before {
-  background: url("/static/img/feature-2.jpg") no-repeat center;
+  background: url("../img/feature-2.jpg") no-repeat center;
   background-size: cover;
   box-shadow: 0 0 0 5px #5E3622;
 }
 
 h2.feature-sweets::before {
-  background: url("/static/img/feature-1.jpg") no-repeat center;
+  background: url("../img/instagram-1.jpg") no-repeat center;
   background-size: cover;
   box-shadow: 0 0 0 5px #7B504D;
 }
 
 .feature p {
-  font-family: "Roboto", sans-serif, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.4rem;
   margin-bottom: 40px;
@@ -570,7 +570,7 @@ h2.feature-sweets::before {
 }
 
 .occasions > h2 {
-  font-family: "Montserrat", sans-serif, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 2.25rem;
   margin-bottom: 60px;
   text-align: center;
@@ -629,7 +629,7 @@ h2.feature-sweets::before {
 }
 
 .instagram h2 {
-  font-family: "Montserrat", sans-serif, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 2.25rem;
   margin-bottom: 60px;
   text-align: center;
@@ -644,7 +644,7 @@ h2.feature-sweets::before {
 }
 
 .instagram a {
-  font-family: "Roboto", sans-serif, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: 4px;
@@ -669,13 +669,13 @@ h2.feature-sweets::before {
 }
 
 .newsletter-content h2 {
-  font-family: "Montserrat", sans-serif, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 2.25rem;
   margin-bottom: 10px;
 }
 
 .newsletter-content p {
-  font-family: "Roboto", sans-serif, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   font-style: italic;
   font-weight: 300;
@@ -684,7 +684,7 @@ h2.feature-sweets::before {
 form input {
   font-size: 1.25rem;
   font-style: italic;
-  font-family: "Montserrat", sans-serif, serif;
+  font-family: "Montserrat", sans-serif;
   width: calc(100% - 140px);
   border: 3px solid #320C0E;
   background: transparent;
@@ -705,7 +705,7 @@ form button {
   width: 140px;
   padding: 13px 0;
   margin-top: 10px;
-  font-family: Georgia, serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: #E6BB7A;
@@ -725,7 +725,7 @@ form button:hover {
 }
 
 .footer h2 {
-  font-family: "Montserrat", sans-serif, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 2rem;
   font-weight: 500;
   color: #F7F7F7;
@@ -734,7 +734,7 @@ form button:hover {
 
 .footer p,
 .footer-content li {
-  font-family: "Roboto", sans-serif, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.8;
@@ -755,7 +755,7 @@ form button:hover {
 }
 
 .footer h3 {
-  font-family: "Montserrat", sans-serif, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.125rem;
   font-weight: 500;
   color: #F7F7F7;
