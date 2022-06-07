@@ -85,7 +85,7 @@
     <h2>Occasions</h2>
     <div class="container occasion-content">
         <div class="grid-6">
-            <img src="/static/img/valentines_day.jpg" alt="Valentines Day" />
+            <img src="{% static 'img/valentines_day.jpg' %}" alt="Valentines Day" />
         </div>
         <div class="grid-6">
             <h2>Valentines Day</h2>
@@ -95,7 +95,7 @@
     </div>
     <div class="container occasion-content">
         <div class="grid-6">
-            <img src="/static/img/mothers.jpg" alt="Easter" />
+            <img src="{% static 'img/mothers.jpg' %}" alt="Easter" />
         </div>
         <div class="grid-6">
             <h2>Mother's Day</h2>
@@ -105,7 +105,7 @@
     </div>
     <div class="container occasion-content">
         <div class="grid-6">
-            <img src="/static/img/birthday.jpg" alt="Birthday" />
+            <img src="{% static 'img/birthday.jpg' %}" alt="Birthday" />
         </div>
         <div class="grid-6">
             <h2>Birthdays</h2>
@@ -134,16 +134,24 @@
     <h2>Follow us on Instagram</h2>
     <div class="container">
         <div class="grid-3">
-            <a aria-label="Link to Candy Care instagram channel" href="https://www.instagram.com/candycaredublin/" target="_blank"><img src="/static/img/instagram-1.jpg" alt="A chocolate cake" /></a>
+            <a aria-label="Link to Candy Care instagram channel" href="https://www.instagram.com/candycaredublin/" target="_blank">
+                <img src="{% static 'img/instagram-1.jpg' %}" alt="A chocolate cake" />
+            </a>
         </div>
         <div class="grid-3">
-            <a aria-label="Link to Candy Care instagram channel" href="https://www.instagram.com/candycaredublin/" target="_blank"><img src="/static/img/instagram-2.jpg" alt="A person holding two pot cakes" /></a>
+            <a aria-label="Link to Candy Care instagram channel" href="https://www.instagram.com/candycaredublin/" target="_blank">
+                <img src="{% static 'img/instagram-2.jpg' %}" alt="A person holding two pot cakes" />
+            </a>
         </div>
         <div class="grid-3">
-            <a aria-label="Link to Candy Care instagram channel" href="https://www.instagram.com/candycaredublin/" target="_blank"><img src="/static/img/instagram-3.jpg" alt="Assorted sweets" /></a>
+            <a aria-label="Link to Candy Care instagram channel" href="https://www.instagram.com/candycaredublin/" target="_blank">
+                <img src="{% static 'img/instagram-3.jpg' %}" alt="Assorted sweets" />
+            </a>
         </div>
         <div class="grid-3">
-            <a aria-label="Link to Candy Care instagram channel" href="https://www.instagram.com/candycaredublin/" target="_blank"><img src="/static/img/instagram-4.jpg" alt="A breakfast basket" /></a>
+            <a aria-label="Link to Candy Care instagram channel" href="https://www.instagram.com/candycaredublin/" target="_blank">
+                <img src="{% static 'img/instagram-4.jpg' %}" alt="A breakfast basket" />
+            </a>
         </div>
     </div>
     <a aria-label="Link to Candy Care instagram channel" href="https://www.instagram.com/candycaredublin/" target="_blank" title="Follow us on Instagram">@candycaredublin</a>
