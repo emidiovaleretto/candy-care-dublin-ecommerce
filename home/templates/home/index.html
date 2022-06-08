@@ -2,37 +2,13 @@
 {% load static %}
 
 {% block content %}
-<header class="nav-top">
-    <div class="container">
-        <nav>
-            <ul>
-                <li><a href="">Sign in</a></li>
-                <li><a href="">Sign up</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-<header class="header">
-    <div class="container">
-        <a class="logo grid-2" href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="Candy Care Logo" /></a>
-        <nav id="nav" class="offset-2 grid-10" aria-label="primary-nav">
-            <button id="btn-mobile" aria-label="Open menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu<span id="hamburger"></span></button>
-            <ul id="menu" class="header-menu" role="menu">
-                <li><a href="">Shop</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href=""><span class="material-symbols-outlined">shopping_bag</span>Cart <span>(0)</span></a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
 
 <main class="intro">
     <div>
         <h1>A sweet, a affection <br> a treat!</h1>
         <p>From ours to your family</p>
     </div>
-    <a href="#">Shop now</a>
+    <a href="{% url 'products' %}">Shop now</a>
 </main>
 
 <section id="about" class="about">
@@ -78,7 +54,7 @@
             </div>
         </div>
     </div>
-    <a href="#">Shop now</a>
+    <a href="{% url 'products' %}">Shop now</a>
 </section>
 
 <section class="occasions">
@@ -90,7 +66,7 @@
         <div class="grid-6">
             <h2>Valentines Day</h2>
             <p>With so many trends coming and going, there must be something about chocolate that it even today, it's a widely popular tradition in almost all countries in the world to give your loved one a box of chocolates on the Valentine's Day.</p>
-            <a href="#">Find out more</a>
+            <a href="{% url 'products' %}">Find out more</a>
         </div>
     </div>
     <div class="container occasion-content">
@@ -100,7 +76,7 @@
         <div class="grid-6">
             <h2>Mother's Day</h2>
             <p>Mother's Day shopping can often feel impossible Chocolate is a gift for the eyes as well as a gift for the mouth. Appeal to multiple sensors with one gift, and spoil your mom with something beautiful.</p>
-            <a href="#">Find out more</a>
+            <a href="{% url 'products' %}">Find out more</a>
         </div>
     </div>
     <div class="container occasion-content">
@@ -110,7 +86,7 @@
         <div class="grid-6">
             <h2>Birthdays</h2>
             <p>Be it Mother's Day, Christmas, a loved one's birthday or Valentine's Day, chocolate is always a great idea. And when it comes in a form as irresistible as truffles, you simply can't go wrong with it! </p>
-            <a href="#">Find out more</a>
+            <a href="{% url 'products' %}">Find out more</a>
         </div>
     </div>
 </section>
@@ -157,42 +133,4 @@
     <a aria-label="Link to Candy Care instagram channel" href="https://www.instagram.com/candycaredublin/" target="_blank" title="Follow us on Instagram">@candycaredublin</a>
 </section>
 
-<footer class="footer">
-    <div class="container">
-        <div class="grid-6">
-            <div class="footer-content">
-                <h2>About</h2>
-                <p>Candy Care is a company that provides a unique candy experience right to your door. We are experts in producing the best sweets, providing our friends and customers with an incredible experience. Based in Dublin, Ireland, we are dedicated to providing you with the best candy in the world.</p>
-            </div>
-        </div>
-        <div class="grid-3">
-            <div class="footer-content">
-                <h2>Contact</h2>
-                <ul>
-                    <li><a href="tel:+35312345678">+353 1 234 5678</a></li>
-                    <li><a href="mailto:candycare@candycare.ie">candycare@candycare.ie</a></li>
-                    <li>1 O'Connel Street - Dublin 1</li>
-                    <li>Dublin - Ireland</li>
-                </ul>
-            </div>
-        </div>
-        <div class="grid-3">
-            <div class="footer-content follow">
-                <h2>Follow us</h2>
-                <a aria-label="Link to Candy Care Facebook page" href="https://www.facebook.com/candycaredublin/" target="_blank"><img src="/static/img/facebook-icon.svg" alt="Facebook" /></a>
-                <a aria-label="Link to Candy Care Instagram page" href="https://www.instagram.com/candycaredublin/" target="_blank"><img src="/static/img/instagram-icon.svg" alt="Instagram" /></a>
-            </div>
-        </div>
-        <div class="grid-12">
-            <div class="footer-content">
-                <div class="grid-8">
-                    <h3 class="copy">Candy Care &copy; <span class="current_year"></span>. All rights reserved.</h3>
-                </div>
-                <div class="grid-4">
-                    <p class="credits">Made with ❤️ by <a href="https://github.com/emidiovaleretto" aria-label="Visit my portfolio on GitHub (opens in a new tab)" target="_blank" rel="noopener">Emidio Valereto</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
 {% endblock %}
