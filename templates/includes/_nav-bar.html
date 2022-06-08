@@ -1,0 +1,26 @@
+{% load static %}
+
+<header class="nav-top">
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="">Sign in</a></li>
+                <li><a href="">Sign up</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<header class="header">
+    <div class="container">
+        <a class="logo grid-2" href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="Candy Care Logo" /></a>
+        <nav id="nav" class="offset-2 grid-10" aria-label="primary-nav">
+            <button id="btn-mobile" aria-label="Open menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu<span id="hamburger"></span></button>
+            <ul id="menu" class="header-menu" role="menu">
+                <li><a href="">Shop</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href=""><span class="material-symbols-outlined">shopping_bag</span>Cart <span>(0)</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
