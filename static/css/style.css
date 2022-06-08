@@ -259,7 +259,7 @@ body {
 }
 
 .nav-top a {
-  font-family: "Montserrat", sans-serif, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   padding: 8px 12px;
@@ -505,7 +505,7 @@ body {
 }
 
 .feature h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif, sans-serif;
   font-size: 2.25rem;
   text-align: center;
   margin-bottom: 20px;
@@ -522,7 +522,7 @@ body {
 }
 
 h2.feature-brigadeiro::before {
-  background: url("../img/feature-3.jpg") no-repeat center;
+  background: url("../img/feature-1.jpg") no-repeat center;
   background-size: cover;
   box-shadow: 0 0 0 5px #421F1D;
 }
@@ -534,13 +534,13 @@ h2.feature-cakes::before {
 }
 
 h2.feature-sweets::before {
-  background: url("../img/feature-1.jpg") no-repeat center;
+  background: url("../img/feature-3.jpg") no-repeat center;
   background-size: cover;
   box-shadow: 0 0 0 5px #7B504D;
 }
 
 .feature p {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif, sans-serif;
   font-size: 1rem;
   line-height: 1.4rem;
   margin-bottom: 40px;
@@ -796,4 +796,58 @@ form button:hover {
   .credits {
     text-align: center;
   }
+}
+
+.products-header {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/chocolate-1.jpg") no-repeat center center;
+  background-size: cover;
+  color: #FFFFFF;
+  padding: 200px 0;
+  text-align: center;
+}
+
+.products-header h1 {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.products-header h1::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 4px;
+  background: #FFFFFF;
+  margin: 10px auto;
+}
+
+.products {
+  padding: 80px 0;
+}
+
+.product-card {
+  margin-bottom: 40px;
+}
+
+.product-card-image:hover {
+  opacity: .8;
+  transition: .2s ease-in-out;
+}
+
+.product-card-info h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.product-card-info p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.4rem;
+  color: #404040;
+  margin: 10px 0;
 }

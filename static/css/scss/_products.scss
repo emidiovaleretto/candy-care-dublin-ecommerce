@@ -1,0 +1,53 @@
+.products-header {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('../img/chocolate-1.jpg') no-repeat center center;
+	background-size: cover;
+	color: $white;
+	padding: 200px 0;
+	text-align: center;
+}
+
+.products-header h1 {
+	text-transform: uppercase;
+    font-family: $font-ms;
+	font-size: 3rem;
+	font-weight: 500;
+	line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.products-header h1::after {
+	content: '';
+	display: block;
+	width: 20px;
+	height: 4px;
+	background: $white;
+	margin: 10px auto;
+}
+
+.products {
+    padding: 80px 0;
+}
+
+.product-card {
+    margin-bottom: 40px;
+}
+
+.product-card-image:hover {
+    opacity: .8;
+    transition: .2s ease-in-out;
+}
+
+.product-card-info h2 {
+    font-family: $font-ms;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.product-card-info p {
+    font-family: $font-rto;
+    font-size: 1.125rem;
+    line-height: 1.4rem;
+    color: $g8;
+    margin: 10px 0;
+}
