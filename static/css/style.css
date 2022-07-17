@@ -2,6 +2,11 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+
+html {
+  overflow-x: hidden;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -839,15 +844,25 @@ form button:hover {
 
 .product-card-info h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 500;
   margin: 10px 0;
 }
 
 .product-card-info p {
   font-family: "Roboto", sans-serif;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.4rem;
   color: #404040;
   margin: 10px 0;
+}
+
+.btt-button {
+  height: 42px;
+  width: 42px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: #320C0E;
+  cursor: pointer;
 }

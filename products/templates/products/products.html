@@ -10,123 +10,105 @@
 </main>
 
 <section class="products">
+    
+    <div class="row">
+        <div class="col text-center mt-3">
+            {% for current_category in current_categories %}
+            <a class="category-badge text-decoration-none"
+                href="{% url 'products' %}?category={{ current_category.name }}">
+                <span
+                    class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ current_category.friendly_name }}
+                </span>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row mt-1 mb-2">
+        <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+            <div class="sort-select-wrapper w-50">
+                <select id="sort-selector"
+                    class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
+                    </option>
+                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price
+                        (low to high)</option>
+                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price
+                        (high to low)</option>
+                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name
+                        (A-Z)</option>
+                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name
+                        (Z-A)</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 order-md-first">
+            <p class="text-muted mt-3 text-center text-md-left">
+                {% if search_term or current_categories or current_sorting != 'None_None' %}
+                <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
+                {% endif %}
+                {{ products|length }} Products{% if search_term %} found for
+                <strong>"{{ search_term }}"</strong>{% endif %}
+            </p>
+        </div>
+    </div>
+
     <div class="container">
-        
-        <div class="grid-12">
+        <div class="offset-1 grid-10">
+            {% for product in products %}
             <div class="grid-4">
                 <div class="product-card">
                     <div class="product-card-image">
-                        <a href=""><img src="{% static 'img/product-1.jpg' %}" alt=""></a>
+                        {% if product.image %}
+                        <a href=""><img src="{{ product.image.url }}" alt="{{ product.name }}"></a>
+                        {% else %}
+                        <a href=""><img src="{{ product.image.url }}" alt="{{ product.name }}"></a>
+                        {% endif %}
                     </div>
                     <div class="product-card-info">
-                        <h2>Product 1</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur
-                        </p>
+                        <h2>{{ product.name }}</h2>
+                        <p>&euro;{{ product.price }}</p>
                     </div>
                 </div>
             </div>
-            <div class="grid-4">
-                <div class="product-card">
-                    <div class="product-card-image">
-                        <a href=""><img src="{% static 'img/product-3.jpg' %}" alt=""></a>
-                    </div>
-                    <div class="product-card-info">
-                        <h2>Product 1</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-4">
-                <div class="product-card">
-                    <div class="product-card-image">
-                        <a href=""><img src="{% static 'img/product-4.jpg' %}" alt=""></a>
-                    </div>
-                    <div class="product-card-info">
-                        <h2>Product 1</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="grid-12">
-            <div class="grid-4">
-                <div class="product-card">
-                    <div class="product-card-image">
-                        <a href=""><img src="{% static 'img/product-3.jpg' %}" alt=""></a>
-                    </div>
-                    <div class="product-card-info">
-                        <h2>Product 1</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-4">
-                <div class="product-card">
-                    <div class="product-card-image">
-                        <a href=""><img src="{% static 'img/product-1.jpg' %}" alt=""></a>
-                    </div>
-                    <div class="product-card-info">
-                        <h2>Product 1</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-4">
-                <div class="product-card">
-                    <div class="product-card-image">
-                        <a href=""><img src="{% static 'img/product-4.jpg' %}" alt=""></a>
-                    </div>
-                    <div class="product-card-info">
-                        <h2>Product 1</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="grid-12">
-            <div class="grid-4">
-                <div class="product-card">
-                    <div class="product-card-image">
-                        <a href=""><img src="{% static 'img/product-1.jpg' %}" alt=""></a>
-                    </div>
-                    <div class="product-card-info">
-                        <h2>Product 1</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-4">
-                <div class="product-card">
-                    <div class="product-card-image">
-                        <a href=""><img src="{% static 'img/product-4.jpg' %}" alt=""></a>
-                    </div>
-                    <div class="product-card-info">
-                        <h2>Product 1</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-4">
-                <div class="product-card">
-                    <div class="product-card-image">
-                        <a href=""><img src="{% static 'img/product-3.jpg' %}" alt=""></a>
-                    </div>
-                    <div class="product-card-info">
-                        <h2>Product 1</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi vel consectetur
-                        </p>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
 
+<div class="btt-button shadow-sm rounded-0">
+    <a class="btt-link d-flex h-100">
+        <i class="fas fa-arrow-up text-white mx-auto my-auto"></i>
+    </a>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    $('.btt-link').click(function (e) {
+        window.scrollTo(0, 0)
+    })
+</script>
+<script>
+    $("#sort-selector").change(function () {
+        let selector = $(this);
+        let currentUrl = new URL(window.location);
+
+        let selectedVal = selector.val();
+        if (selectedVal != "reset") {
+            let sort = selectedVal.split('_')[0]
+            let direction = selectedVal.split('_')[1]
+
+            currentUrl.searchParams.set("sort", sort);
+            currentUrl.searchParams.set("direction", direction);
+
+            window.location.replace(currentUrl);
+        } else {
+
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
+            window.location.replace(currentUrl);
+        }
+    })
+</script>
 {% endblock %}
