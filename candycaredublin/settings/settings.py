@@ -32,8 +32,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.sites',
     'django.contrib.staticfiles',
+    'django.contrib.sites', 
     'cloudinary_storage',
     'cloudinary',
 
@@ -41,6 +41,10 @@ INSTALLED_APPS = [
     'home',
     'products',
 ]
+
+SITE_ID = 1
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
