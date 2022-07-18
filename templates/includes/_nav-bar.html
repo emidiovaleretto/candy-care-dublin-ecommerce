@@ -4,8 +4,16 @@
     <div class="container">
         <nav>
             <ul>
-                <li><a href="">Sign in</a></li>
-                <li><a href="">Sign up</a></li>
+            {% if request.user.is_authenticated %}
+            {% if request.user.is_superuser %}
+                <li><a href="">Product Management</a></li>
+            {% endif %}
+                <li><a href="">My Profile</a></li>
+                <li><a href="{% url 'account_logout' %}">Sign out</a></li>
+            {% else %}
+                <li><a href="{% url 'account_signup' %}">Sign in</a></li>
+                <li><a href="{% url 'account_login' %}">Sign up</a></li>
+            {% endif %}
             </ul>
         </nav>
     </div>
@@ -19,7 +27,13 @@
                 <li><a href="">Shop</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="">Contact</a></li>
-                <li><a href=""><span class="material-symbols-outlined">shopping_bag</span>Cart <span>(0)</span></a></li>
+                <li><a href=""><span class="material-symbols-outlined">shopping_bag</span>Cart <span>
+                    {% if grand_total %}
+                        €{{ grand_total|floatformat:2 }}
+                    {% else %}
+                        €0.00
+                    {% endif %}
+                </span></a></li>
             </ul>
         </nav>
     </div>
