@@ -400,7 +400,7 @@ body {
 }
 
 .intro {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/hero-image.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/hero-image.916cbd609227.jpg") no-repeat center center;
   background-size: cover;
   color: #FFFFFF;
   padding: 200px 0;
@@ -527,19 +527,19 @@ body {
 }
 
 h2.feature-brigadeiro::before {
-  background: url("../img/feature-1.jpg") no-repeat center;
+  background: url("../img/feature-1.bfd8d9b5725e.jpg") no-repeat center;
   background-size: cover;
   box-shadow: 0 0 0 5px #421F1D;
 }
 
 h2.feature-cakes::before {
-  background: url("../img/feature-2.jpg") no-repeat center;
+  background: url("../img/feature-2.83c8e93a0cc3.jpg") no-repeat center;
   background-size: cover;
   box-shadow: 0 0 0 5px #5E3622;
 }
 
 h2.feature-sweets::before {
-  background: url("../img/feature-3.jpg") no-repeat center;
+  background: url("../img/feature-3.6744ce3498ce.jpg") no-repeat center;
   background-size: cover;
   box-shadow: 0 0 0 5px #7B504D;
 }
@@ -804,7 +804,7 @@ form button:hover {
 }
 
 .products-header {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/chocolate-1.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/chocolate-1.294e0ddfd9c0.jpg") no-repeat center center;
   background-size: cover;
   color: #FFFFFF;
   padding: 200px 0;
