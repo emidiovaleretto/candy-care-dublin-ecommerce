@@ -11,8 +11,8 @@
                 <li><a href="">My Profile</a></li>
                 <li><a href="{% url 'account_logout' %}">Sign out</a></li>
             {% else %}
-                <li><a href="{% url 'account_signup' %}">Sign in</a></li>
-                <li><a href="{% url 'account_login' %}">Sign up</a></li>
+                <li><a href="{% url 'account_login' %}">Sign in</a></li>
+                <li><a href="{% url 'account_signup' %}">Sign up</a></li>
             {% endif %}
             </ul>
         </nav>
