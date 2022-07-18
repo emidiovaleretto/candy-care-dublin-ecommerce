@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'cloudinary',
 
+    # Django Allauth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
     # My apps
     'home',
     'products',
