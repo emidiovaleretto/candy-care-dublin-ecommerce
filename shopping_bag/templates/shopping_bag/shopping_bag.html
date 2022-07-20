@@ -21,7 +21,7 @@
 	</div>
 	<div class="row">
 		<div class="col">
-			{% if cart_items %}
+			{% if shopping_bag_items %}
 			<div class="table-responsive rounded">
 				<table class="table table-sm table-borderless">
 					<thead class="text-black">
@@ -34,7 +34,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						{% for item in cart_items %}
+						{% for item in shopping_bag_items %}
 						<tr>
 							<td class="p-3 w-25">
 								<a href="{% url 'product_detail' item.product.id %}">
@@ -58,7 +58,7 @@
 							</td>
 							<td class="py-3 w-25">
 								<form class="form update-form" method="POST"
-									action="{% url 'adjust_quantity_to_cart' item.item_id %}">
+									action="{% url 'adjust_quantity_to_shopping_bag' item.item_id %}">
 									{% csrf_token %}
 									<div class="form-group">
 										<div class="input-group input-group-{{ item.item_id }}">
@@ -166,7 +166,7 @@
 	$(".remove-item").click(function (e) {
 		let csrfToken = "{{ csrf_token }}";
 		let itemId = $(this).attr("id").split("remove_")[1];
-		let url = `/cart/remove/${itemId}`;
+		let url = `/shopping_bag/remove/${itemId}`;
 		let data = {
 			csrfmiddlewaretoken: csrfToken,
 		};
