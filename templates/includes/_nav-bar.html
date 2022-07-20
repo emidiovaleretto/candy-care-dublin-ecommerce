@@ -27,7 +27,7 @@
                 <li><a href="">Shop</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="">Contact</a></li>
-                <li><a href=""><span class="material-symbols-outlined">shopping_bag</span>Cart <span>
+                <li><a href="{% url 'shopping_bag' %}"><span class="material-symbols-outlined">shopping_bag</span>Cart <span>
                     {% if grand_total %}
                         €{{ grand_total|floatformat:2 }}
                     {% else %}
