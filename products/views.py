@@ -3,6 +3,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models.Models_Product import Product
+from .models.Models_Category import Category
 
 
 def list_all_products(request):
