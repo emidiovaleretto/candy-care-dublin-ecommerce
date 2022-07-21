@@ -14,8 +14,7 @@
   
     for (let i = 0; i < allQtyInputs.length; i++) {
       let itemId = $(allQtyInputs[i]).data("item_id");
-      let size = $(allQtyInputs[i]).data("size");
-      handleEnableDisable(itemId, size);
+      handleEnableDisable(itemId);
     }
   
     // check enable/disable every time the input is changed

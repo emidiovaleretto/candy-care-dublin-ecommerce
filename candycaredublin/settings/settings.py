@@ -46,7 +46,9 @@ INSTALLED_APPS = [
     'home',
     'products',
     'profiles',
+
     'shopping_bags'
+
 ]
 
 SITE_ID = 1
@@ -156,3 +158,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+FREE_DELIVERY_THRESHOLD = 50
+STANDARD_DELIVERY_PERCENTAGE = 10
