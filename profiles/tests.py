@@ -29,6 +29,7 @@ class TestModelsUser(TestCase):
 
 
 class TestSignin(TestCase):
+
     def setUp(self):
         self.user = User.objects.create(
             username='test',
@@ -52,3 +53,36 @@ class TestSignin(TestCase):
     def test_user_signin_with_wrong_password_must_return_false(self):
         user = authenticate(username='test', password='wrong password')
         self.assertFalse((user is not None) and user.is_authenticated)
+
+
+class TestViewAuthentication(TestCase):
+
+    def setUp(self):
+        self.user = User.objects.create(
+            username='test',
+            password='12test12',
+            email='test@test.com'
+        )
+        self.user.save()
+
+    def tearDown(self):
+        self.user.delete()
+
+    def test_user_exists_must_return_200(self):
+        context = {
+            'username': 'test',
+            'password': '12test12'
+        }
+
+        response = self.client.post('/auth/login/', data=context)
+        self.assertTrue(response)
+        self.assertEqual(200, response.status_code)
+
+    def test_user_not_found_must_return_404(self):
+        context = {
+            'username': 'anonymous',
+            'password': '12anonymous12'
+        }
+        response = self.client.post('/auth/login/', data=context)
+        self.assertFalse(response)
+        self.assertEqual(404, response.status_code)
