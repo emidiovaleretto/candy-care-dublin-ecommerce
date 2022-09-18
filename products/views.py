@@ -62,9 +62,11 @@ def product_detail(request, product_id):
     """ This function returns an individual product by its id """
 
     product = get_object_or_404(Product, pk=product_id)
+    suggestions = Product.objects.exclude(pk=product_id)[:4]
 
     context = {
-        'product': product
+        'product': product,
+        'suggestions': suggestions
     }
 
     return render(request, 'products/product_detail.html', context=context)
