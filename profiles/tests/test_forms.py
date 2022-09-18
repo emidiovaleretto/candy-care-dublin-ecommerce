@@ -17,5 +17,5 @@ class TestProfileForm(TestCase):
         self.assertTrue(form.is_valid())
 
     def test_profile_form_is_not_valid(self):
-        form = UserProfileForm()
+        form = UserProfileForm(data=None)
         self.assertFalse(form.is_valid())
