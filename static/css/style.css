@@ -505,8 +505,8 @@ body {
 }
 
 .intro {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("../img/hero-image.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../img/halloween_3.jpg") no-repeat center bottom;
   background-size: cover;
   color: #ffffff;
   padding: 200px 0;
@@ -1101,6 +1101,7 @@ form button:hover {
   padding: 16px 32px;
   max-width: max-content;
   background-color: #bf0028;
+  border: 1px transparent;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
   color: #ffffff;
