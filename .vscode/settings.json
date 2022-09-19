@@ -31,7 +31,7 @@
       "editor.defaultFormatter": "esbenp.prettier-vscode"
    },
    "[css]": {
-      "editor.defaultFormatter": "aeschli.vscode-css-formatter"
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
    },
    "[javascript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
