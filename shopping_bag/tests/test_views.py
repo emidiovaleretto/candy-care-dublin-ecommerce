@@ -33,3 +33,12 @@ class TestShoppingBagViews(TestCase):
 
         self.assertEqual(len(shopping_bag.keys()), 1)
         self.assertTrue(shopping_bag is not None)
+
+    def test_add_multiple_items_to_shopping_bag(self):
+        shopping_bag = self.client.session.get('shopping_bag', {
+            'product': self.product,
+            'quantity': 4
+        })
+        self.client.session['shopping_bag'] = shopping_bag
+
+        self.assertEqual(shopping_bag['quantity'], 4)
