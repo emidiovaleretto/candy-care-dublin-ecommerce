@@ -51,6 +51,10 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = 'candycaredublin@example.com'
+
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 MIDDLEWARE = [
