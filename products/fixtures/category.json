@@ -1,0 +1,29 @@
+[{
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+        "name": "cakes",
+        "friendly_name": "Cakes"
+    }
+}, {
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+        "name": "desserts",
+        "friendly_name": "Desserts"
+    }
+}, {
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+        "name": "homemade_bread",
+        "friendly_name": "Homemade Bread"
+    }
+}, {
+    "model": "products.category",
+    "pk": 4,
+    "fields": {
+        "name": "chocolate",
+        "friendly_name": "Chocolate"
+    }
+}]
