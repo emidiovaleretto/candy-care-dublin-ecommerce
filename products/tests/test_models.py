@@ -1,5 +1,5 @@
 from django.test import TestCase
-from ..models import Category, Product
+from ..models import Category, Product, Occasion
 
 
 class TestModelsCategory(TestCase):
@@ -46,3 +46,27 @@ class TestModelsProduct(TestCase):
 
     def test_instance_product(self):
         self.assertIsInstance(self.product, Product)
+
+
+class TestModelsOccasion(TestCase):
+
+    def setUp(self):
+        self.occasion = Occasion.objects.create(
+            name='mothers_day',
+            friendly_name="Mother's Day"
+        )
+        self.occasion.save()
+
+    def tearDown(self):
+        self.occasion.delete()
+
+    def test_create_new_occasion(self):
+        self.assertEqual(1, Occasion.objects.count())
+        self.assertEqual(self.occasion.name, 'mothers_day')
+        self.assertTrue(self.occasion)
+
+    def test_str_name_repr(self):
+        self.assertEqual(str(self.occasion), self.occasion.name)
+
+    def test_instance_of_occasion(self):
+        self.assertIsInstance(self.occasion, Occasion)
