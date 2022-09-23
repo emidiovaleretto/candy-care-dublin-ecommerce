@@ -1,0 +1,20 @@
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/thank-you.css' %}">
+{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="wrapper">
+        <div class="content">
+            <h2>Thank you!</h2>
+            <p>Thank you for signing up! Check your inbox soon for special offers from us</p>
+            <a class="button" href="{% url 'home' %}">Back to Home</a>
+        </div>
+        <div class="grid-4">
+            <img src="{% static 'img/cupcake.jpg' %}" alt="A Chocolate Cupcake With White And Red Toppings">
+        </div>
+    </div>
+</div>
+
+{% endblock  %}
