@@ -1,6 +1,7 @@
 {% load static %}
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/thank-you.css' %}">
+<link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon">
 {% endblock %}
 {% block content %}
 
@@ -11,7 +12,7 @@
             <p>Thank you for signing up! Check your inbox soon for special offers from us</p>
             <a class="button" href="{% url 'home' %}">Back to Home</a>
         </div>
-        <div class="grid-4">
+        <div class="content-img">
             <img src="{% static 'img/cupcake.jpg' %}" alt="A Chocolate Cupcake With White And Red Toppings">
         </div>
     </div>
