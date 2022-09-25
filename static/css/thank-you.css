@@ -59,4 +59,15 @@ img {
     transition: .1s ease-in-out;
 }
 
+@media (max-width: 768px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+    .button {
+        margin-bottom: 40px;
+    }
+    .content-img {
+        display: none;
+    }
+}
 
