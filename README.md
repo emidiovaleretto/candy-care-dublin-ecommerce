@@ -52,9 +52,23 @@ While Django is most often used for web development, it can be used for many oth
 
 ## Django Architecture
 
+Before we really get into the Django universe, let's talk about the software architecture model.
+
+The most popular software architecture, by far, is the Model-View-Controller, or MVC.
+
+Model–view–controller (MVC) is a software architectural pattern commonly used for developing user interfaces that divide the related program logic into three interconnected elements. This is done to separate internal representations of information from the ways information is presented to and accepted from the user.
+
+MVC divides any large application into three parts:
+
+  1. The Model
+  2. The View
+  3. The Controller
+
+Read more in [Wikipedia](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller).
+
 ### Django Project MVT Structure
 
-Every website has three main code sections: **input logic**, **business logic**, and **user interface**.
+Every web application is basically divided into three main sections: **input data**, **business logic**, and **user interface**.
 
 The code has certain functions to perform, the input data is the dataset and how it is stored in the database. It is just a matter of delivering the input to the database in the desired format. The Business Logic is what controls the output of the server in HTML or another format. The HTML and CSS are the pages that it is written for. These days, the approach taken is different. The content is gathered from multiple sources and stored in separate files. This is known as page streaming, and it is a widely used approach for website content. The code for the webpage is stored in one file and the HTML, CSS and JS are stored in separate files. The content is streamed from the server and rendered in the browser.
 
@@ -66,7 +80,7 @@ MVT determines the total structure and workflow of a Django application. In an M
 
  - The **Model** manages the data and is represented by a database. A model is basically a database table.
  - The **View** receives HTTP requests and sends HTTP responses. A view interacts with a model and template to complete a response. It is in **View** where the application logic is present.
- - The **Template** is basically the front-end layer and the dynamic HTML component of a Django application.
+ - The **Template** is basically the front-end layer and the dynamic HTML component of a Django application. The **Template** layer handles the staticfiles such as CSS, JavaScript and Images.
 
 Below I show how the application architecture was designed, based on Django's MVT pattern structure.
 
