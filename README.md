@@ -10,8 +10,24 @@ This project was created as part of the Full Stack Software Development course o
 
 - [Candy Care Dublin](#candy-care-dublin)
 - [Table of Contents](#table-of-contents)
+- [Acknowledgements](#acknowledgements)
+- [Disclaimer](#disclaimer)
 - [Author](#author)
 
+# Acknowledgements
+
+I would like to take the opportunity to thank:
+
+ - To God first, to my family, friends and colleagues for their advice, support and help with testing.
+ - To my mentors Felipe Alarcon & Richard Wells for their feedback, advices, support and, above all, for their patience.
+ - All Code Institute Tutors and Community on Slack for the peer reviews and advice.
+
+
+# Disclaimer
+
+> ****Disclaimer***: The following Context is completely fictional, the company, the context, the CEO, the business questions exist only in my imagination.
+
+> **For educational purposes only.
 
 # Author
 
