@@ -64,6 +64,8 @@ MVC divides any large application into three parts:
   2. The View
   3. The Controller
 
+<img src="./readme-files/imgs/mvc.jpg"/>
+
 Read more in [Wikipedia](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller).
 
 ### Django Project MVT Structure
