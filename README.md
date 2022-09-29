@@ -23,6 +23,13 @@ This project was created as part of the Full Stack Software Development course o
     - [Development environment](#development-environment)
     - [Testing environment](#testing-environment)
     - [Production environment](#production-environment)
+- [Technologies Used](#technologies-used)
+  - [Languages](#languages)
+    - [Front-end](#front-end)
+    - [Back-end](#back-end)
+  - [Frameworks](#frameworks)
+  - [Libraries](#libraries)
+  - [Tools](#tools)
 - [Acknowledgements](#acknowledgements)
 - [Disclaimer](#disclaimer)
 - [Author](#author)
@@ -229,6 +236,43 @@ With the project configured correctly, when running the application, you will se
 <img src="./readme-files/imgs/django_launch.png"/>
 
 [Back to top ⇧](#table-of-contents)
+
+# Technologies Used
+
+## Languages
+
+### Front-end
+
+1. **HTML5, or Hyper Text Markup Language:** Used to construct the page within this app -   
+https://developer.mozilla.org/en-US/docs/Web/HTML
+
+2. **CSS3, or Cascading Style Sheets:** Used to style the various elements on the app's pages via coloring, fonts, spacing, etc. - 
+https://www.w3.org/Style/CSS/Overview.en.html
+
+### Back-end
+
+3. **Javascript:** Used to create iterations across the page. - https://www.javascript.com/
+
+4. **Python 3:** Used to develop all application logic. (https://www.python.org/)
+
+## Frameworks
+
+- [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+- [Django](https://www.djangoproject.com/)
+- [Jquery](https://jquery.com/)
+
+## Libraries
+
+- [Django Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+
+## Tools
+
+- [Heroku](https://www.heroku.com)
+- [Git](https://git-scm.com/)
+- [Postgres](https://www.postgresql.org/)
+- [Db Diagram](https://dbdiagram.io/home)
+- [Figma](https://figma.com)
+- [Stripe](https://stripe.com)
 
 # Acknowledgements
 
