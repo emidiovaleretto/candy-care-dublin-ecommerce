@@ -10,6 +10,8 @@ This project was created as part of the Full Stack Software Development course o
 
 - [Candy Care Dublin](#candy-care-dublin)
 - [Table of Contents](#table-of-contents)
+- [Briefing](#briefing)
+- [The challenge](#the-challenge)
 - [Project Architecture](#project-architecture)
   - [Django Framework](#django-framework)
     - [What is Django?](#what-is-django)
@@ -40,6 +42,26 @@ This project was created as part of the Full Stack Software Development course o
 - [Acknowledgements](#acknowledgements)
 - [Disclaimer](#disclaimer)
 - [Author](#author)
+
+# Briefing
+
+**Candy Care Dublin** is a small company that started in a homely environment, with the idea of ​​making homemade cakes for the people who lived nearby. However, people liked it and recommended it to other people. The business has expanded and today **Candy Care Dublin** has clients that go beyond the surroundings, as well as in other cities. The main means of publicizing the business is through a page on social networks (Facebook and Instagram) but, with the exponential growth of the business, there was a need to create a website, where people could access, see the products available, add to cart and finally checkout the purcharse. In this way, it would no longer be necessary to make sales via Instagram or Facebook, which would facilitate the administration of the business.
+
+# The challenge
+
+With this idea in mind, the person in charge of **Candy Care Dublin** hired me to develop a fullstack web application for the company.
+
+An e-commerce web application is expected to be delivered that meets the following needs:
+
+> 1. A website whose purpose of the company is immediately understood by the user.
+> 2. Have a clear information on what the site is about and what it provides
+> 3. Have an easy navigation that is consistent throughout the website
+> 4. That the user can easily view the list of available products.
+> 5. That the user can easily add an specific item to the bag and identity the total cost of the purchase and all items they will receive.
+> 6. That the user can easily enter their payment information and be sure their personal and payment information are safe and secure.
+
+*For admin*
+> 7. A functionality where the app admin can easily add one or more products, edit and/or delete an specific product.
 
 # Project Architecture
 
