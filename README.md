@@ -12,6 +12,8 @@ This project was created as part of the Full Stack Software Development course o
 - [Table of Contents](#table-of-contents)
 - [Briefing](#briefing)
 - [The challenge](#the-challenge)
+  - [Business Rules](#business-rules)
+  - [Screens](#screens)
 - [Project Architecture](#project-architecture)
   - [Django Framework](#django-framework)
     - [What is Django?](#what-is-django)
@@ -62,6 +64,29 @@ An e-commerce web application is expected to be delivered that meets the followi
 
 *For admin*
 > 7. A functionality where the app admin can easily add one or more products, edit and/or delete an specific product.
+
+## Business Rules
+
+The application's administrative functions are intended to manage what each user can do within the system. Permissions such as adding, editing or removing a property, for example, should under no circumstances be given to the user of the application. Such functionalities must be assigned exclusively to the administrator.
+
+In the system, there will be the following user functionalities:
+
+   - Admin: has permission in all areas of the system.
+   - Users: can edit your own profile like change profile picture or change password. The user can list all the available products and sort them by **Price** and **Name**, add one or more products to their bag, identity the total cost of their purchase and all items they will receive, edit their bag by removing an specific product from the bag or adding another one, before checkout. The user should be able to receive an e-mail containing all the details about their purchase such as the list of products, the total cost, the delivery address, and so on.
+
+## Screens
+
+- Admin:
+    - Add/Edit/Remove products.
+    - View all screens users can view as well.
+- Users:
+    - Can log in and out of the application.
+    - Can manage their own profile.
+    - Can sign up to the newsletter form.
+    - Can add one or more products to their bag.
+
+
+[Back to top ⇧](#table-of-contents)
 
 # Project Architecture
 
