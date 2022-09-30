@@ -58,11 +58,11 @@ def list_all_products(request):
     return render(request, 'products/products.html', context=context)
 
 
-def product_detail(request, product_id):
+def product_detail(request, slug):
     """ This function returns an individual product by its id """
 
-    product = get_object_or_404(Product, pk=product_id)
-    suggestions = Product.objects.exclude(pk=product_id)[:4]
+    product = get_object_or_404(Product.objects.filter(slug=slug))
+    suggestions = Product.objects.exclude(slug=slug)[:4]
 
     context = {
         'product': product,

@@ -80,7 +80,7 @@
     <ul>
         {% for suggestion in suggestions %}
         <li>
-            <a href="{% url 'product_detail' suggestion.id %}">
+            <a href="{% url 'product_detail' suggestion.slug %}">
                 <img src="{{ suggestion.image.url }}" alt="{{ suggestion.name }}">
                 <h3 class="font-p-m gray-11">{{ suggestion.name }}</h3>
                 <p class="font-f-m gray-8">€ {{ suggestion.price }}</p>

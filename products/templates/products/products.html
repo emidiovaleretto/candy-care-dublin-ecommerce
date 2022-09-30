@@ -59,9 +59,9 @@
                 <div class="product-card">
                     <div class="product-card-image">
                         {% if product.image %}
-                        <a href="{% url 'product_detail' product.id %}"><img src="{{ product.image.url }}" alt="{{ product.name }}"></a>
+                        <a href="{% url 'product_detail' product.slug %}"><img src="{{ product.image.url }}" alt="{{ product.name }}"></a>
                         {% else %}
-                        <a href="{% url 'product_detail' product.id %}"><img src="https://res.cloudinary.com/emidio-cloud/image/upload/v1658158199/Image_not_available_qyixph.png" alt="{{ product.name }}"></a>
+                        <a href="{% url 'product_detail' product.slug %}"><img src="https://res.cloudinary.com/emidio-cloud/image/upload/v1658158199/Image_not_available_qyixph.png" alt="{{ product.name }}"></a>
                         {% endif %}
                     </div>
                     <div class="product-card-info">
