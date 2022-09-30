@@ -3,12 +3,11 @@
     "pk": 1,
     "fields": {
         "category": 1,
-        "sku": null,
+        "sku": "1fed7277-644c-4abe-ad66-faaf966c3d3f",
         "name": "M&M's Funny Birthday Cake",
+        "slug": "m&ms-funny-birthday-cake",
         "description": "This M&M's Chocolate Cake has a hidden m&m's surprise center and is loaded with m&m's chocolates.",
         "price": "35.00",
-        "rating": null,
-        "image_url": null,
         "image": "media/pratiksha-mohanty-SxHxyNx-6YI-unsplash_csxzhp"
     }
 }, {
@@ -16,12 +15,11 @@
     "pk": 2,
     "fields": {
         "category": 2,
-        "sku": null,
+        "sku": "b331044a-a2df-4daa-a5a2-4ffa262b5fb9",
         "name": "Brigadeiro",
+        "slug": "brigadeiro",
         "description": "This famous sweet is a type of Brazilian Chocolate Confectionery. It's a scrumptious bite-size (or two) chocolate sweet, very popular in Brazil.",
         "price": "10.00",
-        "rating": null,
-        "image_url": null,
         "image": "media/blackieshoot-lTevGZKLufk-unsplash_eyhr14"
     }
 }, {
@@ -29,12 +27,11 @@
     "pk": 3,
     "fields": {
         "category": 1,
-        "sku": null,
+        "sku": "0ffc44c6-6a9c-47ed-a1ec-42d73c15d200",
         "name": "Strawberry flavored birthday cake",
+        "slug": "strawberry-flavored-birthday-cake",
         "description": "Strawberry flavored birthday cake",
         "price": "35.00",
-        "rating": null,
-        "image_url": null,
         "image": "media/marina-grynykha-Grir9HnKx_0-unsplash_iuvq5b"
     }
 }, {
@@ -42,12 +39,11 @@
     "pk": 4,
     "fields": {
         "category": 1,
-        "sku": null,
+        "sku": "f4d0a836-3f03-49fe-a14f-3e2c6a870fd6",
         "name": "Gourmet's Double Chocolate Cake",
+        "slug": "gourmets-double-chocolate-cake",
         "description": "This double chocolate cake is made with buttermilk, oil, lots of cocoa powder, and coffee, if you wish.",
         "price": "35.00",
-        "rating": null,
-        "image_url": null,
         "image": "media/pexels-darko-trajković-10921755_wco5jn"
     }
 }, {
@@ -55,25 +51,23 @@
     "pk": 5,
     "fields": {
         "category": 2,
-        "sku": null,
+        "sku": "050601c7-5d1e-4e82-9ef7-2c792d57e3f2",
         "name": "Chocolate Cake for Birthdays",
+        "slug": "chocolate-cake-for-birthdays",
         "description": "Chocolate Cake for Birthdays",
         "price": "35.00",
-        "rating": null,
-        "image_url": null,
         "image": "media/pexels-abhinav-goswami-291528_zvrtgj"
     }
 }, {
     "model": "products.product",
     "pk": 6,
     "fields": {
-        "category": null,
-        "sku": null,
+        "category": 2,
+        "sku": "1bb18a9d-7694-4c21-8da8-4aa681f2624b",
         "name": "Volcano Chocolate Cake",
+        "slug": "volcano-chocolate-cake",
         "description": "Combine the butter and chocolate in a double boiler and melt over low heat, stirring until smooth.",
         "price": "30.00",
-        "rating": null,
-        "image_url": null,
         "image": "media/pexels-pavel-danilyuk-6999358_tx3s0f"
     }
 }, {
@@ -81,12 +75,11 @@
     "pk": 7,
     "fields": {
         "category": 2,
-        "sku": null,
+        "sku": "33335a01-48fc-4318-85ac-f70480e9a72e",
         "name": "Assorted Macarons",
+        "slug": "assorted-macarons",
         "description": "Delicate meringue and almond-flour based sandwich cookies with buttercream, jam, or ganache filling that comes in a variety of flavors.",
         "price": "15.00",
-        "rating": null,
-        "image_url": null,
         "image": "media/pexels-arminas-raudys-808941_izwwyo"
     }
 }, {
@@ -94,12 +87,11 @@
     "pk": 8,
     "fields": {
         "category": 2,
-        "sku": null,
+        "sku": "52d35649-80b7-4d35-a8cb-5307ddf1426a",
         "name": "Secret box of Assorted Sweets",
+        "slug": "secret-box-of-assorted-sweets",
         "description": "Our Secret box of Assorted Sweets is perfect for surprising someone who loves the most famous soft candy in the world.",
         "price": "20.00",
-        "rating": null,
-        "image_url": null,
         "image": "media/pexels-pelageia-zelenina-10390457_1_ydpvjp"
     }
 }, {
@@ -107,12 +99,11 @@
     "pk": 9,
     "fields": {
         "category": 2,
-        "sku": null,
+        "sku": "a36ea10b-a158-42e6-a372-d7c5d23543d4",
         "name": "Lemon Tart",
+        "slug": "lemon-tart",
         "description": "A pastry case (often made in a fluted tart tin) containing a baked lemon custard (usually composed of eggs, sugar, lemon juice and cream).",
         "price": "5.00",
-        "rating": null,
-        "image_url": null,
         "image": "media/pexels-suzy-hazelwood-1098592_b9wcoe"
     }
 }, {
@@ -120,12 +111,11 @@
     "pk": 10,
     "fields": {
         "category": 1,
-        "sku": null,
+        "sku": "7035d571-d4a3-4361-a144-453de9f963c1",
         "name": "Kit Kat Chocolate Cake",
+        "slug": "kit-kat-chocolate-cake",
         "description": "This Kit Kat Cake recipe begins with chocolate cake. It's surrounded by Kit Kat Candy Bars, wrapped with a ribbon and topped with M&M's.",
         "price": "45.00",
-        "rating": null,
-        "image_url": null,
         "image": "media/pexels-phạm-thành-đạt-4403073_hotplj"
     }
 }, {
@@ -133,12 +123,11 @@
     "pk": 11,
     "fields": {
         "category": 1,
-        "sku": null,
+        "sku": "c00cf9c3-4272-492f-bf16-1cd5fc70a136",
         "name": "Wedding Cake",
+        "slug": "wedding-cake",
         "description": "Wedding Cake",
         "price": "49.90",
-        "rating": null,
-        "image_url": null,
         "image": "media/pexels-rodnae-productions-8964281_rqgims"
     }
 }, {
@@ -146,12 +135,11 @@
     "pk": 12,
     "fields": {
         "category": 2,
-        "sku": null,
+        "sku": "12ee68c8-16a7-451a-b930-a378b752e811",
         "name": "Churros",
+        "slug": "churros",
         "description": "A sweet Brazilian snack consisting of a strip of fried dough dusted with sugar or cinnamon.",
         "price": "10.00",
-        "rating": null,
-        "image_url": null,
         "image": "media/pexels-pixabay-372851_xcrscu"
     }
 }, {
@@ -159,12 +147,11 @@
     "pk": 13,
     "fields": {
         "category": 4,
-        "sku": null,
+        "sku": "eaa5488c-56de-42bd-9013-510a4e2dc3a0",
         "name": "Chewy Peanut Brittle Bars",
+        "slug": "chewy-peanut-brittle-bars",
         "description": "Creamy peanut butter, yellow cake mix, sweetened",
         "price": "12.00",
-        "rating": null,
-        "image_url": null,
         "image": ""
     }
 }]
