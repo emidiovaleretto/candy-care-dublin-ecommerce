@@ -59,7 +59,7 @@ def list_all_products(request):
 
 
 def product_detail(request, slug):
-    """ This function returns an individual product by its id """
+    """ This function returns an individual product by its slug """
 
     product = get_object_or_404(Product.objects.filter(slug=slug))
     suggestions = Product.objects.exclude(slug=slug)[:4]
