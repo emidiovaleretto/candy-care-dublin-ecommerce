@@ -205,6 +205,8 @@ The colors used throughout the project were extracted from the logo.
 
 <img src="./readme-files/imgs/footer.jpg" alt="Footer">
 
+[Back to top ⇧](#table-of-contents)
+
 # Project Architecture
 
 ## Django Framework
@@ -219,7 +221,7 @@ Django is a free and open-source web application framework written in Python. It
 
 ### Why did I choose Django to work with?
 
-While Django is most often used for web development, it can be used for many other purposes as well. It is a highly-regarded piece of software and is highly recommended for anyone who is serious about their web development. It can be used to build large e-commerce websites, blogging sites, or anything else that requires a scalable, high-performing website. In this article, we are going to cover all the basics you need to know to get started with Django. We will cover topics such as setting up your development environment and installing and using Django. We will also cover how to choose the right Django installation for your needs and how to get the most out of the framework by using best practices. Here are some reasons why I chose to work with Django:
+While Django is most often used for web development, it can be used for many other purposes as well. It is a highly-regarded piece of software and is highly recommended for anyone who is serious about their web development. It can be used to build large e-commerce websites, blogging sites, or anything else that requires a scalable, high-performing website. Here are some reasons why I chose to work with Django:
 
  - Django is a great option for beginner and advanced developers alike. It’s very easy to learn and install, and it doesn’t require any external tools or libraries. It can be used to build any type of web or mobile app, from the simplest to the most complex. Django is often cited as a “best practices” application development framework, because it follows a consistent structure, provides everything developers might need and is very easy to use.
  
@@ -590,3 +592,5 @@ I would like to take the opportunity to thank:
 Made with ❤️ by <b>Emidio Valereto</b> <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="16px"> Get in touch!
 
 [![Linkedin Badge](https://img.shields.io/badge/-Emidio-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/emidiovalereto/)](https://www.linkedin.com/in/emidiovalereto/) [![Gmail Badge](https://img.shields.io/badge/-emidio.valereto@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:emidio.valereto@gmail.com)](mailto:emidio.valereto@gmail.com)
+
+[Back to top ⇧](#table-of-contents)
