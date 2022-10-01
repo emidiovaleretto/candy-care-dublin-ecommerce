@@ -10,7 +10,14 @@ class ProductAdmin(admin.ModelAdmin):
         'price',
         'image'
     )
-    ordering = ('sku',)
+    ordering = ('id',)
+    list_display_links = (
+        'sku',
+        'name',
+    )
+    list_editable = (
+        'price',
+    )
 
 
 class CategoryAdmin(admin.ModelAdmin):
