@@ -14,6 +14,11 @@ This project was created as part of the Full Stack Software Development course o
 - [The challenge](#the-challenge)
   - [Business Rules](#business-rules)
   - [Screens](#screens)
+- [User Experience | UX](#user-experience--ux)
+  - [User Stories](#user-stories)
+    - [User](#user)
+    - [Admin](#admin)
+    - [Developer](#developer)
 - [Project Architecture](#project-architecture)
   - [Django Framework](#django-framework)
     - [What is Django?](#what-is-django)
@@ -85,8 +90,39 @@ In the system, there will be the following user functionalities:
     - Can sign up to the newsletter form.
     - Can add one or more products to their bag.
 
-
 [Back to top ⇧](#table-of-contents)
+
+# User Experience | UX
+  
+## User Stories
+
+### User
+
+- As a **Shooper** I want to be able to **quickly identify deals, clearance items and special offers** so that **I can take advantage of special savings on products I would like to purchase**.
+- As a **Shooper** I want to be able to **easily view the total of my purchases at any time** so that **be aware of how much I've already spent and avoid spending too much**.
+- As a **Shooper** I want to be able to **easily register for an account** so that **I can have a personal account and be able to view my profile**.
+- As a **Shooper** I want to be able to **easily login or logout from my account** so that **I can access my personal account information**.
+- As a **Shooper** I want to be able to **easily recover my password in case I forget it** so that **I can recover access to my account**.
+- As a **Shooper** I want to be able to **receive a confirmation email after registering** so that **I can verify that my account registration was successful**.
+- As a **Shooper** I want to be able to **have a personalized user profile** so that **I can view my personal order history and order confirmations, and save my payment information**.
+- As a **Shooper**, I want to be able to **sort the list of available products** so that **I can easily identify the best priced and categorically sorted products**.
+- As a **Shooper**, I want to be able to **sort a specific category of product** so that **I can find the best-priced product in a specific category, or sort the products in that category by name**.
+- As a **Shooper**, I want to be able to **sort multiple categories of products simultaneously** so that **I can find the best-priced or best-rated product across broad categories, such as "vegan" or "best sellers.**.
+- As a **Shooper**, I want to be able to **search for products by occasion, such as "birthdays" or "father's day"**.
+- As a **Shooper**, I want to be able to **easily see what I have searched for and the number of results** so that **I can quickly decide whether the product I want is available**.
+
+### Admin
+
+- As a **Site Admin** I want to be able to **easily add a product** so that **I can add new items to my store**.
+- As a **Site Admin** I want to be able to **see all existing products** in a simple and easy manner.
+- As a **Site Admin** I want to be able to **edit/update a product** so that **I can change product prices, descriptions, images and other product criteria**.
+- As a **Site Admin** I want to be able to **delete a product** so that **I can remove items that are no longer for sale**.
+
+### Developer
+
+- As a **Developer** I want to ensure that **all application features work** as they were implemented to work.
+- As a **Developer** I want to ensure **an authenticated user can access** all required information correctly.
+- As a **Developer** I want to **work together with the administrator** of the site for **improvements** for the user of the same.
 
 # Project Architecture
 
