@@ -22,6 +22,18 @@ This project was created as part of the Full Stack Software Development course o
   - [Design Choices](#design-choices)
     - [Typography](#typography)
     - [Color palette](#color-palette)
+- [User Interface | UI](#user-interface--ui)
+  - [Features](#features)
+    - [Main Navigation Bar](#main-navigation-bar)
+      - [Secondary Navigation Bar](#secondary-navigation-bar)
+    - [Hero Image](#hero-image)
+    - [About](#about)
+    - [Product Showcase](#product-showcase)
+    - [Occasions](#occasions)
+    - [Newsletter Form](#newsletter-form)
+      - [Thank you Page](#thank-you-page)
+    - [Social Networks](#social-networks)
+    - [Footer](#footer)
 - [Project Architecture](#project-architecture)
   - [Django Framework](#django-framework)
     - [What is Django?](#what-is-django)
@@ -144,6 +156,54 @@ The colors used throughout the project were extracted from the logo.
 <img src="./readme-files/imgs/color_reference.jpg"/>
 
 [Back to top ⇧](#table-of-contents)
+
+# User Interface | UI
+
+<div style="text-align: center;">
+  <img src="./readme-files/imgs/home_desktop.jpg" alt="Home Desktop">
+</div>
+
+## Features
+
+### Main Navigation Bar
+
+<img src="./readme-files/imgs/main_nav.jpg" alt="Main Navigation">
+
+#### Secondary Navigation Bar
+
+<img src="./readme-files/imgs/secondary_nav.jpg" alt="Secondary Navigation">
+
+### Hero Image
+
+<img src="./readme-files/imgs/hero_image.jpg" alt="Hero Image">
+
+### About
+
+<img src="./readme-files/imgs/about.jpg" alt="About section">
+
+### Product Showcase
+
+<img src="./readme-files/imgs/products.jpg" alt="Product Showcase">
+
+### Occasions
+
+<img src="./readme-files/imgs/occasions.jpg" alt="Occasions">
+
+### Newsletter Form
+
+<img src="./readme-files/imgs/newsletter_form.jpg" alt="Newsletter Form">
+
+#### Thank you Page
+
+<img src="./readme-files/imgs/thank_you.jpg" alt="Thank you Page">
+
+### Social Networks
+
+<img src="./readme-files/imgs/social.jpg" alt="Social Networks">
+
+### Footer
+
+<img src="./readme-files/imgs/footer.jpg" alt="Footer">
 
 # Project Architecture
 
