@@ -11,7 +11,7 @@ class Product(models.Model):
         'Category', null=True, blank=True, on_delete=models.SET_NULL)
     occasion = models.ForeignKey(
         'Occasion', null=True, blank=True, on_delete=models.SET_NULL)
-    sku = models.UUIDField(primary_key=True, default=uuid4, editable=False)
+    sku = models.UUIDField(default=uuid4, editable=False)
     name = models.CharField(max_length=254)
     slug = models.SlugField(max_length=100, null=False, unique=True)
     description = models.TextField()
