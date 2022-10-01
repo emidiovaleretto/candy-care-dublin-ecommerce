@@ -21,6 +21,7 @@ This project was created as part of the Full Stack Software Development course o
     - [Developer](#developer)
   - [Design Choices](#design-choices)
     - [Typography](#typography)
+    - [Color palette](#color-palette)
 - [Project Architecture](#project-architecture)
   - [Django Framework](#django-framework)
     - [What is Django?](#what-is-django)
@@ -133,6 +134,16 @@ In the system, there will be the following user functionalities:
 As a primary font, I have chosen to use [Roboto](https://fonts.google.com/specimen/Roboto) since Roboto has been designed for screens and includes 12 different font weights, from thin to black. Roboto also allows letters to take up as much space as it needs and ultimately, making for an improved experience for the user.
 
 As a secondary font I have chosen to use [Montserrat](https://fonts.google.com/specimen/Montserrat) once Montserrat really shines for short pieces of all caps and the geometric simplicity of the letters. It is classified as a *sans serif* with 18 styles and 9 weights. This typeface is similar to Proxima Nova, Gotham, Futura, Arial and Helvetica.
+
+<img src="./readme-files/imgs/design_choices.jpg"/>
+
+### Color palette
+
+The colors used throughout the project were extracted from the logo.
+
+<img src="./readme-files/imgs/color_reference.jpg"/>
+
+[Back to top ⇧](#table-of-contents)
 
 # Project Architecture
 
