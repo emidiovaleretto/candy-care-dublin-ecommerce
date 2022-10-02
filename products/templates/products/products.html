@@ -11,23 +11,11 @@
 
 <section class="products">
     
-    <div class="row">
-        <div class="col text-center mt-3">
-            {% for current_category in current_categories %}
-            <a class="category-badge text-decoration-none"
-                href="{% url 'products' %}?category={{ current_category.name }}">
-                <span
-                    class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ current_category.friendly_name }}
-                </span>
-            </a>
-            {% endfor %}
-        </div>
-    </div>
-    <div class="row mt-1 mb-2">
+    <div class="row mt-1 mb-2 container mx-auto">
         <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
             <div class="sort-select-wrapper w-50">
                 <select id="sort-selector"
-                    class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                    class="custom-select custom-select-sm rounded-0 p-1 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                     <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
                     </option>
                     <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price
@@ -43,11 +31,7 @@
         </div>
         <div class="col-12 col-md-6 order-md-first">
             <p class="text-muted mt-3 text-center text-md-left">
-                {% if search_term or current_categories or current_sorting != 'None_None' %}
-                <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
-                {% endif %}
-                {{ products|length }} Products{% if search_term %} found for
-                <strong>"{{ search_term }}"</strong>{% endif %}
+                {{ products|length }} Products found
             </p>
         </div>
     </div>
