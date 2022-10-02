@@ -5,7 +5,7 @@
         "category": 1,
         "sku": "1fed7277-644c-4abe-ad66-faaf966c3d3f",
         "name": "M&M's Funny Birthday Cake",
-        "slug": "m&ms-funny-birthday-cake",
+        "slug": "mms-funny-birthday-cake",
         "description": "This M&M's Chocolate Cake has a hidden m&m's surprise center and is loaded with m&m's chocolates.",
         "price": "35.00",
         "image": "media/pratiksha-mohanty-SxHxyNx-6YI-unsplash_csxzhp"
@@ -152,6 +152,6 @@
         "slug": "chewy-peanut-brittle-bars",
         "description": "Creamy peanut butter, yellow cake mix, sweetened",
         "price": "12.00",
-        "image": ""
+        "image": "media/lunch-lady-peanut-butter-bars-04_yvdvg0_hy05sz.jpg"
     }
 }]
