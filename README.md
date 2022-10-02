@@ -47,6 +47,12 @@ This project was created as part of the Full Stack Software Development course o
     - [Development environment](#development-environment)
     - [Testing environment](#testing-environment)
     - [Production environment](#production-environment)
+  - [Data Storage](#data-storage)
+    - [Database schema](#database-schema)
+    - [User Table](#user-table)
+    - [Profile Table](#profile-table)
+    - [Product Table](#product-table)
+    - [Category Table](#category-table)
 - [Technologies Used](#technologies-used)
   - [Languages](#languages)
     - [Front-end](#front-end)
@@ -82,7 +88,8 @@ An e-commerce web application is expected to be delivered that meets the followi
 > 5. That the user can easily add an specific item to the bag and identity the total cost of the purchase and all items they will receive.
 > 6. That the user can easily enter their payment information and be sure their personal and payment information are safe and secure.
 
-*For admin*
+_For admin_
+
 > 7. A functionality where the app admin can easily add one or more products, edit and/or delete an specific product.
 
 ## Business Rules
@@ -91,24 +98,24 @@ The application's administrative functions are intended to manage what each user
 
 In the system, there will be the following user functionalities:
 
-   - Admin: has permission in all areas of the system.
-   - Users: can edit your own profile like change profile picture or change password. The user can list all the available products and sort them by **Price** and **Name**, add one or more products to their bag, identity the total cost of their purchase and all items they will receive, edit their bag by removing an specific product from the bag or adding another one, before checkout. The user should be able to receive an e-mail containing all the details about their purchase such as the list of products, the total cost, the delivery address, and so on.
+- Admin: has permission in all areas of the system.
+- Users: can edit your own profile like change profile picture or change password. The user can list all the available products and sort them by **Price** and **Name**, add one or more products to their bag, identity the total cost of their purchase and all items they will receive, edit their bag by removing an specific product from the bag or adding another one, before checkout. The user should be able to receive an e-mail containing all the details about their purchase such as the list of products, the total cost, the delivery address, and so on.
 
 ## Screens
 
 - Admin:
-    - Add/Edit/Remove products.
-    - View all screens users can view as well.
+  - Add/Edit/Remove products.
+  - View all screens users can view as well.
 - Users:
-    - Can log in and out of the application.
-    - Can manage their own profile.
-    - Can sign up to the newsletter form.
-    - Can add one or more products to their bag.
+  - Can log in and out of the application.
+  - Can manage their own profile.
+  - Can sign up to the newsletter form.
+  - Can add one or more products to their bag.
 
 [Back to top ⇧](#table-of-contents)
 
 # User Experience | UX
-  
+
 ## User Stories
 
 ### User
@@ -145,7 +152,7 @@ In the system, there will be the following user functionalities:
 
 As a primary font, I have chosen to use [Roboto](https://fonts.google.com/specimen/Roboto) since Roboto has been designed for screens and includes 12 different font weights, from thin to black. Roboto also allows letters to take up as much space as it needs and ultimately, making for an improved experience for the user.
 
-As a secondary font I have chosen to use [Montserrat](https://fonts.google.com/specimen/Montserrat) once Montserrat really shines for short pieces of all caps and the geometric simplicity of the letters. It is classified as a *sans serif* with 18 styles and 9 weights. This typeface is similar to Proxima Nova, Gotham, Futura, Arial and Helvetica.
+As a secondary font I have chosen to use [Montserrat](https://fonts.google.com/specimen/Montserrat) once Montserrat really shines for short pieces of all caps and the geometric simplicity of the letters. It is classified as a _sans serif_ with 18 styles and 9 weights. This typeface is similar to Proxima Nova, Gotham, Futura, Arial and Helvetica.
 
 <img src="./readme-files/imgs/design_choices.jpg"/>
 
@@ -223,18 +230,20 @@ Django is a free and open-source web application framework written in Python. It
 
 While Django is most often used for web development, it can be used for many other purposes as well. It is a highly-regarded piece of software and is highly recommended for anyone who is serious about their web development. It can be used to build large e-commerce websites, blogging sites, or anything else that requires a scalable, high-performing website. Here are some reasons why I chose to work with Django:
 
- - Django is a great option for beginner and advanced developers alike. It’s very easy to learn and install, and it doesn’t require any external tools or libraries. It can be used to build any type of web or mobile app, from the simplest to the most complex. Django is often cited as a “best practices” application development framework, because it follows a consistent structure, provides everything developers might need and is very easy to use.
- 
- - This flexibility is what makes Django such a popular choice for building websites. It’s easy to learn, easy to implement, and can be extended with a huge range of tools and libraries. It’s also very quick to create a website with and can be up and running in a matter of days.
- 
- - Ridiculously fast.
-     - Django was designed to help developers take applications from concept to completion as quickly as possible. 
+- Django is a great option for beginner and advanced developers alike. It’s very easy to learn and install, and it doesn’t require any external tools or libraries. It can be used to build any type of web or mobile app, from the simplest to the most complex. Django is often cited as a “best practices” application development framework, because it follows a consistent structure, provides everything developers might need and is very easy to use.
 
- - Reassuringly secure.
-     - Django takes security seriously and helps developers avoid many common security mistakes.
+- This flexibility is what makes Django such a popular choice for building websites. It’s easy to learn, easy to implement, and can be extended with a huge range of tools and libraries. It’s also very quick to create a website with and can be up and running in a matter of days.
 
- - Exceedingly scalable.
-     - Some of the busiest sites on the web leverage Django’s ability to quickly and flexibly scale.
+- Ridiculously fast.
+
+  - Django was designed to help developers take applications from concept to completion as quickly as possible.
+
+- Reassuringly secure.
+
+  - Django takes security seriously and helps developers avoid many common security mistakes.
+
+- Exceedingly scalable.
+  - Some of the busiest sites on the web leverage Django’s ability to quickly and flexibly scale.
 
 ## Django Architecture
 
@@ -246,9 +255,9 @@ Model–view–controller (MVC) is a software architectural pattern commonly use
 
 MVC divides any large application into three parts:
 
-  1. The Model
-  2. The View
-  3. The Controller
+1. The Model
+2. The View
+3. The Controller
 
 <img src="./readme-files/imgs/mvc.jpg"/>
 
@@ -266,9 +275,9 @@ Django is based on Model-View-Template architecture. MVT is a design pattern or 
 
 MVT determines the total structure and workflow of a Django application. In an MVT architecture
 
- - The **Model** manages the data and is represented by a database. A model is basically a database table.
- - The **View** receives HTTP requests and sends HTTP responses. A view interacts with a model and template to complete a response. It is in **View** where the application logic is present.
- - The **Template** is basically the front-end layer and the dynamic HTML component of a Django application. The **Template** layer handles the staticfiles such as CSS, JavaScript and Images.
+- The **Model** manages the data and is represented by a database. A model is basically a database table.
+- The **View** receives HTTP requests and sends HTTP responses. A view interacts with a model and template to complete a response. It is in **View** where the application logic is present.
+- The **Template** is basically the front-end layer and the dynamic HTML component of a Django application. The **Template** layer handles the staticfiles such as CSS, JavaScript and Images.
 
 Below I show how the application architecture was designed, based on Django's MVT pattern structure.
 
@@ -363,6 +372,7 @@ os.environ.setdefault("SECRET_KEY_PRODUCTION", "YOUR SECRET KEY")
 os.environ.setdefault("SECRET_KEY_TESTING", "YOUR SECRET KEY")
 
 ```
+
 Once that's done, don't forget to remove the database settings and secret key from the `settings.py` file.
 
 It is worth mentioning that with this change in the project structure, you will need to change some more settings, so that the application works correctly. By default, in the `settings.py` file, the `BASE_DIR` variable looks like this: `BASE_DIR = Path(__file__).resolve().parent.parent`. You will need to add a new `.parent` as there has been a subdivision of the main project folder. So the `BASE_DIR` variable should look like this: `BASE_DIR = Path(__file__).resolve().parent.parent.parent`.
@@ -410,17 +420,72 @@ With the project configured correctly, when running the application, you will se
 
 [Back to top ⇧](#table-of-contents)
 
+## Data Storage
+
+### Database schema
+
+<img src="./readme-files/imgs/db_schema.png" alt="Database Schema">
+
+### User Table
+
+| Title          | Key In Database | Form Validation           | Data Type   |
+| -------------- | --------------- | ------------------------- | ----------- |
+| id             | id              | No Validation             | Primary Key |
+| Username       | username        | max_length 20             | CharField   |
+| First Name     | first_name      | max_lenght 20             | CharField   |
+| Last Name      | last_name       | max_lenght 20             | CharField   |
+| E-mail Address | email           | Must contain @ & .com etc | Email       |
+| Password       | password        | max length 50             | CharField   |
+
+### Profile Table
+
+Once a user registers in the system, a profile is automatically created for that user.
+
+| Title                    | Key In Database          | Form Validation                              | Data Type    |
+| ------------------------ | ------------------------ | -------------------------------------------- | ------------ |
+| Id                       | id                       | No Validation                                | Primary Key  |
+| user                     | user                     | max length 50                                | Foreign Key  |
+| Default Phone Number     | default_phone_number     | max_length=20, null=True, blank=True         | CharField    |
+| Default Street Address 1 | default_street_address_1 | max_length=80, null=True, blank=True         | CharField    |
+| Default Street Address 2 | default_street_address_2 | max_length=80, null=True, blank=True         | CharField    |
+| Default Town or City     | default_town_or_city     | max_length=40, null=True, blank=True         | CharField    |
+| Default County           | default_county           | max_length=80, null=True, blank=True         | CharField    |
+| Default PostCode         | default_postcode         | max_length=20, null=True, blank=True         | CharField    |
+| Default Country          | default_country          | blank_label='Country', null=True, blank=True | CountryField |
+
+### Product Table
+
+|    Title    | Key In Database |                    Form Validation                     |  Data Type   |
+| :---------: | :-------------: | :----------------------------------------------------: | :----------: |
+|     Id      |       id        |                     No Validation                      | Primary Key  |
+|  Category   |    category     | 'Category', null=True, unique=True, on_delete=SET_NULL | Foreign Key  |
+|  Occasion   |    occasion     | 'Occasion', null=True, unique=True, on_delete=SET_NULL | Foreign Key  |
+|     SKU     |       sku       |             default=uuid4, editable=False              |  UUIDField   |
+|    Name     |      name       |                     max_length=254                     |  CharField   |
+|    Slug     |      slug       |        max_length=100, null=False, unique=True         |  SlugField   |
+| Description |   description   |                     No Validation                      |  TextField   |
+|    Price    |      price      |         max_digits=6, null=False, unique=True          | DecimalField |
+|    Image    |      image      |                 null=True, blank=True                  |  ImageField  |
+
+### Category Table
+
+| Title         | Key in Database | Form Validation                   | Data Type     |
+| ------------- | --------------- | --------------------------------- | ------------- |
+| Id            | id              | No Validation                     | Primary Key   |
+| Name          | name            | max length=254                    | CharField     |
+| Friendly Name | friendly_name   | max_length=254, null=True, blank= | CharField     |
+
 # Technologies Used
 
 ## Languages
 
 ### Front-end
 
-1. **HTML5, or Hyper Text Markup Language:** Used to construct the page within this app -   
-https://developer.mozilla.org/en-US/docs/Web/HTML
+1. **HTML5, or Hyper Text Markup Language:** Used to construct the page within this app -  
+   https://developer.mozilla.org/en-US/docs/Web/HTML
 
-2. **CSS3, or Cascading Style Sheets:** Used to style the various elements on the app's pages via coloring, fonts, spacing, etc. - 
-https://www.w3.org/Style/CSS/Overview.en.html
+2. **CSS3, or Cascading Style Sheets:** Used to style the various elements on the app's pages via coloring, fonts, spacing, etc. -
+   https://www.w3.org/Style/CSS/Overview.en.html
 
 ### Back-end
 
@@ -444,6 +509,8 @@ https://www.w3.org/Style/CSS/Overview.en.html
 - [Git](https://git-scm.com/)
 - [Postgres](https://www.postgresql.org/)
 - [Db Diagram](https://dbdiagram.io/home)
+- [Diagrams](https://www.diagrams.net/)
+- [Cloudinary](https://cloudinary.com/)
 - [Figma](https://figma.com)
 - [Stripe](https://stripe.com)
 
@@ -451,110 +518,109 @@ https://www.w3.org/Style/CSS/Overview.en.html
 
 ## Forking the GitHub Repository and Running this Project Locally
 
-By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original 
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original
 repository by using the following steps...
 
-  1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
 
-  2. In the Repository header (not at the top of the page), find a "Code" drop-down button. By clicking this button, you will find some options to clone the project repository. If you have your SSH key configured, choose to select the 'SSH' option and then click on the button right after the url. This button will copy the url and you will paste it in your terminal. If you have not configured your SSH key, you can choose to use the HTTPS protocol. In the same way as was done in the SSH option, when selecting 'HTTPS' you must click on the button right after the url to copy and then paste it into your terminal.
+2. In the Repository header (not at the top of the page), find a "Code" drop-down button. By clicking this button, you will find some options to clone the project repository. If you have your SSH key configured, choose to select the 'SSH' option and then click on the button right after the url. This button will copy the url and you will paste it in your terminal. If you have not configured your SSH key, you can choose to use the HTTPS protocol. In the same way as was done in the SSH option, when selecting 'HTTPS' you must click on the button right after the url to copy and then paste it into your terminal.
 
-    https://github.com/emidiovaleretto/candy-care-dublin-ecommerce.git
+   https://github.com/emidiovaleretto/candy-care-dublin-ecommerce.git
 
-  1. You should now have a copy of the original repository in your GitHub account.
+3. You should now have a copy of the original repository in your GitHub account.
 
-  2. Ideally you will want to work within a virtual environment to allow all packages to be kept within the project, this can be installed using the following command (please note some IDE's require pip3 instead of pip, please check with the documentation for your chosen IDE). To create a virtual environment, run the command
+4. Ideally you will want to work within a virtual environment to allow all packages to be kept within the project, this can be installed using the following command (please note some IDE's require pip3 instead of pip, please check with the documentation for your chosen IDE). To create a virtual environment, run the command
 
-  ### Installing virtualenv
+### Installing virtualenv
 
-  The installation of a virtualenv is done using pip, Python's package manager. It is with it that we install, remove and update packages in our projects. One note is that PIP is already installed when we are using IDE's like VSCode or PyCharm for our Python projects. So, just run the command below to install the virtualenv package on our computer: 
+The installation of a virtualenv is done using pip, Python's package manager. It is with it that we install, remove and update packages in our projects. One note is that PIP is already installed when we are using IDE's like VSCode or PyCharm for our Python projects. So, just run the command below to install the virtualenv package on our computer:
 
     pip install virtualenv
 
-  Once this is done, the package will be installed and ready to be used. Now you can create and manage your virtual environments.
+Once this is done, the package will be installed and ready to be used. Now you can create and manage your virtual environments.
 
-  ### Creating a new virtualenv
+### Creating a new virtualenv
 
-  The process of creating a virtualenv is quite simple and can be done using a single command, as seen below:
+The process of creating a virtualenv is quite simple and can be done using a single command, as seen below:
 
     virtualenv your_virtualenv_name
 
-  *Hint: I usually choose to name my virtual environments after the project name, rather than just writing 'venv', for example, the project is called `MyBlogProject`, so the name of the virtual environment would be something like `myblogenv`. If you need to return to a certain project after a while, you'll easily find the respective environment for that project. But that is totally up to you.*
+_Hint: I usually choose to name my virtual environments after the project name, rather than just writing 'venv', for example, the project is called `MyBlogProject`, so the name of the virtual environment would be something like `myblogenv`. If you need to return to a certain project after a while, you'll easily find the respective environment for that project. But that is totally up to you._
 
-  ### Activating a virtualenv
+### Activating a virtualenv
 
-  After creating a virtualenv, it's needed to activate it so that you can install the necessary packages for the project. To do this, run the following command:
+After creating a virtualenv, it's needed to activate it so that you can install the necessary packages for the project. To do this, run the following command:
 
-  `source your_virtualenv_name/bin/activate (Linux ou macOS)`
+`source your_virtualenv_name/bin/activate (Linux ou macOS)`
 
-  `your_virtualenv_name/Scripts/Activate (Windows)`
+`your_virtualenv_name/Scripts/Activate (Windows)`
 
-  3. Once that's done, you need to install the project's dependencies. To do this, just run the following command:
+3. Once that's done, you need to install the project's dependencies. To do this, just run the following command:
 
-    pip3 install -r requirements.txt
+   pip3 install -r requirements.txt
 
-  4. Next you need to create a new file within the root directory called `env.py`. This file will contain all your secret keys, public keys, production database settings etc. Everything you think should not be exposed, you should put within this file. 
+4. Next you need to create a new file within the root directory called `env.py`. This file will contain all your secret keys, public keys, production database settings etc. Everything you think should not be exposed, you should put within this file.
 
-  So add the following lines to configure the environmental variables.
+So add the following lines to configure the environmental variables.
 
-  ```
-  import os
+```
+import os
 
-  # SECRET KEYS
-  os.environ.setdefault("SECRET_KEY_DEVELOPMENT", "YOUR SECRET KEY")
-  os.environ.setdefault("SECRET_KEY_PRODUCTION", "YOUR SECRET KEY")
-  os.environ.setdefault("SECRET_KEY_TESTING", "YOUR SECRET KEY")
+# SECRET KEYS
+os.environ.setdefault("SECRET_KEY_DEVELOPMENT", "YOUR SECRET KEY")
+os.environ.setdefault("SECRET_KEY_PRODUCTION", "YOUR SECRET KEY")
+os.environ.setdefault("SECRET_KEY_TESTING", "YOUR SECRET KEY")
 
-  # DATABASE URL
-  os.environ.setdefault("DATABASE_URL", "YOUR DATABASE URL")
+# DATABASE URL
+os.environ.setdefault("DATABASE_URL", "YOUR DATABASE URL")
 
-  ```
+```
 
 ## Database setup
 
-  1. To set up your database you will first need to run the following command:
+1. To set up your database you will first need to run the following command:
 
-    python3 manage.py migrate
+   python3 manage.py migrate
 
-  2. Then you need to create a **superuser**. This will allow you to access the application's admin panel. To do so, run the following command in your terminal and fill in the required information as prompted.
+2. Then you need to create a **superuser**. This will allow you to access the application's admin panel. To do so, run the following command in your terminal and fill in the required information as prompted.
 
-    python3 manage.py createsuperuser
+   python3 manage.py createsuperuser
 
-  3. From there you need to delete any objects from the database that are not in the fixture. To do this, run the following commands:
+3. From there you need to delete any objects from the database that are not in the fixture. To do this, run the following commands:
 
-    python3 manage.py shell
+   python3 manage.py shell
 
-  A terminal screen should appear. In the terminal, paste the following command:
+A terminal screen should appear. In the terminal, paste the following command:
 
     from django.contrib.contenttypes.models import ContentType
 
     ContentType.objects.all().delete()
 
-  4. Now you should be able to run the server using the following command:
+4. Now you should be able to run the server using the following command:
 
-    python3 manage.py runserver
+   python3 manage.py runserver
 
-  If everything has been correctly configure you should not get a message giving you a link to your locally hosted site usually at http://127.0.0.1:8000
+If everything has been correctly configure you should not get a message giving you a link to your locally hosted site usually at http://127.0.0.1:8000
 
-  1. Finally, stop the server by pressing CTRL + C (or cmd + C on Mac) and run the following command to populate the database.
+1. Finally, stop the server by pressing CTRL + C (or cmd + C on Mac) and run the following command to populate the database.
 
-    python3 manage.py loaddata category.json
-    python3 manage.py loaddata products.json
+   python3 manage.py loaddata category.json
+   python3 manage.py loaddata products.json
 
-  After running this command, all information contained in the `category.json` and `products.json` files will be saved in the database. Once that's done, run the `python3 manage.py runserver` command again and you should be able to see the application working.  
-  
+After running this command, all information contained in the `category.json` and `products.json` files will be saved in the database. Once that's done, run the `python3 manage.py runserver` command again and you should be able to see the application working.
 
 ## Setting up heroku
 
 To set up heroku you must:
 
-  1. If your requirements.txt file has not changed you can skip this step. Otherwise, in your terminal type 'pip freeze > requirements.txt' then save and push the changes.
-  2. Go to Heroku.com and sign in to your account or create a free one.
-  3. From the heroku dashboard click the 'Create new app' button.
-  4. Name the app something unique and choose what region you are in then click 'Create app'.
-  5. In the resources section, in the *add-ons* field, type `Heroku Postgreslq` and select the free cost option.
-  6. Now, go to the settings tab and find the Config Vars section. Click 'Reveal Config Vars'.
-   
-  In the settings tab, select Reveal Config Vars and copy the pre populated `DATABASE_URL` into your `settings.py` file in your project in the Config Vars in Heroku you will need to populate with the following keys:
+1. If your requirements.txt file has not changed you can skip this step. Otherwise, in your terminal type 'pip freeze > requirements.txt' then save and push the changes.
+2. Go to Heroku.com and sign in to your account or create a free one.
+3. From the heroku dashboard click the 'Create new app' button.
+4. Name the app something unique and choose what region you are in then click 'Create app'.
+5. In the resources section, in the _add-ons_ field, type `Heroku Postgreslq` and select the free cost option.
+6. Now, go to the settings tab and find the Config Vars section. Click 'Reveal Config Vars'.
+
+In the settings tab, select Reveal Config Vars and copy the pre populated `DATABASE_URL` into your `settings.py` file in your project in the Config Vars in Heroku you will need to populate with the following keys:
 
 |          Key          |        Value        |
 | :-------------------: | :-----------------: |
@@ -562,30 +628,28 @@ To set up heroku you must:
 |   DEBUG_PRODUCTION    |        False        |
 |     DATABASE_URL      | [Your DATABASE URL] |
 |      HEROKU_HOST      | [Your Heroku Host]  |
-  
 
-  7.  Then head over to the deploy section by clicking deploy from the nav bar at the top of the page.
-  8.  From the 'Deployment method' section select GitHub and click 'Connect to GitHub'.
-  9.  Enter the repository name as it is in GitHub and click 'search'.
-  10. Click the 'connect' button next to the repository to link it to heroku.
-  11. To deploy, scroll down and click the 'Deploy Branch' button.
-  12. Heroku will notify you that the app was successfully deployed with a button to view the app.
-  13. If you want to rebuild your app automatically you can also select the 'Enable Automatic Deploys' button which will then rebuild the app every time you push any changes.
+7.  Then head over to the deploy section by clicking deploy from the nav bar at the top of the page.
+8.  From the 'Deployment method' section select GitHub and click 'Connect to GitHub'.
+9.  Enter the repository name as it is in GitHub and click 'search'.
+10. Click the 'connect' button next to the repository to link it to heroku.
+11. To deploy, scroll down and click the 'Deploy Branch' button.
+12. Heroku will notify you that the app was successfully deployed with a button to view the app.
+13. If you want to rebuild your app automatically you can also select the 'Enable Automatic Deploys' button which will then rebuild the app every time you push any changes.
 
 # Acknowledgements
 
 I would like to take the opportunity to thank:
 
- - To God first, to my family, friends and colleagues for their advice, support and help with testing.
- - To my mentors Felipe Alarcon & Richard Wells for their feedback, advices, support and, above all, for their patience.
- - All Code Institute Tutors and Community on Slack for the peer reviews and advice.
-
+- To God first, to my family, friends and colleagues for their advice, support and help with testing.
+- To my mentors Felipe Alarcon & Richard Wells for their feedback, advices, support and, above all, for their patience.
+- All Code Institute Tutors and Community on Slack for the peer reviews and advice.
 
 # Disclaimer
 
-> ****Disclaimer***: The following Context is completely fictional, the company, the context, the CEO, the business questions exist only in my imagination.
+> \***_Disclaimer_**: The following Context is completely fictional, the company, the context, the CEO, the business questions exist only in my imagination.
 
-> **For educational purposes only.
+> \*\*For educational purposes only.
 
 # Author
 
