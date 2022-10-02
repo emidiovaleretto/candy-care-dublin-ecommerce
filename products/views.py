@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models.Models_Product import Product
@@ -7,11 +6,9 @@ from .models.Models_Product import Product
 
 def list_all_products(request):
     """ This function list all products,
-        including sorting and search queries """
+        including sorting """
 
     products = Product.objects.all()
-    query = None
-    categories = None
     sort = None
     direction = None
 
@@ -29,29 +26,10 @@ def list_all_products(request):
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
 
-        if 'category' in request.GET:
-            categories = request.GET['category'].split(',')
-            products = products.filter(category__name__in=categories)
-            categories = Category.objects.filter(name__in=categories)
-
-        if 'q' in request.GET:
-            query = request.GET['q']
-
-            if not query:
-                messages.error(
-                    request, "You didn't enter any search criteria!")
-                return redirect(reverse('products'))
-
-            queries = Q(name__icontains=query) | Q(
-                description__icontains=query)
-            products = products.filter(queries)
-
     current_sorting = f'{sort}_{direction}'
 
     context = {
         'products': products,
-        'search_term': query,
-        'current_categories': categories,
         'current_sorting': current_sorting
     }
 
