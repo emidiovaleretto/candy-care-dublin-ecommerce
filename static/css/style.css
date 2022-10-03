@@ -804,6 +804,10 @@ form input {
   float: left;
 }
 
+form input[type=number] {
+  margin-top: 0;
+}
+
 form input::placeholder {
   color: #320c0e;
 }
@@ -1036,6 +1040,10 @@ form button:hover {
   border: 1px solid #a00028;
 }
 
+.qty_input {
+  margin-left: 10px;
+}
+
 input:focus {
   outline: none;
 }
@@ -1123,7 +1131,7 @@ input:focus {
 
 .button {
   display: inline-block;
-  padding: 16px 32px;
+  padding: 0 128px;
   max-width: max-content;
   background-color: #bf0028;
   border: 1px transparent;

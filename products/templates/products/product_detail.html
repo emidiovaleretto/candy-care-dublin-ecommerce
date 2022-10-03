@@ -1,7 +1,4 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 
 <main>
   <section class="container product">
@@ -9,17 +6,25 @@
       <div class="flex-2">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a class="text-info" href="{% url 'home' %}">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-info" href="{% url 'products' %}">Shop</a></li>
-            <li class="breadcrumb-item active" aria-current="page">{{ product.name }}</li>
+            <li class="breadcrumb-item">
+              <a class="text-info" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a class="text-info" href="{% url 'products' %}">Shop</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              {{ product.name }}
+            </li>
           </ol>
         </nav>
-      {% if 'placeholder' in product.image.url %}
-        <img src="https://res.cloudinary.com/emidio-cloud/image/upload/v1658158199/Image_not_available_qyixph.png"
-          alt="{{ product.name }}">
-      {% else %}
-        <img src="{{ product.image.url }}" alt="{{ product.name }}">
-      {% endif %}
+        {% if 'placeholder' in product.image.url %}
+        <img
+          src="https://res.cloudinary.com/emidio-cloud/image/upload/v1658158199/Image_not_available_qyixph.png"
+          alt="{{ product.name }}"
+        />
+        {% else %}
+        <img src="{{ product.image.url }}" alt="{{ product.name }}" />
+        {% endif %}
         <p class="font-p-xs gray-11 mt-3">*Images merely illustrative</p>
       </div>
       <div class="flex-2">
@@ -27,18 +32,36 @@
         <h4 class="font-f-l gray-8 mb-3">€ {{ product.price }}</h4>
         <h3 class="font-p-m gray-9 mt-3">Product Details</h3>
         <p class="font-p-s gray-10 mt-2 mb-3">{{ product.description }}</p>
-        <input class="text-center mx-1" type="number" value="1" />
-        <a href="{% url 'add_to_shopping_bag' product.id %}" class="button">Add to Cart</a>
-        <div class="row">
-          <div class="d-inline">
-            <a href="{% url 'products' %}" class="btn btn-outline-warning text-black rounded-0 mt-3 p-3">
+        <form class="form" action="" method="POST">
+          {% csrf_token %}
+          <div class="col-12">
+            <div class="row">
+              <input
+                id="id_qty_{{ product.id }}"
+                class="qty_input text-center"
+                type="number"
+                name="quantity"
+                value="1"
+                min="1"
+                max="99"
+                data-item_id="{{ product.id }}"
+              />
+              <input type="submit" class="button" value="Add to Bag">
+            </div>
+          </div>
+          <div class="col-12">
+            <a
+              href="{% url 'products' %}"
+              class="btn btn-outline-warning text-black rounded-0 mt-3 p-3"
+            >
               <span class="icon">
                 <i class="fas fa-chevron-left"></i>
               </span>
               <span class="text-uppercase">Keep Shopping</span>
             </a>
           </div>
-        </div>
+          <input type="hidden" name="redirect_url" value="{{ request.path }}">
+        </form>
       </div>
     </div>
   </section>
@@ -56,7 +79,7 @@
       {% for suggestion in suggestions %}
       <li>
         <a href="{% url 'product_detail' suggestion.slug %}">
-          <img src="{{ suggestion.image.url }}" alt="{{ suggestion.name }}">
+          <img src="{{ suggestion.image.url }}" alt="{{ suggestion.name }}" />
           <h3 class="font-p-m gray-11 mt-2">{{ suggestion.name }}</h3>
           <p class="font-f-m gray-8 mt-1">€ {{ suggestion.price }}</p>
         </a>
@@ -65,6 +88,5 @@
     </ul>
   </div>
 </section>
-
 
 {% endblock %}
