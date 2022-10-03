@@ -3,113 +3,62 @@
 
 {% block content %}
 
-<main class="container">
-  <div class="title">
-    <p class="font-p-xl gray-7">€ {{ product.price }}</p>
-    <h1 class="font-p-xxl gray-10">{{ product.name }}</h1>
-  </div>
-  <div class="product">
-    <div class="product-image">
+<main>
+  <section class="container product">
+    <div class="product-content">
+      <div class="flex-2">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a class="text-info" href="{% url 'home' %}">Home</a></li>
+            <li class="breadcrumb-item"><a class="text-info" href="{% url 'products' %}">Shop</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ product.name }}</li>
+          </ol>
+        </nav>
       {% if 'placeholder' in product.image.url %}
-      <img src="https://res.cloudinary.com/emidio-cloud/image/upload/v1658158199/Image_not_available_qyixph.png"
-        alt="{{ product.name }}">
+        <img src="https://res.cloudinary.com/emidio-cloud/image/upload/v1658158199/Image_not_available_qyixph.png"
+          alt="{{ product.name }}">
       {% else %}
-      <img src="{{ product.image.url }}" alt="{{ product.name }}">
+        <img src="{{ product.image.url }}" alt="{{ product.name }}">
       {% endif %}
-      <p class="font-p-xs gray-11">*Images merely illustrative</p>
-    </div>
-    <div class="product-inner-content">
-      <p class="font-f-l gray-9">{{ product.description }}</p>
-      <div class="product-button">
-        <form class="form" action="{% url 'add_to_shopping_bag' product.id %}" method="POST">
-          {% csrf_token %}
-          <div class="form-row">
-            <div class="col{% if s %}-12 mt-2{% endif %}">
-
-              <div class="row">
-                <div class="input-group input-group-{{ product.id }}">
-                  <div class="input-group-prepend">
-                    <button
-                      class="decrement-qty decrement-qty_{{ product.id }}"
-                      data-item_id="{{ product.id }}"
-                    >
-                      <span class="icon">
-                        <i class="fas fa-minus"></i>
-                      </span>
-                    </button>
-                  </div>
-                  <input
-                    class="form-control qty_input id_qty_{{ product.id }}"
-                    type="number"
-                    name="quantity"
-                    value="1"
-                    min="1"
-                    max="99"
-                    data-item_id="{{ product.id }}"
-                  />
-                  <div class="input-group-append">
-                    <button
-                      class="increment-qty increment-qty_{{ product.id }}"
-                      data-item_id="{{ product.id }}"
-                    >
-                      <span class="icon">
-                        <i class="fas fa-plus"></i>
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <input type="submit" title="Add to Bag" class="button" value="Add to Bag" />
-              </div>
-
-              <div class="row">
-                <p class="font-p-xs gray-11 text-center mt-3">Or</p>
-              </div>
-
-              <div class="row">
-                <a href="{% url 'products' %}" class="btn btn-outline-warning text-black rounded-0 mt-3 p-2">
-                  <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
-                  </span>
-                  <span class="text-uppercase">Keep Shopping</span>
-                </a>
-              </div>
-
-            </div>
-            <input type="hidden" name="redirect_url" value="{{ request.path }}" />
+        <p class="font-p-xs gray-11 mt-3">*Images merely illustrative</p>
+      </div>
+      <div class="flex-2">
+        <h1 class="font-p-xxl gray-9">{{ product.name }}</h1>
+        <h4 class="font-f-l gray-8 mb-3">€ {{ product.price }}</h4>
+        <h3 class="font-p-m gray-9 mt-3">Product Details</h3>
+        <p class="font-p-s gray-10 mt-2 mb-3">{{ product.description }}</p>
+        <input class="text-center mx-1" type="number" value="1" />
+        <a href="{% url 'add_to_shopping_bag' product.id %}" class="button">Add to Cart</a>
+        <div class="row">
+          <div class="d-inline">
+            <a href="{% url 'products' %}" class="btn btn-outline-warning text-black rounded-0 mt-3 p-3">
+              <span class="icon">
+                <i class="fas fa-chevron-left"></i>
+              </span>
+              <span class="text-uppercase">Keep Shopping</span>
+            </a>
           </div>
         </div>
       </div>
-      </form>
-      {% if request.user.is_superuser %}
-      <small>
-        <a class="button edit" href="">Edit</a>
-        <a class="button delete" href="#" data-toggle="modal" data-target="#deleteModal">Delete</a>
-      </small>
-      {% include 'includes/modal.html' %}
-      {% endif %}
     </div>
-  </div>
-  </div>
+  </section>
 </main>
 
-<section class="suggestion-container">
+<section class="container">
   <section class="suggestion-content suggestion-header">
     <h2 class="font-p-l gray-10">Related Products</h2>
     <a class="link-home font-f-m" href="{% url 'products' %}">View more</a>
   </section>
 </section>
-<section class="suggestion-container">
+<section class="container">
   <div class="suggestion-content">
     <ul>
       {% for suggestion in suggestions %}
       <li>
         <a href="{% url 'product_detail' suggestion.slug %}">
           <img src="{{ suggestion.image.url }}" alt="{{ suggestion.name }}">
-          <h3 class="font-p-m gray-11">{{ suggestion.name }}</h3>
-          <p class="font-f-m gray-8">€ {{ suggestion.price }}</p>
+          <h3 class="font-p-m gray-11 mt-2">{{ suggestion.name }}</h3>
+          <p class="font-f-m gray-8 mt-1">€ {{ suggestion.price }}</p>
         </a>
       </li>
       {% endfor %}

@@ -995,42 +995,55 @@ form button:hover {
 
 /* Product details */
 
-.product {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: start;
-  gap: 40px;
+.flex-2 {
+  flex-basis: 50%;
+  min-width: 300px;
 }
 
-.product-image {
+.flex-2 img {
+  max-width: 100%;
+  padding: 50px 0;
+}
+
+.flex-2 h1 {
+  padding-bottom: 10px;
+}
+
+.product-content {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.product-image img {
-  flex: 1;
-  min-width: 100%;
-}
-
-.product-inner-content > p {
-  margin-bottom: 32px;
-}
-
-.product-button {
-  display: grid;
-  grid-template-columns: max-content auto;
   align-items: center;
-  justify-items: start;
-  gap: 8px 12px;
-  margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
-.suggestion-container {
-  max-width: 1080px;
-  margin: auto;
-  padding-left: 25px;
-  padding-right: 25px;
+.product {
+  margin-top: 80px;
+}
+
+.product .flex-2 img {
+  padding: 0;
+}
+
+.product .flex-2 {
+  padding: 20px;
+}
+
+.product input {
+  width: 60px;
+  height: 55px;
+  padding-left: 16px;
+  font-size: 20px;
+  margin-right: 10px;
+  border: 1px solid #a00028;
+}
+
+input:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .product-content {
+    display: block;
+  }
 }
 
 .suggestion-content {
