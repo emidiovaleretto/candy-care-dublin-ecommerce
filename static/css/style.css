@@ -408,7 +408,7 @@ body {
   position: relative;
 }
 
-.header li a::after {
+.header li:not(:last-child) a::after {
   content: "";
   display: block;
   height: 2px;
@@ -1038,6 +1038,12 @@ form button:hover {
   font-size: 20px;
   margin-right: 10px;
   border: 1px solid #a00028;
+}
+
+.grand_total {
+  max-width: max-content;
+  padding: 2px 4px;
+  background-color: #a00028;
 }
 
 .qty_input {

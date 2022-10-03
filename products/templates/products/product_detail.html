@@ -32,7 +32,8 @@
         <h4 class="font-f-l gray-8 mb-3">€ {{ product.price }}</h4>
         <h3 class="font-p-m gray-9 mt-3">Product Details</h3>
         <p class="font-p-s gray-10 mt-2 mb-3">{{ product.description }}</p>
-        <form class="form" action="" method="POST">
+
+        <form class="form" action="{% url 'add_to_shopping_bag' product.id %}" method="POST">
           {% csrf_token %}
           <div class="col-12">
             <div class="row">
