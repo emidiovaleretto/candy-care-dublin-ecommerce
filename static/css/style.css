@@ -909,19 +909,6 @@ form button:hover {
   }
 }
 
-.title-bg::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.title-bg {
-  background-color: var(--primary-color-5);
-  margin-bottom: 120px;
-}
-
 .title p {
   padding-top: 60px;
 }
@@ -1039,34 +1026,65 @@ form button:hover {
   margin-bottom: 40px;
 }
 
-.options {
-  margin-top: 100px;
-  margin-bottom: 120px;
+.suggestion-container {
+  max-width: 1080px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
-.options-header {
-  margin-bottom: 40px;
-}
-
-.options ul {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-}
-
-.options h2 {
-  text-align: center;
-}
-
-.options h3 {
+.suggestion-content {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
+  flex-wrap: wrap;
 }
 
-.options img[src$=".jpg"]:hover {
-  opacity: 0.9;
+.suggestion-header {
+  justify-content: space-between;
+  margin: 100px auto 20px;
+}
+
+.suggestion-content a {
+  color: #a00028;
+}
+
+.suggestion-content ul {
+  display: flex;
+  overflow-x: auto;
+}
+
+.suggestion-content li {
+  flex-basis: 25%;
+  min-width: 200px;
+  margin-bottom: 100px;
+  transition: transform 0.5s;
+}
+
+.suggestion-content li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.suggestion-content li:hover {
+  transform: translateY(-5px);
+}
+
+.link-home {
+  position: relative;
+}
+
+.link-home::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: #a00028;
+  margin-top: 4px;
   transition: 0.3s;
+  position: absolute;
+}
+
+.link-home:hover::after {
+  width: 100%;
 }
 
 @media (max-width: 800px) {
@@ -1084,12 +1102,6 @@ form button:hover {
   }
   .product-facilities,
   .product-button {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 800px) {
-  .options ul {
     grid-template-columns: 1fr;
   }
 }
