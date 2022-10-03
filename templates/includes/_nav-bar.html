@@ -24,9 +24,9 @@
         <nav id="nav" class="offset-2 grid-10" aria-label="primary-nav">
             <button id="btn-mobile" aria-label="Open menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu<span id="hamburger"></span></button>
             <ul id="menu" class="header-menu" role="menu">
-                <li><a href="">Shop</a></li>
+                <li><a href="{% url 'products' %}">Shop</a></li>
                 <li><a href="#about">About Us</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#">Contact</a></li>
                 <li><a href="{% url 'shopping_bag' %}"><span class="material-symbols-outlined">shopping_bag</span>Cart <span>
                     {% if grand_total %}
                         €{{ grand_total|floatformat:2 }}
