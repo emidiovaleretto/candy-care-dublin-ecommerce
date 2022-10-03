@@ -53,6 +53,7 @@ This project was created as part of the Full Stack Software Development course o
     - [Profile Table](#profile-table)
     - [Product Table](#product-table)
     - [Category Table](#category-table)
+    - [Occasion Table](#occasion-table)
 - [Technologies Used](#technologies-used)
   - [Languages](#languages)
     - [Front-end](#front-end)
@@ -469,11 +470,19 @@ Once a user registers in the system, a profile is automatically created for that
 
 ### Category Table
 
-| Title         | Key in Database | Form Validation                   | Data Type     |
-| ------------- | --------------- | --------------------------------- | ------------- |
-| Id            | id              | No Validation                     | Primary Key   |
-| Name          | name            | max length=254                    | CharField     |
-| Friendly Name | friendly_name   | max_length=254, null=True, blank= | CharField     |
+| Title         | Key in Database | Form Validation                   | Data Type   |
+| ------------- | --------------- | --------------------------------- | ----------- |
+| Id            | id              | No Validation                     | Primary Key |
+| Name          | name            | max length=254                    | CharField   |
+| Friendly Name | friendly_name   | max_length=254, null=True, blank= | CharField   |
+
+### Occasion Table
+
+| Title         | Key in Database | Form Validation                   | Data Type   |
+| ------------- | --------------- | --------------------------------- | ----------- |
+| Id            | id              | No Validation                     | Primary Key |
+| Name          | name            | max length=254                    | CharField   |
+| Friendly Name | friendly_name   | max_length=254, null=True, blank= | CharField   |
 
 # Technologies Used
 
