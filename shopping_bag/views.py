@@ -2,6 +2,7 @@
 from django.shortcuts import render, redirect
 from django.shortcuts import reverse, get_object_or_404
 
+from django.http import HttpResponse
 from django.contrib import messages
 
 from products.models import Product
@@ -47,11 +48,29 @@ def update_shopping_bag(request, item_id):
     if quantity > 0:
         shopping_bag[item_id] = quantity
         messages.success(request,
-                            f'Updated {product.name} '
-                            f'quantity to {shopping_bag[item_id]}.')
+                         f'Updated {product.name} '
+                         f'quantity to {shopping_bag[item_id]}.')
     else:
         shopping_bag.pop(item_id)
         messages.success(request, f'Removed {product.name} from your bag.')
 
     request.session['shopping_bag'] = shopping_bag
     return redirect(reverse('shopping_bag'))
+
+
+def remove_item_from_shopping_bag(request, item_id):
+    """ This function removes an item from the shopping bag. """
+
+    try:
+        product = get_object_or_404(Product, pk=item_id)
+        shopping_bag = request.session.get('shopping_bag', {})
+
+        shopping_bag.pop(item_id)
+        messages.success(request, f'Removed {product.name} from your bag.')
+
+        request.session['shopping_bag'] = shopping_bag
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        messages.error(request, f'Error removing item: {e}')
+        return HttpResponse(status=500)
