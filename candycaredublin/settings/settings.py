@@ -51,6 +51,7 @@ INSTALLED_APPS = [
 
     # Django Crispy Forms
     'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
 SITE_ID = 1
@@ -91,6 +92,7 @@ CLOUDINARY_STORAGE = {
 ROOT_URLCONF = 'candycaredublin.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 TEMPLATES = [
     {
