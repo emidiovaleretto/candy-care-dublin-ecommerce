@@ -48,6 +48,9 @@ INSTALLED_APPS = [
     'profiles',
     'shopping_bag',
     'checkout',
+
+    # Django Crispy Forms
+    'crispy_forms',
 ]
 
 SITE_ID = 1
@@ -87,6 +90,8 @@ CLOUDINARY_STORAGE = {
 
 ROOT_URLCONF = 'candycaredublin.urls'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -103,6 +108,11 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'shopping_bag.contexts.shopping_bag_contents',
             ],
+            
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
