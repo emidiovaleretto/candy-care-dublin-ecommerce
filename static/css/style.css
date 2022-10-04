@@ -433,6 +433,34 @@ body {
   display: none;
 }
 
+.message-container {
+  position: fixed;
+  top: 100px;
+  right: 32px;
+  z-index: 99999999999;
+}
+
+.toast:not(.show) {
+  display: block !important;
+}
+
+button.close {
+  border: transparent !important;
+}
+
+.custom-toast {
+  overflow: visible;
+}
+
+.toast-capper {
+  height: 2px;
+}
+
+.toast-header {
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 768px) {
   .header-menu {
     display: flex;

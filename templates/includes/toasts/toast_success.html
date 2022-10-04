@@ -15,21 +15,21 @@
             </div>
         </div>
         {% if grand_total and not on_profile_page %}
-            <p class="logo-font bg-white text-black py-1">Your Bag ({{ product_count }})</p>
+            <p class="logo-font bg-white text-black py-1 my-3">Your Bag ({{ product_count }})</p>
             <div class="bag-notification-wrapper">
-                {% for item in cart_items %}
+                {% for item in shopping_bag_items %}
                     <div class="row">
                         <div class="col-3 my-1">
                             {% if item.product.image %}
                             <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                             {% else %}
-                            <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                            <img class="w-100" src="https://res.cloudinary.com/emidio-cloud/image/upload/v1658158199/Image_not_available_qyixph.png"
+                            alt="{{ item.product.name }}">
                             {% endif %}
                         </div>
                         <div class="col-9">
-                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                            <p class="my-0 small">Size: {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
-                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                            <p class="my-1"><strong>{{ item.product.name }}</strong></p>
+                            <p class="my-1 small text-muted">Qty: {{ item.quantity }}</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -45,7 +45,7 @@
                             Spend <strong>${{ free_delivery_delta }}</strong> more to get free next day delivery!
                         </p>
                     {% endif %}
-                    <a href="{% url 'shopping_bag' %}" class="btn btn-black btn-block rounded-0">
+                    <a href="{% url 'shopping_bag' %}" class="btn button text-white rounded-0 my-3 p-3">
                         <span class="text-uppercase">Go To Secure Checkout</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>
