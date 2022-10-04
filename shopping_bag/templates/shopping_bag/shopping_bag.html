@@ -15,39 +15,38 @@
 <div class="container mb-2">
 	<div class="row">
 		<div class="col">
-			<hr />
-			<h2 class="logo-font mb-4">Shopping bag</h2>
+			<h2 class="font-p-xl gray-9 mt-5 mb-4">Shopping bag</h2>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col">
 			{% if shopping_bag_items %}
 			<div class="table-responsive rounded">
-				<table class="table table-sm table-borderless">
-					<thead class="text-black">
+				<table class="table table-sm table-borderless my-5">
+					<thead class="text-black font-p-m gray-9">
 						<tr>
 							<th scope="col">Product info</th>
 							<th scope="col"></th>
 							<th scope="col">Price</th>
-							<th scope="col">Quantity</th>
+							<th scope="col" class="text-center">Quantity</th>
 							<th scope="col">Subtotal</th>
 						</tr>
 					</thead>
 					<tbody>
 						{% for item in shopping_bag_items %}
 						<tr>
-							<td class="p-3 w-25">
-								<a href="{% url 'product_detail' item.product.id %}">
+							<td class="w-25">
+								<a href="{% url 'product_detail' item.product.slug %}">
 								{% if item.product.image %}
-									<img class="w-100" src="{{ product.image.url }}" alt="{{ product.name }}">
+									<img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
 								{% else %}
 									<img class="w-100" src="https://res.cloudinary.com/emidio-cloud/image/upload/v1658158199/Image_not_available_qyixph.png" alt="{{ product.name }}">
                             	{% endif %}
 								</a>
 							</td>
 							<td class="py-3">
-								<a href="{% url 'product_detail' item.product.id %}">
-									<p class="my-0"><strong>{{ item.product.name }}</strong></p>
+								<a href="{% url 'product_detail' item.product.slug %}">
+									<p class="my-0 font-f-l gray-9"><strong>{{ item.product.name }}</strong></p>
 								</a>
 								<p class="my-0 small text-muted">
 									SKU: {{ item.product.sku|upper }}
@@ -56,39 +55,21 @@
 							<td class="py-3">
 								<p class="my-0">&euro;{{ item.product.price }}</p>
 							</td>
-							<td class="py-3 w-25">
+							<td class="py-3 w-25 text-center">
 								<form class="form update-form" method="POST"
-									action="{% url 'adjust_quantity_to_shopping_bag' item.item_id %}">
+									action="">
 									{% csrf_token %}
-									<div class="form-group">
+									<div class="form-group w-25 mb-2">
 										<div class="input-group input-group-{{ item.item_id }}">
-											<div class="input-group-prepend">
-												<button
-													class="decrement-qty btn btn-sm btn-black rounded-0 decrement-qty_{{ item.item_id }}"
-													data-item_id="{{ item.item_id }}">
-													<span>
-														<i class="fas fa-minus fa-sm"></i>
-													</span>
-												</button>
-											</div>
 											<input
 												class="form-control form-control-sm qty_input id_qty_{{ item.item_id }}"
 												type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99"
 												data-item_id="{{ item.item_id }}" />
-											<div class="input-group-append">
-												<button
-													class="increment-qty btn btn-sm btn-black rounded-0 increment-qty_{{ item.item_id }}"
-													data-item_id="{{ item.item_id }}">
-													<span>
-														<i class="fas fa-plus fa-sm"></i>
-													</span>
-												</button>
-											</div>
 										</div>
 									</div>
 								</form>
 								<a class="update-link text-info"><small>Update</small></a>
-								<a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}">
+								<a class="remove-item text-danger float-right mx-2" id="remove_{{ item.item_id }}">
 									<small>Remove</small>
 								</a>
 							</td>
@@ -99,14 +80,14 @@
 						</tr>
 						{% endfor %}
 						<tr>
-							<td colspan="5" class="text-right">
+							<td colspan="5" class="text-right font-p-s gray-10 mb-4">
 								<h6>
 									<strong>Bag Total: &euro;{{ total|floatformat:2 }}</strong>
 								</h6>
 								<h6>
 									<strong>Delivery: &euro;{{ delivery|floatformat:2 }}</strong>
 								</h6>
-								<h4 class="mt-4">
+								<h4>
 									<strong>Grand Total: &euro;{{ grand_total|floatformat:2 }}</strong>
 								</h4>
 
@@ -120,13 +101,13 @@
 						</tr>
 						<tr>
 							<td colspan="5" class="text-right">
-								<a href="{% url 'products' %}" class="btn btn-lg btn-outline-black rounded-0">
+								<a href="{% url 'products' %}" class="btn btn-outline-warning text-black rounded-0 mt-3 p-3">
 									<span class="icon">
 										<i class="fas fa-chevron-left"></i>
 									</span>
 									<span class="text-uppercase">Keep shopping</span?
 								</a>
-								<a href="{% url 'checkout' %}" class="btn btn-lg btn-black rounded-0">
+								<a href="" class="btn button rounded-0 mt-3 p-3 mx-3 text-white">
 									<span class="text-uppercase">Secure Checkout</span?
 									<span class="icon">
 										<i class="fas fa-lock"></i>

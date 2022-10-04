@@ -1114,6 +1114,16 @@ input:focus {
   width: 100%;
 }
 
+td {
+  vertical-align: top;
+  padding-bottom: 30px !important;
+}
+
+.update-form {
+  display: flex !important;
+  justify-content: center;
+}
+
 @media (max-width: 800px) {
   .product {
     grid-template-columns: 1fr;
