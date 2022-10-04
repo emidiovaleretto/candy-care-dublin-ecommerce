@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'products',
     'profiles',
     'shopping_bag',
+    'checkout',
 ]
 
 SITE_ID = 1
