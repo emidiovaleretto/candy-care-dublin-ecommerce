@@ -804,7 +804,7 @@ form input {
   float: left;
 }
 
-form input[type=number] {
+form input[type="number"] {
   margin-top: 0;
 }
 
@@ -1004,7 +1004,6 @@ form button:hover {
   text-transform: uppercase;
   padding: 6px;
   text-align: center;
-
 }
 
 .flex-2 {
@@ -1056,6 +1055,9 @@ form button:hover {
 
 .qty_input {
   margin-left: 10px;
+  border-radius: 0;
+  font: 400 1rem/1.5 "Roboto", sans-serif;
+  text-align: center;
 }
 
 input:focus {
@@ -1179,7 +1181,7 @@ td {
 }
 
 .button.delete {
-  background-color: #FF0000;
+  background-color: #ff0000;
 }
 
 .button.delete:hover {
