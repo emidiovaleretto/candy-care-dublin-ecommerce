@@ -44,11 +44,11 @@
                             	{% endif %}
 								</a>
 							</td>
-							<td class="py-3">
+							<td>
 								<a href="{% url 'product_detail' item.product.slug %}">
-									<p class="my-0 font-f-l gray-9"><strong>{{ item.product.name }}</strong></p>
+									<p class="mb-1 font-f-l gray-10"><strong>{{ item.product.name }}</strong></p>
 								</a>
-								<p class="my-0 small text-muted">
+								<p class="font-p-xs gray-8">
 									SKU: {{ item.product.sku|upper }}
 								</p>
 							</td>
