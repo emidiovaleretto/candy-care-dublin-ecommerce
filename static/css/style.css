@@ -1060,6 +1060,16 @@ form button:hover {
   text-align: center;
 }
 
+.update-link,
+.remove-item {
+  cursor: pointer;
+}
+
+.update-link:hover,
+.remove-item:hover {
+  text-decoration: underline;
+}
+
 input:focus {
   outline: none;
 }

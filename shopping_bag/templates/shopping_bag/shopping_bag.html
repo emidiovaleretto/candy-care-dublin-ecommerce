@@ -57,7 +57,7 @@
 							</td>
 							<td class="py-3 w-25 text-center">
 								<form class="form update-form" method="POST"
-									action="">
+									action="{% url 'update_shopping_bag' item.item_id %}">
 									{% csrf_token %}
 									<div class="form-group w-25 mb-2">
 										<div class="input-group input-group-{{ item.item_id }}">
