@@ -59,7 +59,7 @@
 								<form class="form update-form" method="POST"
 									action="{% url 'update_shopping_bag' item.item_id %}">
 									{% csrf_token %}
-									<div class="form-group w-25 mb-2">
+									<div class="form-group mb-2">
 										<div class="input-group input-group-{{ item.item_id }}">
 											<input
 												class="form-control form-control-sm qty_input id_qty_{{ item.item_id }}"
@@ -80,7 +80,7 @@
 						</tr>
 						{% endfor %}
 						<tr>
-							<td colspan="5" class="text-right font-p-s gray-10 mb-4">
+							<td colspan="5" class="text-end font-p-s gray-10 mb-4">
 								<h6>
 									<strong>Bag Total: &euro;{{ total|floatformat:2 }}</strong>
 								</h6>
@@ -100,14 +100,14 @@
 							</td>
 						</tr>
 						<tr>
-							<td colspan="5" class="text-right">
+							<td colspan="5" class="text-end mr-0">
 								<a href="{% url 'products' %}" class="btn btn-outline-warning text-black rounded-0 mt-3 p-3">
 									<span class="icon">
 										<i class="fas fa-chevron-left"></i>
 									</span>
 									<span class="text-uppercase">Keep shopping</span?
 								</a>
-								<a href="" class="btn button rounded-0 mt-3 p-3 mx-3 text-white">
+								<a href="{% url 'checkout' %}" class="btn button rounded-0 mt-3 p-3 ms-2 text-white">
 									<span class="text-uppercase">Secure Checkout</span?
 									<span class="icon">
 										<i class="fas fa-lock"></i>
