@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% load bag_tools %}
 
-{% block extracss %}
+{% block extra_css %}
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
@@ -101,11 +100,12 @@
 					</div>
 				</fieldset>
 				<fieldset class="px-3 ps-0">
-					<legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
-					<!-- A Stripe card element will go here -->
-					<div class="mb-3" id="card-element"></div>
-					<!-- Used to display form errors -->
-					<div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+					<legend class="fieldset-label font-p-xs gray-8 w-auto mb-3">Payment</legend>
+
+					<div class="mb-3" id="card-element"></div> <!-- A Stripe card element will go here -->
+
+					<div class="mb-3 text-danger" id="card-errors" role="alert"></div> <!-- Used to display form errors -->
+					
 					<!-- Pass the client secret to the view so we can get the payment intent id -->
 					<input type="hidden" value="{{ client_secret }}" name="client_secret">
 				</fieldset>
@@ -134,12 +134,11 @@
 		</div>
 	</div>
 </div>
-
 {% endblock %}
+
 {% block postloadjs %}
 {{ block.super }}
-
-<script type="text/javascript">
-
-</script>
+{{ stripe_publishable_key|json_script:"id_stripe_publishable_key" }}
+{{ client_secret|json_script:"id_client_secret_key" }}
+<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
