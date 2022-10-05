@@ -54,6 +54,8 @@ This project was created as part of the Full Stack Software Development course o
     - [Product Table](#product-table)
     - [Category Table](#category-table)
     - [Occasion Table](#occasion-table)
+    - [Order Table](#order-table)
+    - [Order Line Table](#order-line-table)
 - [Technologies Used](#technologies-used)
   - [Languages](#languages)
     - [Front-end](#front-end)
@@ -68,6 +70,8 @@ This project was created as part of the Full Stack Software Development course o
     - [Activating a virtualenv](#activating-a-virtualenv)
   - [Database setup](#database-setup)
   - [Setting up heroku](#setting-up-heroku)
+- [Credits](#credits)
+  - [Media](#media)
 - [Acknowledgements](#acknowledgements)
 - [Disclaimer](#disclaimer)
 - [Author](#author)
@@ -431,11 +435,11 @@ With the project configured correctly, when running the application, you will se
 
 | Title          | Key In Database | Form Validation           | Data Type   |
 | -------------- | --------------- | ------------------------- | ----------- |
-| id             | id              | No Validation             | Primary Key |
+| id             | id              | auto-increment            | Primary Key |
 | Username       | username        | max_length 20             | CharField   |
 | First Name     | first_name      | max_lenght 20             | CharField   |
 | Last Name      | last_name       | max_lenght 20             | CharField   |
-| E-mail Address | email           | Must contain @ & .com etc | Email       |
+| E-mail Address | email           | Must contain @ & .com etc | EmailField  |
 | Password       | password        | max length 50             | CharField   |
 
 ### Profile Table
@@ -444,7 +448,7 @@ Once a user registers in the system, a profile is automatically created for that
 
 | Title                    | Key In Database          | Form Validation                              | Data Type    |
 | ------------------------ | ------------------------ | -------------------------------------------- | ------------ |
-| Id                       | id                       | No Validation                                | Primary Key  |
+| Id                       | id                       | auto-increment                               | Primary Key  |
 | user                     | user                     | max length 50                                | Foreign Key  |
 | Default Phone Number     | default_phone_number     | max_length=20, null=True, blank=True         | CharField    |
 | Default Street Address 1 | default_street_address_1 | max_length=80, null=True, blank=True         | CharField    |
@@ -458,13 +462,13 @@ Once a user registers in the system, a profile is automatically created for that
 
 |    Title    | Key In Database |                    Form Validation                     |  Data Type   |
 | :---------: | :-------------: | :----------------------------------------------------: | :----------: |
-|     Id      |       id        |                     No Validation                      | Primary Key  |
+|     Id      |       id        |                     Auto-increment                     | Primary Key  |
 |  Category   |    category     | 'Category', null=True, unique=True, on_delete=SET_NULL | Foreign Key  |
 |  Occasion   |    occasion     | 'Occasion', null=True, unique=True, on_delete=SET_NULL | Foreign Key  |
 |     SKU     |       sku       |             default=uuid4, editable=False              |  UUIDField   |
 |    Name     |      name       |                     max_length=254                     |  CharField   |
 |    Slug     |      slug       |        max_length=100, null=False, unique=True         |  SlugField   |
-| Description |   description   |                     No Validation                      |  TextField   |
+| Description |   description   |                     No validation                      |  TextField   |
 |    Price    |      price      |         max_digits=6, null=False, unique=True          | DecimalField |
 |    Image    |      image      |                 null=True, blank=True                  |  ImageField  |
 
@@ -472,17 +476,51 @@ Once a user registers in the system, a profile is automatically created for that
 
 | Title         | Key in Database | Form Validation                   | Data Type   |
 | ------------- | --------------- | --------------------------------- | ----------- |
-| Id            | id              | No Validation                     | Primary Key |
+| Id            | id              | Auto-increment                    | Primary Key |
 | Name          | name            | max length=254                    | CharField   |
 | Friendly Name | friendly_name   | max_length=254, null=True, blank= | CharField   |
 
 ### Occasion Table
 
-| Title         | Key in Database | Form Validation                   | Data Type   |
-| ------------- | --------------- | --------------------------------- | ----------- |
-| Id            | id              | No Validation                     | Primary Key |
-| Name          | name            | max length=254                    | CharField   |
-| Friendly Name | friendly_name   | max_length=254, null=True, blank= | CharField   |
+| Title         | Key in Database | Form Validation                       | Data Type   |
+| ------------- | --------------- | ------------------------------------- | ----------- |
+| Id            | id              | Auto-increment                        | Primary Key |
+| Name          | name            | max length=254                        | CharField   |
+| Friendly Name | friendly_name   | max_length=254, null=True, blank=True | CharField   |
+
+### Order Table
+
+| Title             | Key in Database   | Form Validation                                                               | Data Type    |
+| ----------------- | ----------------- | ----------------------------------------------------------------------------- | ------------ |
+| Id                | id                | Auto-increment                                                                | Primary Key  |
+| Order Number      | order_number      | max length=32, null=False, editable=False                                     | CharField    |
+| User Profile      | user_profile      | UserProfile, null=True, blank=True, on_delete=SET_NULL, related_name="orders" | Foreign Key  |
+| Fullname          | full_name         | max_length=50, null=False, blank=False                                        | CharField    |
+| E-mail            | email             | max_length=254, null=False, blank=False, Must contain @ & .com etc            | Email        |
+| Phone Number      | phone_number      | max_length=20, null=True, blank=True                                          | CharField    |
+| Country           | country           | blank_label='Country', null=False, blank=False                                | CountryField |
+| Post Code         | postcode          | max_length=20, null=False, blank=False                                        | CharField    |
+| Town or City      | town_or_city      | max_length=40, null=True, blank=True                                          | CharField    |
+| Street Address 1  | street_address_1  | max_length=80, null=True, blank=True                                          | CharField    |
+| Street Address 2  | street_address_2  | max_length=80, null=True, blank=True                                          | CharField    |
+| County            | county            | max_length=80, null=True, blank=True                                          | CharField    |
+| Date              | date              | auto_now_add=True                                                             | CharField    |
+| Delivery Cost     | delivery_cost     | max_digits=6, decimal_places=2, null=False, default=0                         | DecimalField |
+| Order Total       | order_total       | max_digits=10, decimal_places=2, null=False, default=0                        | DecimalField |
+| Grand Total       | grand_total       | max_digits=10, decimal_places=2, null=False, default=0                        | DecimalField |
+| Original Cart     | original_cart     | null=False, blank=False, default=''                                           | TextField    |
+| Stripe Payment ID | stripe_payment_id | max_length=254, null=False, blank=False, default=''                           | CharField    |
+
+### Order Line Table
+
+| Title           | Key in Database | Form Validation                                                                    | Data Type    |
+| --------------- | --------------- | ---------------------------------------------------------------------------------- | ------------ |
+| Id              | id              | Auto-increment                                                                     | Primary Key  |
+| Order           | order           | Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems' | Foreign Key  |
+| Product         | product         | Product, null=False, blank=False, on_delete=models.CASCADE                         | Foreign Key  |
+| Quantity        | quantity        | null=False, blank=False, default=0                                                 | IntegerField |
+| Line Itam Total | lineitem_total  | max_digits=6, decimal_places=2, null=False, editable=False                         | DecimalField |
+
 
 # Technologies Used
 
@@ -645,6 +683,16 @@ In the settings tab, select Reveal Config Vars and copy the pre populated `DATAB
 11. To deploy, scroll down and click the 'Deploy Branch' button.
 12. Heroku will notify you that the app was successfully deployed with a button to view the app.
 13. If you want to rebuild your app automatically you can also select the 'Enable Automatic Deploys' button which will then rebuild the app every time you push any changes.
+
+# Credits
+
+## Media
+
+   - [Pexels](https://www.pexels.com/) - All images were downloaded from the website.
+   - [Freepik](https://www.freepik.com/) - For icons.
+   - [Table of contents](https://ecotrust-canada.github.io/markdown-toc/)
+   - [Code Institute](https://codeinstitute.net/)
+
 
 # Acknowledgements
 
