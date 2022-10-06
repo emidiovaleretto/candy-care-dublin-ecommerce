@@ -64,7 +64,7 @@ def checkout(request):
             order = order_form.save(commit=False)
             payment_id = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_payment_id = payment_id
-            order.original_bag = json.dumps(shopping_bag)
+            order.original_cart = json.dumps(shopping_bag)
             order.save()
 
             for item_id, item_data in shopping_bag.items():
