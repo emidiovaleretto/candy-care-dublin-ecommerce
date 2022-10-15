@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /auth/
+Disallow: /cart/
+Sitemap: https://candycaredublin.herokuapp.com/sitemap.xml

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://candycaredublin.herokuapp.com/</loc>
+  <lastmod>2022-10-14T02:31:06+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://candycaredublin.herokuapp.com/auth/login/</loc>
+  <lastmod>2022-10-14T02:31:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://candycaredublin.herokuapp.com/auth/signup/</loc>
+  <lastmod>2022-10-14T02:31:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://candycaredublin.herokuapp.com/shop/</loc>
+  <lastmod>2022-10-14T02:31:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://candycaredublin.herokuapp.com/my_bag/</loc>
+  <lastmod>2022-10-14T02:31:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://candycaredublin.herokuapp.com/auth/password/reset/</loc>
+  <lastmod>2022-10-14T02:31:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycaredublin.herokuapp.com/shop/mms-funny-birthday-cake/</loc>
+  <lastmod>2022-10-14T02:31:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycaredublin.herokuapp.com/shop/brigadeiro/</loc>
+  <lastmod>2022-10-14T02:31:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycaredublin.herokuapp.com/shop/strawberry-flavored-birthday-cake/</loc>
+  <lastmod>2022-10-14T02:31:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycaredublin.herokuapp.com/shop/gourmets-double-chocolate-cake/</loc>
+  <lastmod>2022-10-14T02:31:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycaredublin.herokuapp.com/shop/chocolate-cake-for-birthdays/</loc>
+  <lastmod>2022-10-14T02:31:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycaredublin.herokuapp.com/shop/volcano-chocolate-cake/</loc>
+  <lastmod>2022-10-14T02:31:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycaredublin.herokuapp.com/shop/assorted-macarons/</loc>
+  <lastmod>2022-10-14T02:31:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycaredublin.herokuapp.com/shop/secret-box-of-assorted-sweets/</loc>
+  <lastmod>2022-10-14T02:31:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycaredublin.herokuapp.com/shop/lemon-tart/</loc>
+  <lastmod>2022-10-14T02:31:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycaredublin.herokuapp.com/shop/kit-kat-chocolate-cake/</loc>
+  <lastmod>2022-10-14T02:31:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycaredublin.herokuapp.com/shop/wedding-cake/</loc>
+  <lastmod>2022-10-14T02:31:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycaredublin.herokuapp.com/shop/churros/</loc>
+  <lastmod>2022-10-14T02:31:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycaredublin.herokuapp.com/shop/chewy-peanut-brittle-bars/</loc>
+  <lastmod>2022-10-14T02:31:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
