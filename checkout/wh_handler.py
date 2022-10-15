@@ -1,13 +1,15 @@
 from django.http import HttpResponse
 from django.template.loader import render_to_string
 
+from django.core.mail import send_mail
 from django.conf import settings
+
 from .models import Order, OrderLineItem
-
 from products.models import Product
-from profiles.models.Models_Profile import UserProfile
 
+from profiles.models.Models_Profile import UserProfile
 from time import sleep
+
 import json
 
 
