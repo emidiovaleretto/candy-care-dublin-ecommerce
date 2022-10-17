@@ -11,6 +11,7 @@ from checkout.wh_handler import StripeWebHooksHandler
 
 from decouple import config
 
+
 @require_POST
 @csrf_exempt
 def webhook(request):
@@ -19,7 +20,11 @@ def webhook(request):
     """
 
     # Setup credentials
-    wh_secret = config('DEV_WH_SECRET') if 'DEVELOPMENT' in os.environ else os.environ.get('STRIPE_WH_SECRET')
+    if 'DEVELOPMENT' in os.environ:
+        wh_secret = config('DEV_WH_SECRET')
+    else:
+        wh_secret = settings.STRIPE_WH_SECRET
+
     stripe.api_key = settings.STRIPE_SECRET_KEY
 
     # Getting the webhook data and verify its signature
@@ -36,7 +41,7 @@ def webhook(request):
 
     except stripe.error.SignatureVerificationError as e:
         return HttpResponse(status=400)
-        
+
     except Exception as e:
         return HttpResponse(
             content=e,
