@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 
+from decouple import config
+
 if os.path.exists('env.py'):
     import env
 
@@ -55,10 +57,6 @@ INSTALLED_APPS = [
 ]
 
 SITE_ID = 1
-
-if 'DEVELOPMENT' in os.environ:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'candycaredublin@example.com'
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
@@ -186,7 +184,11 @@ STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'eur'
 STRIPE_PUBLISHABLE_KEY = os.environ.get("STRIPE_PUBLISHABLE_KEY")
 STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
-STRIPE_WH_SECRET = os.environ.get("STRIPE_WH_SECRET")
+
+if 'DEVELOPMENT' in os.environ:
+    STRIPE_WH_SECRET = config('STRIPE_WH_SECRET')
+else:
+    STRIPE_WH_SECRET = os.environ.get("STRIPE_WH_SECRET")
 
 # Email
 
@@ -195,9 +197,9 @@ if 'DEVELOPMENT' in os.environ:
     DEFAULT_FROM_EMAIL = 'candycaredublin@example.com'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-    EMAIL_USE_TLS = True
-    EMAIL_PORT = 587
-    EMAIL_HOST = 'smtp.gmail.com'
-    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
-    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+    EMAIL_USE_TLS = config('EMAIL_USE_TLS')
+    EMAIL_PORT = config('EMAIL_PORT')
+    EMAIL_HOST = config('EMAIL_HOST')
+    EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+    DEFAULT_FROM_EMAIL = config('EMAIL_HOST_USER')

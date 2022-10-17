@@ -5,7 +5,7 @@ from .settings import *
 if os.path.exists("env.py"):
     import env
 
-DEBUG = False
+DEBUG_PRODUCTION = os.environ.get('DEBUG_PRODUCTION')
 SECRET_KEY = os.environ.get("SECRET_KEY_PRODUCTION")
 ALLOWED_HOSTS = [os.environ.get("HEROKU_HOST")]
 
