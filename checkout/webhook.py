@@ -1,3 +1,4 @@
+import os
 import stripe
 
 from django.views.decorators.http import require_POST
@@ -8,6 +9,7 @@ from django.http import HttpResponse
 
 from checkout.wh_handler import StripeWebHooksHandler
 
+from decouple import config
 
 @require_POST
 @csrf_exempt
@@ -17,7 +19,7 @@ def webhook(request):
     """
 
     # Setup credentials
-    wh_secret = settings.STRIPE_WH_SECRET
+    wh_secret = config('DEV_WH_SECRET') if 'DEVELOPMENT' in os.environ else os.environ.get('STRIPE_WH_SECRET')
     stripe.api_key = settings.STRIPE_SECRET_KEY
 
     # Getting the webhook data and verify its signature

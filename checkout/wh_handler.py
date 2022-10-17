@@ -35,10 +35,14 @@ class StripeWebHooksHandler:
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
 
         send_mail(
-            subject,
-            message,
-            from_email,
-            [customer_email]
+
+            subject=subject,
+            message=message,
+            from_email=from_email,
+            recipient_list=[
+                customer_email,
+            ],
+            fail_silently=False
         )
 
     def handle_event(self, event):
