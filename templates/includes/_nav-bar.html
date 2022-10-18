@@ -26,7 +26,7 @@
             <ul id="menu" class="header-menu" role="menu">
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'products' %}">Shop</a></li>
-                <li><a href="#about">About Us</a></li>
+                <li><a href="{% url 'home' %}#about">About Us</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="{% url 'shopping_bag' %}"><span class="material-symbols-outlined">shopping_bag</span>Cart <span {% if grand_total %}class="grand_total" {% endif %}>
                     {% if grand_total %}
