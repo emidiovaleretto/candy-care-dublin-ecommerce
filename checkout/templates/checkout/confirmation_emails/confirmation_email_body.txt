@@ -1,6 +1,15 @@
 Hi, {{ order.full_name }}!
 
-This is the confirmation of your order at Candy Care Dublin. Your order information is below:
+Thanks for your order. When your goods have been packed and dispatched you'll receive a email, please keep an eye out for it.
+
+Email address {{ order.email }} is now subscribed to our newsletter. We promise not to bombard you with junk or spam.
+If you prefer not never hear from us please reply this mail with the subject line changed to UNSUBSCRIBE ME.
+
+-----------------------------------------------------------------------------------------------------------------------
+
+This is the confirmation of your order at Candy Care Dublin. 
+
+Your order information is below:
 
 Order Number: {{ order.order_number }}
 Order Date: {{ order.date }}
