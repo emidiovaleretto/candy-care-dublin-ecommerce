@@ -146,7 +146,7 @@
 	$(".remove-item").click(function (e) {
 		let csrfToken = "{{ csrf_token }}";
 		let itemId = $(this).attr("id").split("remove_")[1];
-		let url = `/my_bag/remove/${itemId}`;
+		let url = `/shopping_bag/remove/${itemId}`;
 		let data = {
 			csrfmiddlewaretoken: csrfToken,
 		};
