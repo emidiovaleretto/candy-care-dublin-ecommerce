@@ -56,8 +56,11 @@ This project was created as part of the Full Stack Software Development course o
   - [Frameworks](#frameworks)
   - [Libraries](#libraries)
   - [Tools](#tools)
-- [Testing](#testing)
+- [Testing 🔎](#testing-)
+  - [Test Driven Development (TDD)](#test-driven-development-tdd)
+  - [Manual tests](#manual-tests)
   - [Testing User Stories](#testing-user-stories)
+  - [Bugs Report 🐞](#bugs-report-)
 - [Deployment](#deployment)
   - [Forking the GitHub Repository and Running this Project Locally](#forking-the-github-repository-and-running-this-project-locally)
     - [Installing virtualenv](#installing-virtualenv)
@@ -491,9 +494,25 @@ Once a user registers in the system, a profile is automatically created for that
 
 [Back to top ⇧](#table-of-contents)
 
-# Testing
+# Testing 🔎
+
+## Test Driven Development (TDD)
+
+## Manual tests
 
 Some manual tests were performed to ensure the correct functioning of the application.
+
+ <strong>Implementation</strong> 🔨:
+When I had set up the products.json and loaded into the database I could then view all available products. That way, I could ensure all ones were loaded as expected and that products information was visible when selected.
+
+- <strong>Test</strong> 🔎:
+To test this, I went through each product and loaded the its information page, then looked at changing the url to ensure each item was loading correctly.
+
+- <strong>Result</strong> 🏆:
+All products were loaded as expected to the main store page. When amending the url all products again loaded as expected. However, if I tried to access an product slug that didn't exist I was presented with a 404 page.
+
+- <strong>Verdict</strong> ✅:
+This test passed and no amendments were required.
 
 ## Testing User Stories
 
@@ -518,6 +537,24 @@ Some manual tests were performed to ensure the correct functioning of the applic
 | [[#17](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/17)] | Make changes to a individual product                 | As a Shopper I want to be able to adjust the quantity of a individual product in my shopping bag so that I can easily make changes to my purchase before checkout.                                        | The user can update the shopping bag by adding quantity or removing items.                                                                                                                                | Passed ✅    |
 | [[#18](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/18)] | Payment information                                  | As a Shopper I want to be able to easily enter my payment information so that I can check out quickly and with no hassles.                                                                                | The user can easily enter their payment information.                                                                                                                                                      | Passed ✅    |
 | [[#19](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/19)] | Personal and payment information are safe and secure | As a Shopper I want to be able to ensure my personal and payment information are safe and secure so that I can confidently provide the needed information to make a purchase.                             | The user can note a  ”https” at the beginning of the URL as well as the closed lock or unbroken key in the browser, which indicates all data will be secure and encrypted when submitted on that website. | Passed ✅    |
+| [[#20](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/20)] | Order confirmation | As a Shopper I want to be able to view an order confirmation right after checkout so that I can verify that I haven't made any mistakes.                             | The user can see right after checkout an order summary, detailing the purchase. Also, the user receives an email with the order confirmation. | Passed ✅    |
+| [[#21](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/21)] | Email confirmation after purchase. | As a Shopper I want to be able to receive an email confirmation after checking out so that I can keep the confirmation of what I have purchased for my records.                             | 🐞 Bug Report: Confirmation email not sent after checkout. [[#31](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/31) | To Fix 🔨   |
+| [[#22](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/22)] | Add a product. | As a Store Owner I want to be able to add a product so that I can add new items to my store.                             | This feature was not implemented in this project yet. | Fail ❌    |
+| [[#23](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/23)] | Edit/update a product | As a Store Owner I want to be able to edit/update a product so that I can change product prices, descriptions, images and other product criteria.                             | This feature was not implemented in this project yet. | Fail ❌    |
+| [[#24](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/24)] | Delete a product | As a Store Owner I want to be able to delete a product so that I can remove items that are no longer for sale.                             | This feature was not implemented in this project yet. | Fail ❌    |
+| [[#25](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/25)] | Searching by keywords. | As a Shopper I want to be able to search for a product by keywords such as "chocolate" or "cakes" so that I can receive recommendations of the best products according to my search criteria.                             | This feature won't be implemented in this project. | Fail ❌   |
+| [[#26](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/26)] | Action messages. | As a Shopper I want to be able to see a message informing me of an action I took on the site so that I can be aware of what I've done, such as when I remove an item or add an item to the shopping bag.                             | The user can see a message box pops up upon they make any change such as login/logout, add/update/delete a product, checkout, and so on. | Passed ✅    |
+| [[#33](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/33)] | Add a newsletter signup form to the application. | As a Site user I want to be able to sign up for a newsletter so that I can stay on top of store news.                             | This feature was not implemented in this project yet. | To Do 🔨    |
+
+---
+
+## Bugs Report 🐞
+
+| Bug ID                                                                          | Bug description                                           | Current behaviour                                                                                                                                                                                     | Expected behaviour                                                                                                                                                                                           | Status |
+| --------------------------------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| [[#31](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/31)] | Confirmation email not sent after checkout. | After the user completes the purchase, the purchase summary is displayed, however, the confirmation email is not sent.                             | After the user completes the purchase, it is expected that a confirmation email will be sent to the email provided at the time of purchase. | To Fix 🔨    |
+| [[#32](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/32)] | Verification email is not sent after sign up. | After the user signs up for the application, the verification email is not sent, resulting in a 404 error/crashing the application.                             | After the user signs up for the application, an email is expected to be sent to the email address provided at the time of sign-up. | To Fix 🔨     |
+| [[#34](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/34)] | Issues in sign in/sign up form are present | Once I access the sign in and sign up form, I see that there are navigability issues. The form works, but it's not visibly nice.                             | That it is visibly pleasant and without navigability problems. | To Fix 🔨     |
 
 ---
 
