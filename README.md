@@ -61,6 +61,7 @@ This project was created as part of the Full Stack Software Development course o
   - [Manual tests](#manual-tests)
   - [Testing User Stories](#testing-user-stories)
   - [Bugs Report 🐞](#bugs-report-)
+  - [Bugs resolution 👷⛏](#bugs-resolution-)
 - [Deployment](#deployment)
   - [Forking the GitHub Repository and Running this Project Locally](#forking-the-github-repository-and-running-this-project-locally)
     - [Installing virtualenv](#installing-virtualenv)
@@ -557,6 +558,34 @@ This test passed and no amendments were required.
 | [[#32](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/32)] | Verification email is not sent after sign up. | After the user signs up for the application, the verification email is not sent, resulting in a 404 error/crashing the application. | After the user signs up for the application, an email is expected to be sent to the email address provided at the time of sign-up.          | To Fix 🔨 |
 | [[#34](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/34)] | Issues in sign in/sign up form are present    | Once I access the sign in and sign up form, I see that there are navigability issues. The form works, but it's not visibly nice.    | That it is visibly pleasant and without navigability problems.                                                                              | To Fix 🔨 |
 
+
+## Bugs resolution 👷⛏
+
+| Bug ID                                                                            | Bug description                               | Current behaviour                                                                                                                   | Expected behaviour                                                                                                                          | Status   |
+| --------------------------------------------------------------------------------- | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| [[#31](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/31)] | Confirmation email not sent after checkout.   | After the user completes the purchase, the purchase summary is displayed, however, the confirmation email is not sent.              | After the user completes the purchase, it is expected that a confirmation email will be sent to the email provided at the time of purchase. | To Fix 🔨 |
+
+
+I was trying to connect the `EMAIL_BACKEND` with the smtp service from Google. I already had use this services previously, so I set up all my credentials as usual in `env.py` and exported them into `settings.py` in order to send confirmation email to customers as well as send email to users upon their registration in the application, password recovery, and so on. Basically, I had to go into our Google Account and turn off the **Less secupe apps** verification. As a result, it was possible for third-party applications to gain access to the account. However, as per Google Documentation, which can be find [here](https://support.google.com/accounts/answer/6010255), *"To help keep your account secure, from May 30, 2022, ​​Google no longer supports the use of third-party apps or devices which ask you to sign in to your Google Account using only your username and password."*
+
+To fix it, I went through my Google Account, then **Security** and finally click in **App passwords**.
+
+<img src="./readme-files/imgs/google_steps.jpg" alt="Google Steps">
+
+Once this is done, the **App password** window will open and you needed to generate a password to use in the application.
+
+<img src="./readme-files/imgs/app_passwords.jpg" alt="App password">
+
+<img src="./readme-files/imgs/app_passwords_2.jpg" alt="App password">
+
+And then a password will be generated.
+
+<img src="./readme-files/imgs/app_passwords_3.jpg" alt="App password">
+
+Make sure to copy and secure your generated password before click in *Done*.
+
+Once this is done, just replace the default password of your email with the generated password and the application will be able to send emails using Google's smtp service.
+
 ---
 
 [Back to top ⇧](#table-of-contents)
@@ -683,7 +712,7 @@ You will see something like this:
 
 To set up heroku you must:
 
-1. If your requirements.txt file has not changed you can skip this step. Otherwise, in your terminal type 'pip freeze > requirements.txt' then save and push the changes.
+1. If your requirements.txt file has not changed you can skip this step. Otherwise, in your terminal type `pip freeze > requirements.txt` then save and push the changes.
 2. Go to Heroku.com and sign in to your account or create a free one at [Heroku](https://www.heroku.com/).
 3. From the heroku dashboard click the 'Create new app' button.
 4. Name the app something unique and choose what region you are in then click 'Create app'.
@@ -692,20 +721,22 @@ To set up heroku you must:
 
 In the settings tab, select Reveal Config Vars and copy the pre populated `DATABASE_URL` into your `settings.py` file in your project in the Config Vars in Heroku you will need to populate with the following keys:
 
-|          Key          |        Value        |
-| :-------------------: | :-----------------: |
-| SECRET_KEY_PRODUCTION |  [Your Secret Key]  |
-|   DEBUG_PRODUCTION    |        False        |
-|     DATABASE_URL      | [Your DATABASE URL] |
-|      HEROKU_HOST      | [Your Heroku Host]  |
+|          Key           |          Value           |
+| :--------------------: | :----------------------: |
+| SECRET_KEY_PRODUCTION  |    [Your Secret Key]     |
+|    DEBUG_PRODUCTION    |          False           |
+|       HEROKU_DB        |   [Your DATABASE URL]    |
+|      HEROKU_HOST       |    [Your Heroku Host]    |
+| STRIPE_PUBLISHABLE_KEY |  [Your Publishable Key]  |
+|   STRIPE_SECRET_KEY    | [Your Stripe Secret Key] |
 
 7.  Then head over to the deploy section by clicking deploy from the nav bar at the top of the page.
 8.  From the 'Deployment method' section select GitHub and click 'Connect to GitHub'.
 9.  Enter the repository name as it is in GitHub and click 'search'.
-10. Click the 'connect' button next to the repository to link it to heroku.
-11. To deploy, scroll down and click the 'Deploy Branch' button.
-12. Heroku will notify you that the app was successfully deployed with a button to view the app.
-13. If you want to rebuild your app automatically you can also select the 'Enable Automatic Deploys' button which will then rebuild the app every time you push any changes.
+10.  Click the 'connect' button next to the repository to link it to heroku.
+11.  To deploy, scroll down and click the 'Deploy Branch' button.
+12.  Heroku will notify you that the app was successfully deployed with a button to view the app.
+13.  If you want to rebuild your app automatically you can also select the 'Enable Automatic Deploys' button which will then rebuild the app every time you push any changes.
 
 [Back to top ⇧](#table-of-contents)
 
