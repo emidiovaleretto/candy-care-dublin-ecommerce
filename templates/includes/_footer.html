@@ -1,3 +1,4 @@
+{% load static %}
 <footer class="footer">
     <div class="container">
         <div class="grid-6">
@@ -20,8 +21,8 @@
         <div class="grid-3">
             <div class="footer-content follow">
                 <h2>Follow us</h2>
-                <a aria-label="Link to Candy Care Facebook page" href="https://www.facebook.com/people/Candy-Care/100038339116419/" target="_blank"><img src="/static/img/facebook-icon.svg" alt="Facebook" /></a>
-                <a aria-label="Link to Candy Care Instagram page" href="https://www.instagram.com/candycaredublin/" target="_blank"><img src="/static/img/instagram-icon.svg" alt="Instagram" /></a>
+                <a href="https://www.facebook.com/people/Candy-Care/100038339116419/" title="Visit the Candy Care Facebook page" aria-label="Visit the Candy Care Facebook page (opens in a new tab)" target="_blank" rel="noopener"><img src="{% static 'img/facebook-icon.svg' %}" alt="Facebook" /></a>
+                <a href="https://www.instagram.com/candycaredublin/" title="Visit the Candy Care Instagram page" aria-label="Visit the Candy Care Instagram page (opens in a new tab)" target="_blank" rel="noopener"><img src="{% static 'img/instagram-icon.svg' %}" alt="Instagram" /></a>
             </div>
         </div>
         <div class="grid-12">
@@ -30,7 +31,7 @@
                     <h3 class="copy">Candy Care &copy; <span class="current_year"></span>. All rights reserved.</h3>
                 </div>
                 <div class="grid-4">
-                    <p class="credits">Made with ❤️ by <a href="https://github.com/emidiovaleretto" aria-label="Visit my portfolio on GitHub (opens in a new tab)" target="_blank" rel="noopener">Emidio Valereto</a></p>
+                    <p class="credits">Made with ❤️ by <a href="https://github.com/emidiovaleretto" title="Visit my portfolio on GitHub" aria-label="Visit my portfolio on GitHub (opens in a new tab)" target="_blank" rel="noopener">Emidio Valereto</a></p>
                 </div>
             </div>
         </div>
