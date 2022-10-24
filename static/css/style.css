@@ -1233,9 +1233,83 @@ td {
 
 /* Allauth form formatting */
 
+.auth {
+  margin: 20px 0;
+  min-height: 50vh;
+}
+
+.auth p a {
+  color: #e6bb7a;
+}
+
+.auth p a:hover {
+  text-decoration: underline;
+  color: #d39f52;
+}
+
+.auth input[type=text],
+.auth input[type=password],
+.auth input[type=email],
+.signup input[type=email] {
+    font: 400 0.875rem/1.43 "Montserrat", sans-serif;
+    background-color: #f7f7f7;
+    border: 1px solid #dedede;
+    padding: 12px;
+    padding-left: 16px;
+    margin-left: 0;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.auth input[type=text]::placeholder,
+.auth input[type=password]::placeholder,
+.auth input[type=email]::placeholder,
+.signup input[type=email]::placeholder {
+  color: #2e2e2e;
+}
+
+.login {
+  position: relative;
+}
+
+.login input[type=checkbox] {
+  position: absolute;
+  left: 140px;
+  bottom: 100px;
+}
+
+.login input[type=checkbox]:checked {
+  background-color: #a00028;
+  border-color: none !important;
+}
+
+.login label {
+  position: relative;
+  left: -25px;
+  top: 10px;
+  font: 400 1rem/1.5 "Roboto", sans-serif;
+  color: #717171;
+}
+
+.auth input[type=text]:focus,
+.auth input[type=password]:focus {
+    outline: none;
+    border-color: #e6bb7a;
+    background-color: #fff;
+    box-shadow: 0 0 0 2px #fea;
+}
+
+.password_reset__info {
+  position: absolute;
+  top: 10px;
+  left: 18px;
+  margin-top: 30px;
+}
+
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    margin-top: 1.5rem;
+    color: #6c757d; 
 }
 
 .allauth-form-inner-content input {
@@ -1253,22 +1327,19 @@ td {
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-	/* btn */
 	display: inline-block;
-    font-weight: 400;
-    color: #fff;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: #000;
-    border: 1px solid #000;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0;
+  font: 400 1rem/1.5 "Roboto", sans-serif;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #a00028;
+  border: 1px solid transparent;
+  padding: 8px 16px;
+  border-radius: 0;
 
     /* standard bootstrap btn transitions */
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -1277,8 +1348,8 @@ td {
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
 	color: #fff;
-    background-color: #222;
-    border-color: #222;
+    background-color: #80001c;
+    border-color: none;
 }
 
 .allauth-form-inner-content a {

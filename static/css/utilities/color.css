@@ -13,6 +13,12 @@
   --gray-2: #ededed;
   --gray-1: #f7f7f7;
   --white: #ffffff;
+
+  --primary-color: #a00028;
+}
+
+.primary-color {
+  color: var(--primary-color);
 }
 
 .black {
