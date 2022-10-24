@@ -5,9 +5,10 @@
 {% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
 
 {% block inner_content %}
-    <h2 class="logo-font mt-5 mb-4">{% trans "Verify Your E-mail Address" %}</h2>
-    <hr>
+    <div class="container auth">
+        <h2 class="font-f-l mt-5 mb-2">{% trans "Verify Your E-mail Address" %}</h2>
+        <hr>
 
-    <p class="mb-5">{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. Please contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
-
+        <p class="font-p-s mb-5">{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. Please contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
+    </div>
 {% endblock %}
