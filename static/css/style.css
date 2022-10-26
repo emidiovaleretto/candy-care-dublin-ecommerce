@@ -917,6 +917,15 @@ form button:hover {
   margin-left: 0;
 }
 
+.follow a:last-child {
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.follow a:last-child:hover {
+  text-decoration: underline;
+}
+
 .credits {
   text-align: right;
 }
@@ -1431,4 +1440,42 @@ td {
     border-color: #bf0028;
     color: #ffffff;  
   }
+}
+
+/* Privacy */
+
+.privacy h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.25rem;
+  line-height: 1.2;
+  text-align: center;
+  margin-top: 120px;
+  margin-bottom: 40px;
+}
+
+.privacy h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.75rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.privacy p {
+  font-family: "Roboto", sans-serif, sans-serif;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.privacy li {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.8;
+  margin-left: 60px;
+  list-style: disc;
+}
+
+.privacy p:last-child {
+  margin-bottom: 100px;
 }
