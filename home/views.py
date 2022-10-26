@@ -11,3 +11,8 @@ def success(request):
         after submitting the newsletter form
     """
     return render(request, 'thank-you.html')
+
+def privacy(request):
+    """ A view to return the privacy page """
+    
+    return render(request, 'privacy.html')
