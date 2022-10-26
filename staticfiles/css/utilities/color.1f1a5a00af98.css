@@ -1,0 +1,74 @@
+:root {
+  /* Shades of gray */
+  --black: #000000;
+  --gray-11: #111111;
+  --gray-10: #2e2e2e;
+  --gray-9: #404040;
+  --gray-8: #595959;
+  --gray-7: #717171;
+  --gray-6: #9c9c9c;
+  --gray-5: #b2b2b2;
+  --gray-4: #cccccc;
+  --gray-3: #dedede;
+  --gray-2: #ededed;
+  --gray-1: #f7f7f7;
+  --white: #ffffff;
+
+  --primary-color: #a00028;
+}
+
+.primary-color {
+  color: var(--primary-color);
+}
+
+.black {
+  color: var(--black);
+}
+
+.gray-11 {
+  color: var(--gray-11);
+}
+
+.gray-10 {
+  color: var(--gray-10);
+}
+
+.gray-9 {
+  color: var(--gray-9);
+}
+
+.gray-8 {
+  color: var(--gray-8);
+}
+
+.gray-7 {
+  color: var(--gray-7);
+}
+
+.gray-6 {
+  color: var(--gray-6);
+}
+
+.gray-5 {
+  color: var(--gray-5);
+}
+
+.gray-4 {
+  color: var(--gray-4);
+}
+
+.gray-3 {
+  color: var(--gray-3);
+}
+
+.gray-2 {
+  color: var(--gray-2);
+}
+
+.gray-1 {
+  color: var(--gray-1);
+}
+
+.white {
+  color: var(--white);
+}
