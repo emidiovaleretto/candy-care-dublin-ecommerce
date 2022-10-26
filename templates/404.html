@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Page not found!{% endblock %}
+
+{% block navbar %}{% endblock %}
+{% block messages %}{% endblock %}
+
+{% block content %}
+{{ block.super }}
+    <section class="error">
+        <div class="container error-inner">
+            <h2 class="font-p-l gray-3">Ooops! Looks like you got lost along the way.</h2>
+            <h1>404</h1>
+            <p class="font-p-m gray-4">The page you're looking for no longer exists or is temporarily unavailable.</p>
+            <a href="{% url 'home' %}">Take me back home!</a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block footer %}{% endblock %}
