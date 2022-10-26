@@ -1355,3 +1355,70 @@ td {
 .allauth-form-inner-content a {
 	color: #17a2b8; /* text-info */
 }
+
+/* 404 & 500 error pages */
+
+.error {
+  padding-top: 80px;
+  min-height: 100vh;
+  background-image: linear-gradient(125deg, #d39f52, #c55470);
+}
+
+.error-inner {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  justify-content: center;
+  max-width: 1080px;
+  padding: 0 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 2px 1px 10px -1px rgba(255,238,157, .25);
+  -webkit-box-shadow: 2px 1px 10px -1px rgba(255,238,157, .25);
+  -moz-box-shadow: 2px 1px 10px -1px rgba(255,238,157, .25);
+}
+
+.error-inner h1 {
+  font-size: 14rem;
+  margin: 10px 0;
+  font-weight: 900;
+  letter-spacing: 18px;
+  background: url(../img/birthday.jpg) center no-repeat;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.error-inner a {
+  display: inline-block;
+  width: 220px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #bf0028;
+  padding: 15px 0;
+  border: 2px solid;
+  margin: 40px auto 0 auto;
+}
+
+.error-inner a:hover {
+  background: #bf0028;
+  border-color: #bf0028;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 480px) {
+  .error-inner {
+    box-shadow: none;
+  }
+  .error-inner h1 {
+    font-size: 10rem;
+  }
+  .error-inner a {
+    background: #bf0028;
+    border-color: #bf0028;
+    color: #ffffff;  
+  }
+}
