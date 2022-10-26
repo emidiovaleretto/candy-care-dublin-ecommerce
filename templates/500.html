@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Page not found!{% endblock %}
+
+{% block navbar %}{% endblock %}
+{% block messages %}{% endblock %}
+
+{% block content %}
+{{ block.super }}
+    <section class="error">
+        <div class="container error-inner">
+            <h2 class="font-p-l gray-3">Oh no! Internal Server Error.</h2>
+            <h1 id="_500">500</h1>
+            <p class="font-p-m gray-4">Our cake went wrong in the oven and we have to fix it. Please come back soon.</p>
+            <a href="{% url 'home' %}">Take me back home!</a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block footer %}{% endblock %}

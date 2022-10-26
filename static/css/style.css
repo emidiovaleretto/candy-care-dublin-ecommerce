@@ -1384,8 +1384,18 @@ td {
   margin: 10px 0;
   font-weight: 900;
   letter-spacing: 18px;
+}
+
+.error-inner h1#_404 {
   background: url(../img/birthday.jpg) center no-repeat;
-  background-clip: text;
+  background-size: 460px;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.error-inner h1#_500 {
+  background: url(../img/color-bars.jpg) center no-repeat;
+  background-size: 460px;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
