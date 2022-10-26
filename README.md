@@ -18,7 +18,9 @@ This project was created as part of the Full Stack Software Development course o
   - [Screens](#screens)
 - [Marketing Strategy](#marketing-strategy)
   - [Facebook Business Page](#facebook-business-page)
-  - [Highlights](#highlights)
+    - [Highlights](#highlights)
+  - [Instagram Business Profile](#instagram-business-profile)
+    - [Highlights](#highlights-1)
 - [User Experience | UX](#user-experience--ux)
   - [User Stories](#user-stories)
     - [User](#user)
@@ -135,11 +137,23 @@ In the system, there will be the following user functionalities:
 
  - [Candy Care Dublin - Facebook Business Page](https://www.facebook.com/people/Candy-Care/100038339116419/)
   <img src="./readme-files/imgs/facebook_page.jpg" alt="Facebook Business Page of Candy Care Dublin Store">
+  <img src="./readme-files/imgs/facebook_page_2.jpg" alt="Facebook Business Page of Candy Care Dublin Store">
 
-## Highlights
+### Highlights
 
  - Cover photo matches the **Candy Care Dublin** site.
  - Profile pictute matches the **Candy Care Dublin** logo.
+
+## Instagram Business Profile
+
+ - [Candy Care Dublin - Instagram Business Profile](https://www.instagram.com/candycaredublin/)
+  <img src="./readme-files/imgs/instagram_page.jpg" alt="Instagram Business Page of Candy Care Dublin Store">
+  <img src="./readme-files/imgs/instagram_page_2.jpg" alt="Instagram Business Page of Candy Care Dublin Store">
+
+### Highlights
+
+ - Profile pictute matches the **Candy Care Dublin** logo.
+
 
 [Back to top ⇧](#table-of-contents)
 
