@@ -64,6 +64,10 @@ This project was created as part of the Full Stack Software Development course o
   - [Libraries](#libraries)
   - [Tools](#tools)
 - [Testing 🔎](#testing-)
+  - [HTML Validator](#html-validator)
+  - [CSS Validator](#css-validator)
+  - [JavaScript Validator (JSHint)](#javascript-validator-jshint)
+  - [Accessibility and Performance testing](#accessibility-and-performance-testing)
   - [Test Driven Development (TDD)](#test-driven-development-tdd)
   - [Manual tests](#manual-tests)
   - [Testing User Stories](#testing-user-stories)
@@ -536,7 +540,448 @@ Once a user registers in the system, a profile is automatically created for that
 
 # Testing 🔎
 
+## HTML Validator
+
+Page tested using [W3C HTML Checker](https://validator.w3.org/). No errors or warnings were found.
+
+<img src="./readme-files/imgs/html_pass.jpg" alt="Screenshot of HTML validator">
+
+## CSS Validator
+
+Stylesheet tested using [W3C CSS Validator](https://jigsaw.w3.org/css-validator/). No errors or warnings were found.
+
+<img src="./readme-files/imgs/css_pass.jpg" alt="Screenshot of CSS validator">
+
+## JavaScript Validator (JSHint)
+
+All Javascript was tested using [JSHint]. No errors were found.
+
+<img src="./readme-files/imgs/js_pass.jpg" alt="Screenshot of Javascript validator">
+
+Three warnings related to Javascript version were raised but does not affect the code.
+
+`eversion`: This option is used to specify the ECMAScript version to which the code must adhere.
+
+`6` - To tell JSHint that your code uses ECMAScript 6 specific syntax. Note that not all browsers implement them.
+
+You can find more explanation at [JSHint Docs](https://jshint.com/docs/options/).
+
+## Accessibility and Performance testing
+
+
 ## Test Driven Development (TDD)
+
+<header>
+    <div class="content">
+        <h1>Coverage report:
+            <span class="pc_cov">87%</span>
+        </h1>
+        <p class="text">
+            <a class="nav" href="https://coverage.readthedocs.io">coverage.py v6.4.4</a>,
+            created at 2022-10-26 17:11 +0000
+        </p>
+    </div>
+</header>
+<main id="index">
+    <table class="index" data-sortable>
+        <thead>
+            <tr class="tablehead" title="Click to sort">
+                <th class="name left" aria-sort="none" data-shortcut="n">Module</th>
+                <th aria-sort="none" data-default-sort-order="descending" data-shortcut="s">statements</th>
+                <th aria-sort="none" data-default-sort-order="descending" data-shortcut="m">missing</th>
+                <th aria-sort="none" data-default-sort-order="descending" data-shortcut="x">excluded</th>
+                <th class="right" aria-sort="none" data-shortcut="c">coverage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="file">
+                <td class="name left">candycaredublin/__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">candycaredublin/settings/__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">candycaredublin/settings/development.py</a></td>
+                <td>8</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="8 8">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">candycaredublin/settings/settings.py</a></td>
+                <td>29</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="29 29">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">candycaredublin/settings/testing.py</a></td>
+                <td>8</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="8 8">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">candycaredublin/urls.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">env.py</a></td>
+                <td>8</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="8 8">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">home/__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">home/admin.py</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="1 1">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">home/apps.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">home/migrations/__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">home/models.py</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="1 1">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">home/tests.py</a></td>
+                <td>10</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="10 10">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">home/urls.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">home/views.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">manage.py</a></td>
+                <td>12</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="right" data-ratio="10 12">83%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">products/__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">products/admin.py</a></td>
+                <td>9</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="9 9">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">products/apps.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">products/migrations/0001_initial.py</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="6 6">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">products/migrations/__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">products/models/Models_Category.py</a></td>
+                <td>10</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="right" data-ratio="9 10">90%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">products/models/Models_Product.py</a></td>
+                <td>12</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="12 12">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">products/models/__init__.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">products/tests/__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">products/tests/test_models.py</a></td>
+                <td>29</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="29 29">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">products/tests/test_views.py</a></td>
+                <td>13</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="13 13">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">products/urls.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">products/views.py</a></td>
+                <td>41</td>
+                <td>26</td>
+                <td>0</td>
+                <td class="right" data-ratio="15 41">37%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">profiles/__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">profiles/admin.py</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="1 1">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">profiles/apps.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">>profiles/forms.py</a></td>
+                <td>18</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="right" data-ratio="17 18">94%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">profiles/migrations/0001_initial.py</a></td>
+                <td>8</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="8 8">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">profiles/migrations/__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">profiles/models/Models_Profile.py</a></td>
+                <td>21</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="right" data-ratio="20 21">95%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">profiles/tests/__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">profiles/tests/test_forms.py</a></td>
+                <td>9</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="9 9">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">profiles/tests/test_models.py</a></td>
+                <td>41</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="41 41">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">profiles/tests/test_views.py</a></td>
+                <td>13</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="13 13">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">profiles/urls.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">profiles/views.py</a></td>
+                <td>18</td>
+                <td>11</td>
+                <td>0</td>
+                <td class="right" data-ratio="7 18">39%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">shopping_bag/__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">shopping_bag/admin.py</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="1 1">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">shopping_bag/apps.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">shopping_bag/migrations/__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">shopping_bag/models.py</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="1 1">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">shopping_bag/templatetags/__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">shopping_bag/templatetags/bag_tools.py</a></td>
+                <td>5</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="right" data-ratio="4 5">80%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">shopping_bag/tests/__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">shopping_bag/tests/test_views.py</a></td>
+                <td>24</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="24 24">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">shopping_bag/urls.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left">shopping_bag/views.py</a></td>
+                <td>17</td>
+                <td>11</td>
+                <td>0</td>
+                <td class="right" data-ratio="6 17">35%</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="total">
+                <td class="name left">Total</td>
+                <td>411</td>
+                <td>54</td>
+                <td>0</td>
+                <td class="right" data-ratio="357 411">87%</td>
+            </tr>
+        </tfoot>
+    </table>
+    <p id="no_rows">
+        No items found using the specified filter.
+    </p>
+</main>
+
+---
 
 ## Manual tests
 
