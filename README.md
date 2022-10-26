@@ -10,10 +10,15 @@ This project was created as part of the Full Stack Software Development course o
 
 - [Candy Care Dublin](#candy-care-dublin)
 - [Table of Contents](#table-of-contents)
-- [Briefing](#briefing)
+- [Business Model](#business-model)
+  - [Business to Consumer (B2C)](#business-to-consumer-b2c)
+- [Client Briefing](#client-briefing)
 - [The challenge](#the-challenge)
-  - [Business Rules](#business-rules)
+- [Business Rules](#business-rules)
   - [Screens](#screens)
+- [Marketing Strategy](#marketing-strategy)
+  - [Facebook Business Page](#facebook-business-page)
+  - [Highlights](#highlights)
 - [User Experience | UX](#user-experience--ux)
   - [User Stories](#user-stories)
     - [User](#user)
@@ -69,6 +74,7 @@ This project was created as part of the Full Stack Software Development course o
     - [Activating a virtualenv](#activating-a-virtualenv)
   - [Database setup](#database-setup)
   - [Stripe | Payment Processing Platform for the Internet](#stripe--payment-processing-platform-for-the-internet)
+  - [Testing Payment Intents with Stripe](#testing-payment-intents-with-stripe)
   - [Setting up heroku](#setting-up-heroku)
 - [Credits](#credits)
   - [Media](#media)
@@ -76,7 +82,13 @@ This project was created as part of the Full Stack Software Development course o
 - [Disclaimer](#disclaimer)
 - [Author](#author)
 
-# Briefing
+# Business Model
+
+## Business to Consumer (B2C)
+
+B2C is the process of selling products or services from businesses to individual consumers. In this case, **Candy Care Dublin** is the business and the cakes/sweeties are our products.
+
+# Client Briefing
 
 **Candy Care Dublin** is a small company that started in a homely environment, with the idea of ​​making homemade cakes for the people who lived nearby. However, people liked it and recommended it to other people. The business has expanded and today **Candy Care Dublin** has clients that go beyond the surroundings, as well as in other cities. The main means of publicizing the business is through a page on social networks (Facebook and Instagram) but, with the exponential growth of the business, there was a need to create a website, where people could access, see the products available, add to cart and finally checkout the purcharse. In this way, it would no longer be necessary to make sales via Instagram or Facebook, which would facilitate the administration of the business.
 
@@ -97,7 +109,7 @@ _For admin_
 
 > 7. A functionality where the app admin can easily add one or more products, edit and/or delete an specific product.
 
-## Business Rules
+# Business Rules
 
 The application's administrative functions are intended to manage what each user can do within the system. Permissions such as adding, editing or removing a property, for example, should under no circumstances be given to the user of the application. Such functionalities must be assigned exclusively to the administrator.
 
@@ -116,6 +128,18 @@ In the system, there will be the following user functionalities:
   - Can manage their own profile.
   - Can sign up to the newsletter form.
   - Can add one or more products to their bag.
+
+# Marketing Strategy
+
+## Facebook Business Page
+
+ - [Candy Care Dublin - Facebook Business Page](https://www.facebook.com/people/Candy-Care/100038339116419/)
+  <img src="./readme-files/imgs/facebook_page.jpg" alt="Facebook Business Page of Candy Care Dublin Store">
+
+## Highlights
+
+ - Cover photo matches the **Candy Care Dublin** site.
+ - Profile pictute matches the **Candy Care Dublin** logo.
 
 [Back to top ⇧](#table-of-contents)
 
@@ -580,6 +604,8 @@ Once this is done, the **App password** window will open and you needed to gener
 
 <img src="./readme-files/imgs/app_passwords.jpg" alt="App password">
 
+In the Select app dropdown menu, choose the app you’re using. You can also select Other and enter you own custom app name.
+
 <img src="./readme-files/imgs/app_passwords_2.jpg" alt="App password">
 
 And then a password will be generated.
@@ -711,6 +737,24 @@ You will see something like this:
 | :--------------------: | :----------------------: |
 | STRIPE_PUBLISHABLE_KEY |  [Your Publishable Key]  |
 |   STRIPE_SECRET_KEY    | [Your Stripe Secret Key] |
+
+## Testing Payment Intents with Stripe
+
+As a way of exemplifying how the payment functionality works, Stripe provides three types of payment events and their respective card numbers: successful payment, requires authentication and failed payment. Below you will see a table with these events and their card numbers. _Note that when using the application, you **MUST NOT** enter any real card numbers. Therefore, Stripe already makes these cards available for testing._ 
+
+|      Payment event      |     Card Number     |
+| :---------------------: | :-----------------: |
+|   Successful payment    | 4242 4242 4242 4242 |
+| Requires authentication | 4000 0025 0000 3155 |
+|     Failed payment      | 4000 0000 0000 9995 |
+
+**Additional information**:
+
+- Use a valid future date, such as 12/34.
+- Use any three-digit CVC.
+- Use any value you like for other form fields (you may be asked to enter a ZIP code).
+
+<img src="./readme-files/imgs/payment_field.jpg" alt="A screenshot of the payment field">
 
 ## Setting up heroku
 
