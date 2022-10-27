@@ -1,5 +1,5 @@
-@import "./utilities/typography.css";
-@import "./utilities/color.css";
+@import url("./utilities/typography.53d8413c561d.css");
+@import url("./utilities/color.1f1a5a00af98.css");
 
 html {
   overflow-x: hidden;
@@ -540,7 +540,7 @@ button.close {
 
 .intro {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("../img/halloween_3.jpg") no-repeat center bottom;
+    url("../img/halloween_3.f04c95e2a3b7.jpg") no-repeat center bottom;
   background-size: cover;
   color: #ffffff;
   padding: 200px 0;
@@ -667,19 +667,19 @@ button.close {
 }
 
 h2.feature-brigadeiro::before {
-  background: url("../img/feature-1.jpg") no-repeat center;
+  background: url("../img/feature-1.bfd8d9b5725e.jpg") no-repeat center;
   background-size: cover;
   box-shadow: 0 0 0 5px #421f1d;
 }
 
 h2.feature-cakes::before {
-  background: url("../img/feature-2.jpg") no-repeat center;
+  background: url("../img/feature-2.83c8e93a0cc3.jpg") no-repeat center;
   background-size: cover;
   box-shadow: 0 0 0 5px #5e3622;
 }
 
 h2.feature-sweets::before {
-  background: url("../img/feature-3.jpg") no-repeat center;
+  background: url("../img/feature-3.6744ce3498ce.jpg") no-repeat center;
   background-size: cover;
   box-shadow: 0 0 0 5px #7b504d;
 }
@@ -977,7 +977,7 @@ form button:hover {
 
 .products-header {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("../img/chocolate-1.jpg") no-repeat center center;
+    url("../img/chocolate-1.294e0ddfd9c0.jpg") no-repeat center center;
   background-size: cover;
   color: #ffffff;
   padding: 200px 0;
@@ -1396,14 +1396,14 @@ td {
 }
 
 .error-inner h1#_404 {
-  background: url(../img/birthday.jpg) center no-repeat;
+  background: url("../img/birthday.57acd86029cb.jpg") center no-repeat;
   background-size: 460px;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 
 .error-inner h1#_500 {
-  background: url(../img/color-bars.jpg) center no-repeat;
+  background: url("../img/color-bars.cbebe0744495.jpg") center no-repeat;
   background-size: 460px;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
