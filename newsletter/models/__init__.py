@@ -1,0 +1,1 @@
+from .Models_Newsletter import Newsletter
