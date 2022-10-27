@@ -99,10 +99,10 @@
                 <p>stay on top of our promotions</p>
             </div>
         </div>
-        <form method="POST" action="{% url 'success' %}" class="grid-6">
+        <form method="POST" action="{% url 'newsletter' %}" class="grid-6">
             {% csrf_token %}
-            <input type="email" name="newsletter" placeholder="Your email address">
-            <button type="submit">Submit</button>
+            <input type="email" name="newsletter" placeholder="Your email address" required>
+            <button type="submit">Subscribe</button>
         </form>
     </div>
 </section>
