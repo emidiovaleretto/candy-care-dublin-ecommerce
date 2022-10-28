@@ -168,6 +168,34 @@ In the system, there will be the following user functionalities:
 
 ## System Usability Scale
 
+In order to test the user's feeling when using the system, I applied the System Usability Scale test which includes 10 questions (in this case I added 3 more) which users of your website will answer. Participants will rank each question from 1 to 5 based on how much they agree with the statement they are reading. 5 means they agree completely, 1 means they disagree vehemently.
+
+The questionnaire contains the following questions:
+
+ 1. I think I would like to use this system often.
+ 2. I found the system unnecessarily complex.
+ 3. I found the system easy to use.
+ 4. The features of this system were very well integrated.
+ 5. I found this system very inconsistent.
+ 6. I think most people would learn to use this system quickly.
+ 7. I found this website very cumbersome/awkward to use.
+ 8. I felt very confident using this system.
+ 9. I needed to learn a number of things before I could start using this system.
+ 10. It was easy to find the information I was looking for.
+ 11. I liked using the system interface.
+ 12. The system interface is enjoyable.
+ 13. The organization of system information is clear.
+
+The form can be found in this [link](https://forms.gle/qSztkzuxcuVgKFwC7).
+
+Five people, 3 women and 2 men, participated as volunteers in the survey and I share the result below.
+
+<details>
+    <summary>Google Forms</summary>
+        <img src="./readme-files/imgs/usability_test.jpg" alt="Usability Test Results">
+</details>
+
+
 ## User Stories
 
 ### User
