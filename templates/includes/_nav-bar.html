@@ -6,9 +6,9 @@
             <ul>
             {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
-                <li><a href="">Product Management</a></li>
+                <li><a href="{% url 'management' %}">Product Management</a></li>
             {% endif %}
-                <li><a href="">My Profile</a></li>
+                <li><a href="{% url 'profile' %}">My Profile</a></li>
                 <li><a href="{% url 'account_logout' %}">Sign out</a></li>
             {% else %}
                 <li><a href="{% url 'account_login' %}">Sign in</a></li>
