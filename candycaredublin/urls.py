@@ -20,6 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('allauth.urls')),
     path('', include('home.urls')),
+    path('api/', include('api.urls')),
     path('profile/', include('profiles.urls')),
     path('shop/', include('products.urls')),
     path('shopping_bag/', include('shopping_bag.urls')),

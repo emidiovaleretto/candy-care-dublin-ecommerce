@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
 
     # My apps
+    'api',
     'home',
     'products',
     'profiles',
