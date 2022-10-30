@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Management Panel - All Products{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="overlay"></div>
+<div class="container product-list">
+    <div class="row">
+        <div class="col-12 col-md-6 offset-3">
+            <h2 class="font-p-xl my-5 text-center">Product Management</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="header-list font-f-m mb-5 border-bottom">
+            <p>SKU</p>
+            <p>Name</p>
+            <p>Category</p>
+            <p>Price</p>
+            <p>Image</p>
+            <p>Action</p>
+        </div>
+    </div>
+    <div class="row">
+        {% for product in products %}
+        <div class="product-list-content font-p-s gray-10">
+            <p>{{ product.sku |truncatechars:7 }}</p>
+            <a href="{% url 'product_detail' product.slug %}"><h2>{{ product.name }}</h2></a>
+            <p>{{ product.category }}</p>
+            <p>{{ product.price }}</p>
+            <a href="{% url 'product_detail' product.slug %}"><img src="{{ product.image.url }}" alt="{{ product.name }}"></a>
+            <a href="{% url 'edit_product' product.id %}">Edit</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
