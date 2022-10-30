@@ -1575,3 +1575,48 @@ td {
 .form button {
   width: 200px;
 }
+
+.product-list {
+  min-height: 100vh;
+  margin: 60px auto 120px auto;
+}
+
+.header-list,
+.product-list-content {
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 1fr) 1fr 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.product-list-content {
+  padding: 20px 0;
+}
+
+.product-list-content a {
+  color: #2e2e2e;
+}
+
+.product-list-content img {
+  max-width: 80px;
+}
+
+.product-list-content:nth-child(odd) {
+  background-color: #ffe4b9;
+}
+
+.product-list-content a:last-child {
+  display: block;
+  width: 100px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #320c0e;
+  padding: 12px 16px;
+  border: 1px solid #320c0e;
+  transition: .1s;
+}
+
+.product-list-content a:last-child:hover {
+  background: #320c0e;
+  color: #fff;
+}
