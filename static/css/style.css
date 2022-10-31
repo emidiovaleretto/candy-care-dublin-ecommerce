@@ -346,6 +346,10 @@ body {
   color: #111111;
 }
 
+.content {
+  min-height: 50vh;
+}
+
 .nav-top {
   padding: 10px 0;
   background: #e6bb7a;
