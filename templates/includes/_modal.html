@@ -1,0 +1,21 @@
+{% load static %}
+<div class="modal fade" id="btnModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="font-p-l" id="ModalLabel">Delete</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p class="font-p-m mb-3">Are you sure you want to delete this product?</p>
+            <p class="font-f-xs mb-3">Unexpected bad things will happen if you don't read this.</p>
+            <p class="font-p-s mb-3 text-danger">This action <span class="text-decoration-underline">CANNOT</span> be undone!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary rounded-0" data-bs-dismiss="modal">Close</button>
+          <a href="{% url 'delete_product' product.id %}" type="button" class="btn btn-outline-danger rounded-0">Yes, delete it!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
