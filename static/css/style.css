@@ -1554,6 +1554,15 @@ td {
 }
 
 .form a {
+  color: #111;
+  font-weight: bold;
+}
+
+.form a:hover {
+  text-decoration: underline;
+}
+
+.btn a {
   display: inline-block;
   width: 220px;
   text-transform: uppercase;
@@ -1563,17 +1572,17 @@ td {
   color: #320c0e;
   padding: 20px 0 14px 0;
   border: 1px solid #320c0e;
-  margin: 40px 10px 0 auto;
+  margin: 40px auto 0 auto;
 }
 
-.form a:hover {
+.btn a:hover {
   background: #e6bb7a;
   border-color: #e6bb7a;
   color: #320c0e;
 }
 
 .form button {
-  width: 200px;
+  width: 220px;
 }
 
 .product-list {
