@@ -94,3 +94,21 @@ def edit_product(request, product_id):
     }
 
     return render(request, 'api/edit_product.html', context=context)
+
+
+@login_required(login_url='/auth/login')
+def delete_a_product(request, product_id):
+    """
+    This method deletes a product in the store.
+    """
+    if not request.user.is_superuser:
+        messages.error(request,
+                       "It looks like you tried to access a page for which you don't have permission. \
+                        Please contact the store owner for assistance.")
+        return redirect(reverse('home'))
+
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.info(request, f"{product.name} deleted successfully!")
+
+    return redirect(reverse('edit_all_products'))
