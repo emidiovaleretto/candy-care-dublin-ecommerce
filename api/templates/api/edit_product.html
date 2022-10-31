@@ -39,7 +39,17 @@
             </form>
         </div>
     </div>
+    <div class="row">
+        <div class="col-12 col-md-6 offset-3 d-flex justify-content-between py-5 px-3 my-5 border-top">
+            <div>
+                <h4 class="font-p-l">Delete this product</h4>
+                <p class="font-f-s">Once you delete this product, this action cannot be undone. Please be certain!</p>
+            </div>
+            <button type="button" class="btn btn-danger btn-lg align-self-center rounded-0" data-bs-toggle="modal" data-bs-target="#btnModal">Delete this product</button>
+        </div>
+    </div>
 </div>
+{% include 'includes/_modal.html' %}
 
 {% endblock %}
 
