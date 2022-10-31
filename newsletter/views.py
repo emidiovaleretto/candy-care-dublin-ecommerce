@@ -12,6 +12,11 @@ def newsletter(request):
     """
     form = NewsletterForm()
 
+    if request.method == 'GET':
+        messages.error(request,
+                       "Ooops! Something went wrong.")
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = NewsletterForm(request.POST)
 
