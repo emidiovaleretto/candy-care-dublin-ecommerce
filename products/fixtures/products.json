@@ -1,157 +1,254 @@
-[{
-    "model": "products.product",
-    "pk": 1,
-    "fields": {
-        "category": 1,
-        "sku": "1fed7277-644c-4abe-ad66-faaf966c3d3f",
-        "name": "M&M's Funny Birthday Cake",
-        "slug": "mms-funny-birthday-cake",
-        "description": "This M&M's Chocolate Cake has a hidden m&m's surprise center and is loaded with m&m's chocolates.",
-        "price": "35.00",
-        "image": "media/pratiksha-mohanty-SxHxyNx-6YI-unsplash_csxzhp"
-    }
-}, {
-    "model": "products.product",
-    "pk": 2,
-    "fields": {
-        "category": 2,
-        "sku": "b331044a-a2df-4daa-a5a2-4ffa262b5fb9",
-        "name": "Brigadeiro",
-        "slug": "brigadeiro",
-        "description": "This famous sweet is a type of Brazilian Chocolate Confectionery. It's a scrumptious bite-size (or two) chocolate sweet, very popular in Brazil.",
-        "price": "10.00",
-        "image": "media/blackieshoot-lTevGZKLufk-unsplash_eyhr14"
-    }
-}, {
-    "model": "products.product",
-    "pk": 3,
-    "fields": {
-        "category": 1,
-        "sku": "0ffc44c6-6a9c-47ed-a1ec-42d73c15d200",
-        "name": "Strawberry flavored birthday cake",
-        "slug": "strawberry-flavored-birthday-cake",
-        "description": "Strawberry flavored birthday cake",
-        "price": "35.00",
-        "image": "media/marina-grynykha-Grir9HnKx_0-unsplash_iuvq5b"
-    }
-}, {
-    "model": "products.product",
-    "pk": 4,
-    "fields": {
-        "category": 1,
-        "sku": "f4d0a836-3f03-49fe-a14f-3e2c6a870fd6",
-        "name": "Gourmet's Double Chocolate Cake",
-        "slug": "gourmets-double-chocolate-cake",
-        "description": "This double chocolate cake is made with buttermilk, oil, lots of cocoa powder, and coffee, if you wish.",
-        "price": "35.00",
-        "image": "media/pexels-darko-trajković-10921755_wco5jn"
-    }
-}, {
-    "model": "products.product",
-    "pk": 5,
-    "fields": {
-        "category": 2,
-        "sku": "050601c7-5d1e-4e82-9ef7-2c792d57e3f2",
-        "name": "Chocolate Cake for Birthdays",
-        "slug": "chocolate-cake-for-birthdays",
-        "description": "Chocolate Cake for Birthdays",
-        "price": "35.00",
-        "image": "media/pexels-abhinav-goswami-291528_zvrtgj"
-    }
-}, {
-    "model": "products.product",
-    "pk": 6,
-    "fields": {
-        "category": 2,
-        "sku": "1bb18a9d-7694-4c21-8da8-4aa681f2624b",
-        "name": "Volcano Chocolate Cake",
-        "slug": "volcano-chocolate-cake",
-        "description": "Combine the butter and chocolate in a double boiler and melt over low heat, stirring until smooth.",
-        "price": "30.00",
-        "image": "media/pexels-pavel-danilyuk-6999358_tx3s0f"
-    }
-}, {
-    "model": "products.product",
-    "pk": 7,
-    "fields": {
-        "category": 2,
-        "sku": "33335a01-48fc-4318-85ac-f70480e9a72e",
-        "name": "Assorted Macarons",
-        "slug": "assorted-macarons",
-        "description": "Delicate meringue and almond-flour based sandwich cookies with buttercream, jam, or ganache filling that comes in a variety of flavors.",
-        "price": "15.00",
-        "image": "media/pexels-arminas-raudys-808941_izwwyo"
-    }
-}, {
-    "model": "products.product",
-    "pk": 8,
-    "fields": {
-        "category": 2,
-        "sku": "52d35649-80b7-4d35-a8cb-5307ddf1426a",
-        "name": "Secret box of Assorted Sweets",
-        "slug": "secret-box-of-assorted-sweets",
-        "description": "Our Secret box of Assorted Sweets is perfect for surprising someone who loves the most famous soft candy in the world.",
-        "price": "20.00",
-        "image": "media/pexels-pelageia-zelenina-10390457_1_ydpvjp"
-    }
-}, {
-    "model": "products.product",
-    "pk": 9,
-    "fields": {
-        "category": 2,
-        "sku": "a36ea10b-a158-42e6-a372-d7c5d23543d4",
-        "name": "Lemon Tart",
-        "slug": "lemon-tart",
-        "description": "A pastry case (often made in a fluted tart tin) containing a baked lemon custard (usually composed of eggs, sugar, lemon juice and cream).",
-        "price": "5.00",
-        "image": "media/pexels-suzy-hazelwood-1098592_b9wcoe"
-    }
-}, {
-    "model": "products.product",
-    "pk": 10,
-    "fields": {
-        "category": 1,
-        "sku": "7035d571-d4a3-4361-a144-453de9f963c1",
-        "name": "Kit Kat Chocolate Cake",
-        "slug": "kit-kat-chocolate-cake",
-        "description": "This Kit Kat Cake recipe begins with chocolate cake. It's surrounded by Kit Kat Candy Bars, wrapped with a ribbon and topped with M&M's.",
-        "price": "45.00",
-        "image": "media/pexels-phạm-thành-đạt-4403073_hotplj"
-    }
-}, {
-    "model": "products.product",
-    "pk": 11,
-    "fields": {
-        "category": 1,
-        "sku": "c00cf9c3-4272-492f-bf16-1cd5fc70a136",
-        "name": "Wedding Cake",
-        "slug": "wedding-cake",
-        "description": "Wedding Cake",
-        "price": "49.90",
-        "image": "media/pexels-rodnae-productions-8964281_rqgims"
-    }
-}, {
-    "model": "products.product",
-    "pk": 12,
-    "fields": {
-        "category": 2,
-        "sku": "12ee68c8-16a7-451a-b930-a378b752e811",
-        "name": "Churros",
-        "slug": "churros",
-        "description": "A sweet Brazilian snack consisting of a strip of fried dough dusted with sugar or cinnamon.",
-        "price": "10.00",
-        "image": "media/pexels-pixabay-372851_xcrscu"
-    }
-}, {
-    "model": "products.product",
-    "pk": 13,
-    "fields": {
-        "category": 4,
-        "sku": "eaa5488c-56de-42bd-9013-510a4e2dc3a0",
-        "name": "Chewy Peanut Brittle Bars",
-        "slug": "chewy-peanut-brittle-bars",
-        "description": "Creamy peanut butter, yellow cake mix, sweetened",
-        "price": "12.00",
-        "image": "media/lunch-lady-peanut-butter-bars-04_yvdvg0_hy05sz.jpg"
-    }
-}]
+[
+{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "category": 1,
+    "occasion": null,
+    "sku": "1fed7277-644c-4abe-ad66-faaf966c3d3f",
+    "name": "M&M's Funny Birthday Cake",
+    "slug": "mms-funny-birthday-cake",
+    "description": "This M&M's Chocolate Cake has a hidden m&m's surprise center and is loaded with m&m's chocolates.",
+    "price": "35.00",
+    "image": "media/pratiksha-mohanty-SxHxyNx-6YI-unsplash_csxzhp_cazrts"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 2,
+  "fields": {
+    "category": 2,
+    "occasion": null,
+    "sku": "b331044a-a2df-4daa-a5a2-4ffa262b5fb9",
+    "name": "Brigadeiro",
+    "slug": "brigadeiro",
+    "description": "This famous sweet is a type of Brazilian Chocolate Confectionery. It's a scrumptious bite-size (or two) chocolate sweet, very popular in Brazil.",
+    "price": "8.00",
+    "image": "media/blackieshoot-lTevGZKLufk-unsplash_eyhr14"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 3,
+  "fields": {
+    "category": 1,
+    "occasion": null,
+    "sku": "0ffc44c6-6a9c-47ed-a1ec-42d73c15d200",
+    "name": "Strawberry flavored birthday cake",
+    "slug": "strawberry-flavored-birthday-cake",
+    "description": "Strawberry flavored birthday cake",
+    "price": "35.00",
+    "image": "media/marina-grynykha-Grir9HnKx_0-unsplash_iuvq5b"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 4,
+  "fields": {
+    "category": 1,
+    "occasion": null,
+    "sku": "f4d0a836-3f03-49fe-a14f-3e2c6a870fd6",
+    "name": "Gourmet's Double Chocolate Cake",
+    "slug": "gourmets-double-chocolate-cake",
+    "description": "This double chocolate cake is made with buttermilk, oil, lots of cocoa powder, and coffee, if you wish.",
+    "price": "35.00",
+    "image": "media/pexels-darko-trajković-10921755_wco5jn"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "category": 2,
+    "occasion": null,
+    "sku": "050601c7-5d1e-4e82-9ef7-2c792d57e3f2",
+    "name": "Chocolate Cake for Birthdays",
+    "slug": "chocolate-cake-for-birthdays",
+    "description": "Chocolate Cake for Birthdays",
+    "price": "35.00",
+    "image": "media/pexels-abhinav-goswami-291528_zvrtgj"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 6,
+  "fields": {
+    "category": 2,
+    "occasion": null,
+    "sku": "1bb18a9d-7694-4c21-8da8-4aa681f2624b",
+    "name": "Volcano Chocolate Cake",
+    "slug": "volcano-chocolate-cake",
+    "description": "Combine the butter and chocolate in a double boiler and melt over low heat, stirring until smooth.",
+    "price": "30.00",
+    "image": "media/pexels-pavel-danilyuk-6999358_tx3s0f"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 7,
+  "fields": {
+    "category": 2,
+    "occasion": null,
+    "sku": "33335a01-48fc-4318-85ac-f70480e9a72e",
+    "name": "Assorted Macarons",
+    "slug": "assorted-macarons",
+    "description": "Delicate meringue and almond-flour based sandwich cookies with buttercream, jam, or ganache filling that comes in a variety of flavors.",
+    "price": "15.00",
+    "image": "media/pexels-arminas-raudys-808941_izwwyo"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 8,
+  "fields": {
+    "category": 2,
+    "occasion": null,
+    "sku": "52d35649-80b7-4d35-a8cb-5307ddf1426a",
+    "name": "Secret box of Assorted Sweets",
+    "slug": "secret-box-of-assorted-sweets",
+    "description": "Our Secret box of Assorted Sweets is perfect for surprising someone who loves the most famous soft candy in the world.",
+    "price": "27.00",
+    "image": "media/pexels-pelageia-zelenina-10390457_1_ydpvjp"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 9,
+  "fields": {
+    "category": 2,
+    "occasion": null,
+    "sku": "a36ea10b-a158-42e6-a372-d7c5d23543d4",
+    "name": "Lemon Tart",
+    "slug": "lemon-tart",
+    "description": "A pastry case (often made in a fluted tart tin) containing a baked lemon custard (usually composed of eggs, sugar, lemon juice and cream).",
+    "price": "5.00",
+    "image": "media/pexels-suzy-hazelwood-1098592_b9wcoe"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 10,
+  "fields": {
+    "category": 1,
+    "occasion": null,
+    "sku": "7035d571-d4a3-4361-a144-453de9f963c1",
+    "name": "Kit Kat Chocolate Cake",
+    "slug": "kit-kat-chocolate-cake",
+    "description": "This Kit Kat Cake recipe begins with chocolate cake. It's surrounded by Kit Kat Candy Bars, wrapped with a ribbon and topped with M&M's.",
+    "price": "45.00",
+    "image": "media/pexels-phạm-thành-đạt-4403073_hotplj"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 11,
+  "fields": {
+    "category": 1,
+    "occasion": null,
+    "sku": "c00cf9c3-4272-492f-bf16-1cd5fc70a136",
+    "name": "Wedding Cake",
+    "slug": "wedding-cake",
+    "description": "Wedding Cake",
+    "price": "49.90",
+    "image": "media/pexels-rodnae-productions-8964281_rqgims"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 12,
+  "fields": {
+    "category": 2,
+    "occasion": null,
+    "sku": "12ee68c8-16a7-451a-b930-a378b752e811",
+    "name": "Churros",
+    "slug": "churros",
+    "description": "A sweet Brazilian snack consisting of a strip of fried dough dusted with sugar or cinnamon.",
+    "price": "10.00",
+    "image": "media/pexels-pixabay-372851_xcrscu"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 13,
+  "fields": {
+    "category": 4,
+    "occasion": null,
+    "sku": "eaa5488c-56de-42bd-9013-510a4e2dc3a0",
+    "name": "Chewy Peanut Brittle Bars",
+    "slug": "chewy-peanut-brittle-bars",
+    "description": "Creamy peanut butter, yellow cake mix, sweetened",
+    "price": "12.00",
+    "image": "media/lunch-lady-peanut-butter-bars-04_yvdvg0_hy05sz.jpg"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 14,
+  "fields": {
+    "category": 1,
+    "occasion": null,
+    "sku": "42-9013-bdeaa5510-aa056de-488c4e2dc3",
+    "name": "Belgian Chocolate Mud Cake",
+    "slug": "belgian-chocolate-mud-cake",
+    "description": "Our best-loved chocolate mudcake, coated in a premium chocolate glaze and finished with an exquisite Belgian chocolate collar flickered with gold.",
+    "price": "45.00",
+    "image": "media/the-ultimate-chocolate-mud-cake-33040-2_crpj3l"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 15,
+  "fields": {
+    "category": 1,
+    "occasion": null,
+    "sku": "488c-9013eaa5-56de510-a4e2dc3a0-42bd",
+    "name": "Brownie & Choc Cigars Nude Cake",
+    "slug": "brownie-choc-cigars-nude-cake",
+    "description": "Chocolate sponge layered with white chocolate buttercream, topped with chunks of chocolate brownie and chocolate shavings! Perfect for the chocolate lovers!",
+    "price": "45.00",
+    "image": "media/sweets-4367937_au78c2"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 16,
+  "fields": {
+    "category": 1,
+    "occasion": null,
+    "sku": "787b-4011xaa5-56d0a4e2-e51dc3a0-42bd",
+    "name": "Chocolate Treats Nude Cake",
+    "slug": "chocolate-treats-nude-cake",
+    "description": "This decadent chocolate cake is made with moist layers of chocolate sponge cake filled with our white chocolate buttercream and drizzled in the finest of Belgian chocolate...",
+    "price": "50.00",
+    "image": "media/happy-birthday-3960005_cwjles"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 17,
+  "fields": {
+    "category": 1,
+    "occasion": null,
+    "sku": null,
+    "name": "Milk Chocolate Ganache Cake Round",
+    "slug": "milk-chocolate-ganache-cake-round",
+    "description": "The Milk Chocolate Gannache Cake Round is a smooth, airy and light chocolate cake made with lovely Belgian Milk Chocolate, chocolate sponge and Chocolate buttercream.",
+    "price": "38.50",
+    "image": "media/pexels-bruno-curly-12118046_yk8ynr"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 18,
+  "fields": {
+    "category": 1,
+    "occasion": null,
+    "sku": "548fk-a4e3a0x-56de-548d-9013-ea42ba8c",
+    "name": "Strawberry cheesecake",
+    "slug": "strawberry-cheesecake",
+    "description": "Cheesecake as a flavor tastes tart, sweet, creamy, and tangy! A popular flavor is also strawberry cheesecake, which seems to be quite a common yogurt and ice cream flavor, and which has the same sweet tanginess, but with fresh strawberry notes.",
+    "price": "25.00",
+    "image": "media/cheesecake-5788226_1920_zrj01k"
+  }
+}
+]
