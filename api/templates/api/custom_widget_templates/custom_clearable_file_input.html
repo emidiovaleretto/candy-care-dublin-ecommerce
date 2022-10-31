@@ -1,6 +1,6 @@
 {% if widget.is_initial %}
     <p class="font-p-s mt-5 mb-2">{{ widget.initial_text }}:</p>
-    <a href="{{ widget.value.url }}">
+    <a href="{{ widget.value.url }}" target="__blank" rel="noopener">
         <img width="120" height="120" class="rounded shadow-sm d-inline" src="{{ widget.value.url }}">
     </a>
     {{ widget.input_text }}

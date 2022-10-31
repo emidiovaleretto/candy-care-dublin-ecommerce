@@ -1599,6 +1599,7 @@ td {
   display: grid;
   grid-template-columns: 1fr minmax(300px, 1fr) 1fr 1fr 1fr 1fr;
   justify-items: center;
+  align-items: center;
 }
 
 .product-list-content {
