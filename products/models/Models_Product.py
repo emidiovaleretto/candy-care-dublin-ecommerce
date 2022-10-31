@@ -1,6 +1,8 @@
 from uuid import uuid4
 from products.models import *
 
+from django_resized import ResizedImageField
+
 
 class Product(models.Model):
     """
@@ -16,7 +18,11 @@ class Product(models.Model):
     slug = models.SlugField(max_length=100, null=False, unique=True)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    image = models.ImageField(null=True, blank=True)
+    image = ResizedImageField(
+        size=[640, 480],
+        quality=75, 
+        force_format='JPEG'
+    )
 
     def __str__(self):
         """
