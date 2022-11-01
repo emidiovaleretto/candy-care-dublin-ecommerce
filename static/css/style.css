@@ -543,10 +543,11 @@ button.close {
 }
 
 .intro {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("../img/halloween_3.jpg") no-repeat center bottom;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+    url("../img/hero-image.jpg") no-repeat center bottom;
   background-size: cover;
   color: #ffffff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   padding: 200px 0;
   height: 90vh;
   text-align: center;
@@ -557,6 +558,7 @@ button.close {
   font-family: "Montserrat", sans-serif;
   font-size: 3rem;
   line-height: 1.2;
+  margin-top: 60px;
   margin-bottom: 20px;
 }
 
@@ -595,7 +597,10 @@ button.close {
 
 @media (max-width: 739px) {
   .intro {
-    padding: 160px 0;
+    padding: 100px 0;
+  }
+  .intro h1 {
+    margin-top: 0;
   }
   .intro > a {
     background: #bf0028;
