@@ -1,0 +1,29 @@
+[
+{
+  "model": "products.occasion",
+  "pk": 1,
+  "fields": {
+    "name": "valentines_day",
+    "friendly_name": "Valentines Day",
+    "created_at": "2022-11-01T05:58:36.374Z"
+  }
+},
+{
+  "model": "products.occasion",
+  "pk": 2,
+  "fields": {
+    "name": "mothers_day",
+    "friendly_name": "Mother's Day",
+    "created_at": "2022-11-01T05:58:54.420Z"
+  }
+},
+{
+  "model": "products.occasion",
+  "pk": 3,
+  "fields": {
+    "name": "birthdays",
+    "friendly_name": "Birthdays",
+    "created_at": "2022-11-01T05:59:10.659Z"
+  }
+}
+]
