@@ -1,21 +1,54 @@
 .order-history {
-    max-height: 416px; /* height of profile form + submit button */
-    overflow-y: auto;
+  max-height: 416px; /* height of profile form + submit button */
+  overflow-y: auto;
 }
 
-#profile-update-form .form-control {
-    color: #000;
+.table tr {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font: 400 1rem/1.5 "Roboto", sans-serif;
+}
+
+.table tr a {
+    font: 400 1rem/1.5 "Roboto", sans-serif;
+    color: #2e2e2e;
+}
+
+#profile-update-form .form-control,
+#id_default_country {
+  font: 400 1rem/1.5 "Roboto", sans-serif;
+  box-sizing: border-box;
+  height: 40px;
+  padding: 10px 12px;
+  border: 1px solid rgba(160, 0, 40, 0.4);
+  border-radius: 0px;
+  background-color: white;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+#profile-update-form:focus,
+.form-control:focus,
+.form-control:active,
+#id_default_country:focus,
+#id_default_country:active {
+  box-shadow: 0 0 0 2px rgba(160, 0, 40, 0.4);
+}
+
+.form-control#id_default_postcode {
+    margin-bottom: 10px;
 }
 
 #profile-update-form input::placeholder {
-    color: #aab7c4;
+  color: #aab7c4;
 }
 
 #id_default_country,
 #id_default_country option:not(:first-child) {
-    color: #000;
+  color: #000;
 }
 
 #id_default_country option:first-child {
-    color: #aab7c4;
+  color: #aab7c4;
 }
