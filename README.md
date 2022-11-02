@@ -44,6 +44,7 @@ This project was created as part of the Full Stack Software Development course o
       - [Thank you Page](#thank-you-page)
       - [Social Networks](#social-networks)
       - [Footer](#footer)
+    - [Features to be implemented](#features-to-be-implemented)
 - [Project Architecture](#project-architecture)
   - [Project settings structure](#project-settings-structure)
     - [Development environment](#development-environment)
@@ -300,13 +301,17 @@ The wireframes were created in [Figma](https://www.figma.com/) which can be expl
 
 <img src="./readme-files/imgs/footer.jpg" alt="Footer">
 
+### Features to be implemented
+
+Due to time constraints I haven't been able to implement some of the changes I had planned.
+
+<img src="./readme-files/imgs/todo.jpg" alt="Features to be implemented">
+
 [Back to top ⇧](#table-of-contents)
 
 # Project Architecture
 
 <img src="./readme-files/imgs/architecture_design.jpg"/>
-
-[Back to top ⇧](#table-of-contents)
 
 ## Project settings structure
 
@@ -323,6 +328,8 @@ See below how the project structure should look 👇
 <img src="./readme-files/imgs/project_structure.jpg"/>
 
 Now, we will need to open each file and add some settings.
+
+[Back to top ⇧](#table-of-contents)
 
 ### Development environment
 
@@ -543,6 +550,7 @@ Once a user registers in the system, a profile is automatically created for that
 | User email | user_email      | null=False, blank=False | EmailField    |
 | Created At | created_at      | auto_now_add=True       | DateTimeField |
 
+[Back to top ⇧](#table-of-contents)
 
 # Technologies Used
 
@@ -1053,23 +1061,67 @@ All products were loaded as expected to the main store page. When amending the u
 - <strong>Verdict</strong> ✅:
 This test passed and no amendments were required.
 
+---
+
+ <strong>Implementation</strong> 🔨:
+The system admin will only be able to access the 'Add product' or 'Edit an existing product' pages if they are properly logged into the system.
+
+- <strong>Test</strong> 🔎:
+To test this, I went through the browser and tried to access the endpoint `/api/add_product` or `/api/edit_product`. 
+
+- <strong>Result</strong> 🏆:
+As a result, I was automatically redirected to the login page and the endpoint that appears in the URL is `auth/login/?next=/api/add_product/`, which means that after being properly logged in I will be redirected to the 'Add product' page.
+
+- <strong>Verdict</strong> ✅:
+This test passed and no amendments were required.
+
+---
+
+ <strong>Implementation</strong> 🔨:
+What happen if another user (non admin) try to access the 'Add product' or 'Edit an existing product' pages by the URL endpoints even if they are properly logged into the system?
+
+- <strong>Test</strong> 🔎:
+To test this, I went through the browser and tried to access the endpoint `/api/add_product` or `/api/edit_product`. Then I was automatically redirected to the login page and the endpoint that appears in the URL is `auth/login/?next=/api/add_product/`.
+
+- <strong>Result</strong> 🏆:
+As a result, I was automatically redirected to the home page and an error message was shown: *It appears you tried to access a page that you do not have permission. Please contact the store owner for assistance.*.
+
+- <strong>Verdict</strong> ✅:
+This test passed and no amendments were required.
+
+---
+
+ <strong>Implementation</strong> 🔨:
+To make sure that the user can navigate the site easily, I have tested the navigation of all items, links, buttons, etc., in order to ensure that the user does not get lost within the application sessions.
+
+- <strong>Test</strong> 🔎:
+This test was performed in a systematic way, so that each page was navigated, clicked on all the links, in order to ensure that the user knew how to "find himself" within the site.
+
+- <strong>Result</strong> 🏆:
+Every page and link was checked and each provided a positive result, in no time was the user sent to an unexpected destination.
+
+- <strong>Verdict</strong> ✅:
+This test completed as expected without bugs.
+
+---
+
 ## Testing User Stories
 
 | Issue ID                                                                          | User Story                                           | Requirement to be met                                                                                                                                                                                     | Requirement met                                                                                                                                                                                                                 | Test result         |
 | --------------------------------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
 | [[#1](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/1)]   | View a list of products                              | As a Shopper I want to be able to view a list of products so that I can select some to purchase.                                                                                                          | The list with all products is displayed as soon as the user clicks on "Shop"                                                                                                                                                    | Passed ✅            |
 | [[#2](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/2)]   | View individual product details                      | As a Shopper I want to be able to view individual product details so that I can identify the price, description, and product image.                                                                       | A product's detail page is displayed once the user clicks on the chosen product.                                                                                                                                                | Passed ✅            |
-| [[#3](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/3)]   | Identify deals                                       | As a Shopper I want to be able to quickly identify deals, clearance items and special offers so that I can take advantage of special savings on products I would like to purchase.                        | This feature was not implemented in this project.                                                                                                                                                                               | Fail ❌              |
+| [[#3](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/3)]   | Identify deals                                       | As a Shopper I want to be able to quickly identify deals, clearance items and special offers so that I can take advantage of special savings on products I would like to purchase.                        | This feature was not implemented in this project.                                                                                                                                                                               | To be implemented 🔨 |
 | [[#4](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/4)]   | View total of my purchase                            | As a Shopper I want to be able to easily view the total of my purchases at any time so that I can be aware of how much I've already spent and avoid spending too much.                                    | The user can see the total expenses as they add items to the shopping bag                                                                                                                                                       | Passed ✅            |
 | [[#5](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/5)]   | Register for an account                              | As a Site user I want to be able to easily register for an account so that I can have a personal account and be able to view my profile.                                                                  | 🐞 Bug Report: Verification email is not sent after sign up. [[#32](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/32)]                                                                                   | Fixed ✅             |
 | [[#6](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/6)]   | login or logout                                      | As a Site user I want to be able to easily login or logout from my account so that I can access my personal account information.                                                                          | There's a 'Sign in' link in the top of the page where the user can easily login into the application. Once they're logged, a 'Sign out' link appears.                                                                           | Passed ✅            |
 | [[#7](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/7)]   | Recover password                                     | As a Site user I want to be able to easily recover my password in case I forget it so that I can recover access to my account.                                                                            | The user is able to request a password recovery.                                                                                                                                                                                | Passed ✅            |
 | [[#8](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/8)]   | Confirmation email after registering                 | As a Site user I want to be able to receive a confirmation email after registering so that I can verify that my account registration was successful.                                                      | 🐞 Bug Report: Verification email is not sent after sign up. [[#32](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/32)]                                                                                   | Fixed ✅             |
-| [[#9](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/9)]   | Personalized profile                                 | As a Site user I want to be able to have a personalized user profile so that I can view my personal order history and order confirmations, and save my payment information.                               | Not implemented yet                                                                                                                                                                                                             | To Do 🔨             |
+| [[#9](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/9)]   | Personalized profile                                 | As a Site user I want to be able to have a personalized user profile so that I can view my personal order history and order confirmations, and save my payment information.                               | Not implemented yet                                                                                                                                                                                                             | Passed ✅            |
 | [[#10](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/10)] | List of available products                           | As a Shopper I want to be able to sort the list of available products so that I can easily identify the best priced and categorically sorted products.                                                    | The user can see the list of all available products.                                                                                                                                                                            | Passed ✅            |
 | [[#11](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/11)] | Specific product category                            | As a Shopper I want to be able to sort a specific category of product so that I can find the best-priced or best-rated product in a specific category, or sort the products in that category by name.     | This feature was not implemented in this project.                                                                                                                                                                               | To be implemented 🔨 |
 | [[#12](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/12)] | Multiple categories                                  | As a Shopper I want to be able to sort multiple categories of products simultaneously so that I can find the best-priced or best-rated product across broad categories, such as "vegan" or "best sellers. | This feature was not implemented in this project.                                                                                                                                                                               | To be implemented 🔨 |
-| [[#13](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/13)] | Searching by occasion                                | As a shopper, I want to be able to search for products by occasion, such as "birthdays" or "father's day".                                                                                                | Feature partially implemented                                                                                                                                                                                                   | To Fix 🔨            |
+| [[#13](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/13)] | Searching by occasion                                | As a shopper, I want to be able to search for products by occasion, such as "birthdays" or "father's day".                                                                                                | Feature partially implemented                                                                                                                                                                                                   | Passed ✅            |
 | [[#14](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/14)] | Feedback about my searching                          | As a Shopper I want to be able to easily see what I have searched for and the number of results so that I can quickly decide whether the product I want is available.                                     | This feature was not implemented in this project.                                                                                                                                                                               | To be implemented 🔨 |
 | [[#15](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/15)] | Select the type and quantity                         | As a Shopper I want to be able to easily select the type and quantity of a chocolate/cake/sweet when purchasing it so that I can ensure I don't accidentally select the wrong product, quantity or type.  | The user can update the shopping bag by adding quantity or removing items.                                                                                                                                                      | Passed ✅            |
 | [[#16](https://github.com/emidiovaleretto/candy-care-dublin-ecommerce/issues/16)] | Items in my shopping bag                             | As a Shopper I want to be able to view items in my bad to be purchased so that I can identity the total cost of my purchase and all items I will receive.                                                 | The user is able to clearly identify items in their bag before purchase as well as the total cost of the purchase.                                                                                                              | Passed ✅            |
@@ -1194,6 +1246,8 @@ os.environ.setdefault("SECRET_KEY_TESTING", "YOUR SECRET KEY")
 os.environ.setdefault("DATABASE_URL", "YOUR DATABASE URL")
 
 ```
+
+[Back to top ⇧](#table-of-contents)
 
 ## Database setup
 
