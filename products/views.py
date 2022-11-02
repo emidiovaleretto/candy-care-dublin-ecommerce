@@ -4,6 +4,7 @@ from django.db.models.functions import Lower
 from django.contrib import messages
 
 from .models.Models_Product import Product
+from .models.Models_Occasion import Occasion
 from .forms import ProductForm
 
 
@@ -14,6 +15,7 @@ def list_all_products(request):
     """
 
     products = Product.objects.all()
+    occasions = None
     sort = None
     direction = None
 
@@ -31,10 +33,16 @@ def list_all_products(request):
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
 
+        if 'occasion' in request.GET:
+            occasion = request.GET['occasion']
+            products = products.filter(occasion__name__icontains=occasion)
+            occasions = Occasion.objects.filter(name__icontains=occasion)
+
     current_sorting = f'{sort}_{direction}'
 
     context = {
         'products': products,
+        'current_occasions': occasions,
         'current_sorting': current_sorting
     }
 

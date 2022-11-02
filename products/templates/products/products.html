@@ -13,7 +13,10 @@
 </main>
 
 <section class="products">
-    
+    <div class="col text-center container w-50 mt-4">
+        <h2 class="font-f-l-b gray-9 my-4">Products</h2>
+        <hr class="mb-5">
+    </div>
     <div class="row mt-1 mb-4 container mx-auto">
         <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
             <div class="sort-select-wrapper w-50">
@@ -34,7 +37,7 @@
         </div>
         <div class="col-12 col-md-6 order-md-first">
             <p class="text-muted mt-3 text-center text-md-left">
-                {{ products|length }} Products found
+                {{ products|length }} Products found{% if current_occasions %} founds for <strong>"{{ current_occasions.first.friendly_name }}"</strong>{% endif %}
             </p>
         </div>
     </div>
