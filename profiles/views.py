@@ -5,6 +5,7 @@ from django.contrib import messages
 from .models.Models_Profile import UserProfile
 from .forms import UserProfileForm
 
+from checkout.models import Order
 
 @login_required(login_url='/auth/login')
 def profile(request):
@@ -29,6 +30,22 @@ def profile(request):
     orders = profile.orders.all()
     context = {
         'form': form,
+        'orders': orders,
         'on_profile_page': True,
     }
     return render(request, 'profiles/profile.html', context=context)
+
+
+def order_history(request, order_number):
+    order = get_object_or_404(Order, order_number=order_number)
+
+    messages.info(request, (
+        f'This is a past confirmation for order number {order_number}.'
+        'A confirmation email was sent on the order date.'
+    ))
+
+    context = {
+        'order': order,
+        'from_profile': True
+    }
+    return render(request, 'checkout/checkout_success.html', context=context)
