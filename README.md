@@ -1259,17 +1259,7 @@ os.environ.setdefault("DATABASE_URL", "YOUR DATABASE URL")
 
    python3 manage.py createsuperuser
 
-3. From there you need to delete any objects from the database that are not in the fixture. To do this, run the following commands:
-
-   python3 manage.py shell
-
-A terminal screen should appear. In the terminal, paste the following command:
-
-    from django.contrib.contenttypes.models import ContentType
-
-    ContentType.objects.all().delete()
-
-4. Now you should be able to run the server using the following command:
+3. Now you should be able to run the server using the following command:
 
    python3 manage.py runserver
 
@@ -1278,9 +1268,10 @@ If everything has been correctly configure you should not get a message giving y
 1. Finally, stop the server by pressing CTRL + C (or cmd + C on Mac) and run the following command to populate the database.
 
    python3 manage.py loaddata category.json
+   python3 manage.py loaddata occasions.json
    python3 manage.py loaddata products.json
 
-After running this command, all information contained in the `category.json` and `products.json` files will be saved in the database. Once that's done, run the `python3 manage.py runserver` command again and you should be able to see the application working.
+After running this command, all information contained in the `category.json`, `occasions.json` and `products.json` files will be saved in the database. Once that's done, run the `python3 manage.py runserver` command again and you should be able to see the application working.
 
 ## Stripe | Payment Processing Platform for the Internet
 
