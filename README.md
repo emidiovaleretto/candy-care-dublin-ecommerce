@@ -44,6 +44,8 @@ This project was created as part of the Full Stack Software Development course o
       - [Thank you Page](#thank-you-page)
       - [Social Networks](#social-networks)
       - [Footer](#footer)
+    - [Inner pages](#inner-pages)
+    - [Admin Panel](#admin-panel)
     - [Features to be implemented](#features-to-be-implemented)
 - [Project Architecture](#project-architecture)
   - [Project settings structure](#project-settings-structure)
@@ -300,6 +302,62 @@ The wireframes were created in [Figma](https://www.figma.com/) which can be expl
 #### Footer
 
 <img src="./readme-files/imgs/footer.jpg" alt="Footer">
+
+### Inner pages
+
+<details>
+    <summary>Shop page</summary>
+        <img src="./readme-files/imgs/shop.jpg" alt="Shop page">
+</details>
+
+<details>
+    <summary>Product details page</summary>
+        <img src="./readme-files/imgs/product_detail.jpg" alt="Product details page">
+</details>
+
+
+<details>
+    <summary>Shopping bag page</summary>
+        <img src="./readme-files/imgs/shopping_bag.jpg" alt="Shopping bag page">
+</details>
+
+
+<details>
+    <summary>Checkout page</summary>
+        <img src="./readme-files/imgs/checkout.jpg" alt="Checkout page">
+</details>
+
+<details>
+    <summary>Profile page</summary>
+        <img src="./readme-files/imgs/profile.jpg" alt="Profile page">
+</details>
+
+
+### Admin Panel
+
+
+<details>
+    <summary>Management page</summary>
+        <img src="./readme-files/imgs/management.jpg" alt="Management page">
+</details>
+
+
+<details>
+    <summary>Add product page</summary>
+        <img src="./readme-files/imgs/add_product.jpg" alt="Add product page">
+</details>
+
+
+<details>
+    <summary>Edit products page</summary>
+        <img src="./readme-files/imgs/edit_products.jpg" alt="FoEdit products pageoter">
+</details>
+
+
+<details>
+    <summary>Edit an individual product page</summary>
+        <img src="./readme-files/imgs/edit_product.jpg" alt="Edit an individual product page">
+</details>
 
 ### Features to be implemented
 
