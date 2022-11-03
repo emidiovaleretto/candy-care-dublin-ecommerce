@@ -36,7 +36,7 @@
             <p>{{ product.sku |truncatechars:7 }}</p>
             <a href="{% url 'product_detail' product.slug %}"><h2>{{ product.name }}</h2></a>
             <p>{{ product.category }}</p>
-            <p>{{ product.price }}</p>
+            <p>€{{ product.price }}</p>
             <a href="{% url 'product_detail' product.slug %}"><img src="{{ product.image.url }}" alt="{{ product.name }}"></a>
             <a href="{% url 'edit_product' product.id %}">Edit</a>
         </div>
