@@ -3,7 +3,7 @@ from decouple import config
 
 DEBUG = True
 SECRET_KEY = config("SECRET_KEY_DEVELOPMENT")
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = [config("DEVELOPMENT_HOST"), "localhost", "127.0.0.1"]
 
 DATABASES = {
     'default': {
