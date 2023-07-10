@@ -508,7 +508,7 @@ With the project configured correctly, when running the application, you will se
 
 ### Database schema
 
-<img src="./readme-files/imgs/db_schema.png" alt="Database Schema">
+<img src="./readme-files/imgs/db_schema.jpg" alt="Database Schema">
 
 ### User Table
 
